@@ -1,4 +1,12 @@
-﻿body {
+﻿@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/source-sans-pro.woff2') format('woff2');
+}
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -14,6 +22,35 @@
 */
 .dl-horizontal dt {
     white-space: normal;
+}
+
+.jumbotron {
+    position: relative;
+    background-image: url('/Images/Jumbotron.png');
+    background-size: cover;
+    width: 1152px;
+    height: 628px;
+    left: 0px;
+    top: 0px;
+}
+
+.jumbotron h1 {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 56px;
+    color: white;
+ }
+
+.jumbotron-bottom {
+    position: absolute;
+    bottom: 50px;
+    width: 80%;
+}
+
+.actions{
+    display: inline;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
