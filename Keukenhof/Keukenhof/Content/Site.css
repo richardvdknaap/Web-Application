@@ -22,3 +22,58 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/* Footer css*/
+.footer{
+    width: 1152px;
+    display: block;
+    overflow: hidden;
+    padding: 70px 0;
+    box-sizing: border-box;
+}
+
+.inner_footer{
+    display: block;
+    margin: 0 auto;
+    width: 1081px;
+    height: 208px;
+}
+
+.inner_footer .logo_container{
+    width: 35%;
+    float: left;
+    height: 100%;
+    display: block;
+}
+
+.inner_footer .logo_container img {
+    width: 155px;
+    height: 54px;
+}
+
+.inner_footer .footer_third{
+    width: calc(21.6666666667% - 20px);
+    margin-right: 10px;
+    float: left;
+    height: 100%;
+}
+
+.inner_footer .footer_third:last-child{
+    margin-right: 0;
+}
+
+.inner_footer .foother_third h1{
+    font-family: 'arial';
+    font-size: 22px;
+    color: black;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.inner_footer a{
+    color: black;
+
+}
+
+
