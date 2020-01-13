@@ -1,3 +1,5 @@
 
 *.lock
 Keukenhof/.vs/*
+Keukenhof/Keukenhof/bin/*
+Keukenhof/Keukenhof/obj/*
