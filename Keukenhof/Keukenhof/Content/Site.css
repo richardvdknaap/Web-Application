@@ -53,10 +53,12 @@ textarea {
     font-weight: normal;
 }
 
+/* Dit is de plaatje op een positie*/
 #footer_1_4{
     position: relative;
 }
 
+/* Dit zijn de social media icons*/
 .footer-icons{
     position: absolute;
     bottom: 50px;
@@ -83,3 +85,16 @@ textarea {
 .fa-youtube {
     color: white;
 }
+
+/*Dit is de quick links sectie van de footer*/
+.footer-ql {
+    border-bottom: 1px solid #CEDBD8;
+    padding-top: 15px;
+}
+
+.footer-ql a {
+    color: black;
+}
+
+
+
