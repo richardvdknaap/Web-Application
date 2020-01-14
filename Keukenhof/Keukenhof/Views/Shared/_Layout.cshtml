@@ -6,6 +6,8 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <script src="https://kit.fontawesome.com/185266b104.js" crossorigin="anonymous"></script>
+   
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -33,32 +35,14 @@
         <div class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-3">
-                        <img src=" /Images/image.png" /><br />
-                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-                        <ul class="list-unstyled list-inline text-center">
-                            <li class=" list-inline-item">
-                                <a class="btn-floating btn-fb mx-1">
-                                    <i class="fab fa-facebook-f">
-                                    </i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="btn-floating btn-tw mx-1">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="btn-floating btn-gplus mx-1">
-                                    <i class="fab fa-google-plus-g"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="btn-floating btn-li mx-1">
-                                    <i class="fab fa-linked-in "></i>
-                                </a>
-                            </li>
-                        </ul>
+                    <div class="col-sm-3" id="footer-1_4">
+                        <img src=" /Images/image.png" /> <br />
+                        <div class="footer-icons">
+                        <i class="fab fa-instagram fa-lg circle-icon"></i>
+                        <i class="fab fa-facebook fa-lg circle-icon"></i>
+                        <i class="fab fa-twitter fa-lg circle-icon"></i>
+                        <i class="fab fa-youtube fa-lg circle-icon"></i>
+                        </div>
                     </div>
                     <div class="col-sm-3">
                         <h1 class="footer-header">Adres</h1>
@@ -73,7 +57,9 @@
                     <div class="col-sm-3">
                     </div>
                 </div>
+            </div>
     </div>
+</div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

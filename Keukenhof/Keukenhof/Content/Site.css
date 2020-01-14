@@ -53,3 +53,33 @@ textarea {
     font-weight: normal;
 }
 
+#footer_1_4{
+    position: relative;
+}
+
+.footer-icons{
+    position: absolute;
+    bottom: 50px;
+}
+
+.circle-icon{
+    background: green;
+    padding: 10px;
+    border-radius: 100%;
+}
+
+.fa-instagram{
+    color: white;
+}
+
+.fa-facebook {
+    color: white;
+}
+
+.fa-twitter {
+    color: white;
+}
+
+.fa-youtube {
+    color: white;
+}
