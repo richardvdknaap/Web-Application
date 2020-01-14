@@ -16,9 +16,26 @@
     white-space: normal;
 }
 
+.bg1 {
+    background-color: #FBDFD3;
+}
+
+.bg2{
+    background-color: #E1EBE9;
+}
+
+
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
     max-width: 280px;
+}
+
+#ParkJumbo {
+    background-image:url('/Images/ParkJumbo.png');
+}
+
+#featured {
+
 }
