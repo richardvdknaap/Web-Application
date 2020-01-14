@@ -7,7 +7,6 @@
 }
 
 body {
-    padding-top: 50px;
     padding-bottom: 20px;
 }
 
@@ -26,7 +25,6 @@ body {
 
 .jumbotron {
     position: relative;
-    background-image: url('/Images/Jumbotron.png');
     background-size: cover;
     width: 1152px;
     height: 628px;
@@ -58,4 +56,8 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+#homejumbo {
+    background-image: url('/Images/Homejumbo.png');
 }
