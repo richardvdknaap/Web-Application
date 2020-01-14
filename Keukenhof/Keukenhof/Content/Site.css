@@ -96,5 +96,12 @@ textarea {
     color: black;
 }
 
+.footer-hl {
+    padding-top: 0px;
+}
+
+.footer-hl a {
+    color: black;
+}
 
 
