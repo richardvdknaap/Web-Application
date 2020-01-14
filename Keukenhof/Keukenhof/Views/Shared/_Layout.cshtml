@@ -6,6 +6,8 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <script src="https://kit.fontawesome.com/185266b104.js" crossorigin="anonymous"></script>
+   
 </head>
 <body>
     @Scripts.Render("~/bundles/jquery")
@@ -33,10 +35,81 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3" id="footer-1_4">
+                        <img src=" /Images/image.png" /> <br />
+                        <div class="footer-icons">
+                        <i class="fab fa-instagram fa-lg circle-icon"></i>
+                        <i class="fab fa-facebook fa-lg circle-icon"></i>
+                        <i class="fab fa-twitter fa-lg circle-icon"></i>
+                        <i class="fab fa-youtube fa-lg circle-icon"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h1 class="footer-header">Adres</h1>
+                        <label class="footer-content">Stationsweg 166A</label><br />
+                        <label class="footer-content">2161 AM Lisse</label><br />
+                        <h2 class="footer-header">Openingstijden</h2>
+                        <label class="footer-content">21 maart - 10 mei 2020, </label><br />
+                        <label class="footer-content">9:00-17:00u</label><br />
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-ql">
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    <a href="insert_quick_link">Het Park</a>
+                                </div>
+                                <div class="col-sm-2">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-ql">
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    <a href="insert_quick_link">Praktisch</a>
+                                </div>
+                                <div class="col-sm-2">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-ql">
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    <a href="insert_quick_link">Groepen</a>
+                                </div>
+                                <div class="col-sm-2">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-ql">
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    <a href="insert_quick_link">Pers</a>
+                                </div>
+                                <div class="col-sm-2">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
 
+
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-hl">
+                            <h1 class="footer-header">Meer handige links</h1>
+                            <i class="fas fa-chevron-right fa-fw"></i><a href="insert_quick_link">Beschikbaarheid</a><br />
+                            <i class="fas fa-chevron-right fa-fw"></i><a href="insert_quick_link">Evenementen</a><br />
+                            <i class="fas fa-chevron-right fa-fw"></i><a href="insert_quick_link">Veelgestelde vragen</a><br />
+                            <i class="fas fa-chevron-right fa-fw"></i><a href="insert_quick_link">Contact</a><br />
+                            <i class="fas fa-chevron-right fa-fw"></i><a href="insert_quick_link">Privacy statement</a><br />
+                        </div>
+                    </div>
+            </div>
+    </div>
 </body>
 </html>

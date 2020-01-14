@@ -39,3 +39,85 @@ textarea {
 #featured {
 
 }
+
+/* Footer css*/
+.footer{
+    width: 1152px;
+    display: block;
+    overflow: hidden;
+    padding: 70px 0;
+    box-sizing: border-box;
+}
+
+.footer-header {
+    width: 247px;
+    height: 28px;
+    left: 315px;
+    top: 32px;
+
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: #36454E;
+    border-radius: 4px;
+}
+
+.footer-content {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* Dit is de plaatje op een positie*/
+#footer_1_4{
+    position: relative;
+}
+
+/* Dit zijn de social media icons*/
+.footer-icons{
+    position: absolute;
+    bottom: 50px;
+}
+
+.circle-icon{
+    background: green;
+    padding: 10px;
+    border-radius: 100%;
+}
+
+.fa-instagram{
+    color: white;
+}
+
+.fa-facebook {
+    color: white;
+}
+
+.fa-twitter {
+    color: white;
+}
+
+.fa-youtube {
+    color: white;
+}
+
+/*Dit is de quick links sectie van de footer*/
+.footer-ql {
+    border-bottom: 1px solid #CEDBD8;
+    padding-top: 15px;
+}
+
+.footer-ql a {
+    color: black;
+}
+
+.footer-hl {
+    padding-top: 0px;
+}
+
+.footer-hl a {
+    color: black;
+}
+
