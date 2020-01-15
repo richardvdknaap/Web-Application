@@ -104,4 +104,30 @@ textarea {
     color: black;
 }
 
+/*Content Pagina*/
 
+.autoJumboTron{
+    position: relative;
+    height: 628px;
+    left: 0px;
+    top: 0px;
+}
+
+.autoJumboTron h1{
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 56px;
+    color: black;
+}
+
+.autoJumboTron-bottom{
+    position: absolute;
+    bottom: 50px;
+    width: 90%;
+}
+
+#autojumbo{
+    background-image: url('Images/AutoJumboTron.png');
+}
