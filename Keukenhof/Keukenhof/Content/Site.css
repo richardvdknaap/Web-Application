@@ -108,7 +108,7 @@ textarea {
 
 .autoJumboTron{
     position: relative;
-    height: 628px;
+    height: 329px;
     left: 0px;
     top: 0px;
 }
@@ -117,17 +117,63 @@ textarea {
     font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 600;
-    font-size: 52px;
+    font-size: 48px;
     line-height: 56px;
-    color: black;
+    color: white;
 }
 
 .autoJumboTron-bottom{
     position: absolute;
-    bottom: 50px;
+    bottom: 25px;
+    left: 32px;
     width: 90%;
 }
 
 #autojumbo{
-    background-image: url('Images/AutoJumboTron.png');
+    background-image: url('/Images/AutoJumboTron.png');
+}
+
+#home-icon {
+    color: #00694C;
+}
+
+ /* Style the list */
+
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: white;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 14px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li + li:before {
+  padding: 8px;
+  color: #CEDBD8;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+} 
+
+.alinea{
+    position: relative;
+    left: 10.85%;
+    right: 10.85%;
+    top: 27.88%;
+    bottom: 14.16%;
 }
