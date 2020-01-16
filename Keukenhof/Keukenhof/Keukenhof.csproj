@@ -146,6 +146,7 @@
     <Compile Include="Controllers\HetParkController.cs" />
     <Compile Include="Controllers\ContentPaginaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InfoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -193,6 +194,7 @@
     <Content Include="Views\Events\Index.cshtml" />
     <Content Include="Views\HetPark\Index.cshtml" />
     <Content Include="Views\ContentPagina\Index.cshtml" />
+    <Content Include="Views\Info\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
