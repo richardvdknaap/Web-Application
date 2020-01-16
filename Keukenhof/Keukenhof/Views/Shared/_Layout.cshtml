@@ -7,19 +7,22 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <script src="https://kit.fontawesome.com/185266b104.js" crossorigin="anonymous"></script>
-    <script>$(document).ready(function () {
-            $(".fa-search").click(function () {
-                $(".search-box").toggle();
-                $("input[type='text']").focus();
-            });
-
-        });</script>
 
 </head>
 <body>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    <script>
+        $(document).ready(function () {
+            $(".fa-search").click(function () {
+                $(".search-box").toggle();
+                $("input[type='text']").focus();
+            });
+
+        });
+    </script>
 
     <nav class="navbar navbar-expand-md navbar-light sticky-top">
         <div class="container-fluid">
