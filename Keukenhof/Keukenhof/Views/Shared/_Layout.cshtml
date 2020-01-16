@@ -7,31 +7,54 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <script src="https://kit.fontawesome.com/185266b104.js" crossorigin="anonymous"></script>
-   
+    <script>$(document).ready(function () {
+            $(".fa-search").click(function () {
+                $(".search-box").toggle();
+                $("input[type='text']").focus();
+            });
+
+        });</script>
+
 </head>
 <body>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Keukenhof", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Het park", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Praktisch", "About", "Home")</li>
-                    <li>@Html.ActionLink("Veelgestelde vragen", "Contact", "Home")</li>
+
+    <nav class="navbar navbar-expand-md navbar-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="/Images/image.png" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Het park</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Praktisch</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Veelgestelde vragen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Bereikbaarheid</a>
+                    </li>
+                    <li class="active">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <div class="search-box">
+                            <input type="text" placeholder="" />
+                            <input type="button" value="Zoeken" />
+                        </div>
+                    </li>
                 </ul>
+
             </div>
+
         </div>
-    </div>
+    </nav>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -111,8 +134,7 @@
                     </div>
                 </div>
             </div>
-
-
-
+        </div>
+    </div>
 </body>
 </html>
