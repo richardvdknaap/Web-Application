@@ -195,3 +195,22 @@ ul.breadcrumb li a:hover {
     font-size: 18px;
     line-height: 28px;
 }
+
+.carousel-inner > .active {
+    height: 600px;
+}
+
+.btn {
+    background-color: white; /* Blue background */
+    border: none; /* Remove borders */
+    color: green; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+}
+
+.btn:hover {
+    background-color: green;
+    color: white;
+}
+
