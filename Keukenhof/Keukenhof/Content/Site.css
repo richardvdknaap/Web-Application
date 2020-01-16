@@ -32,7 +32,6 @@ body {
 }
 
 .jumbotron h1 {
-    font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 600;
     font-size: 52px;
@@ -40,10 +39,18 @@ body {
     color: white;
  }
 
+.praticalinfo {
+    background-color: white;
+    border-radius: 4px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 20px;
+}
+
 .jumbotron-bottom {
     position: absolute;
     bottom: 50px;
-    width: 90%;
+    width: 100%;
 }
 
 .actions{
@@ -58,6 +65,7 @@ textarea {
 }
 
 #homejumbo {
+    position: relative;
     background-image: url('/Images/Homejumbo.png');
 }
 
