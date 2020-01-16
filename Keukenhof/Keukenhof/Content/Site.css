@@ -367,3 +367,152 @@ ul li:hover:not(.active) {
     cursor: pointer;
 }
 
+.circle-icon{
+    background: green;
+    padding: 10px;
+    border-radius: 100%;
+}
+
+.fa-instagram{
+    color: white;
+}
+
+.fa-facebook {
+    color: white;
+}
+
+.fa-twitter {
+    color: white;
+}
+
+.fa-youtube {
+    color: white;
+}
+
+/*Dit is de quick links sectie van de footer*/
+.footer-ql {
+    border-bottom: 1px solid #CEDBD8;
+    padding-top: 15px;
+}
+
+.footer-ql a {
+    color: black;
+}
+
+.footer-hl {
+    padding-top: 0px;
+}
+
+.footer-hl a {
+    color: black;
+}
+
+/*Content Pagina*/
+
+.autoJumboTron{
+    position: relative;
+    height: 329px;
+    left: 0px;
+    top: 0px;
+}
+
+.autoJumboTron h1{
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+    color: white;
+}
+
+.autoJumboTron-bottom{
+    position: absolute;
+    bottom: 25px;
+    left: 32px;
+    width: 90%;
+}
+
+#autojumbo{
+    background-image: url('/Images/AutoJumboTron.png');
+}
+
+#home-icon {
+    color: #00694C;
+}
+
+ /* Style the list */
+
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: white;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 14px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li + li:before {
+  padding: 8px;
+  color: #CEDBD8;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+} 
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.container show {
+}
+
+.show h6 {
+    font-family: Avenir;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.show p {
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.carousel-inner > .active {
+    height: 600px;
+}
+
+.btn {
+    background-color: white; /* Blue background */
+    border: none; /* Remove borders */
+    color: green; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+}
+
+.btn:hover {
+    background-color: green;
+    color: white;
+}
