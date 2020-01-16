@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace Keukenhof.Controllers
 {
-    public class ContentPaginaController : Controller
+    public class InfoController : Controller
     {
-        // GET: ContentPagina
+        // GET: Info
         public ActionResult Index()
         {
             return View();
