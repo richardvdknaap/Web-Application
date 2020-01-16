@@ -1,6 +1,12 @@
-﻿
+﻿@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/source-sans-pro.woff2') format('woff2');
+}
+
 body {
-    padding-top: 50px;
     padding-bottom: 20px;
 }
 
@@ -25,6 +31,52 @@ body {
     background-color: #E1EBE9;
 }
 
+.jumbotron {
+    position: relative;
+    background-size: cover;
+    height: 628px;
+    left: 0px;
+    top: 0px;
+}
+
+.jumbotron h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 56px;
+    color: white;
+ }
+
+.praticalinfo {
+    background-color: white;
+    border-radius: 4px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 15px;
+}
+
+.jumbotron-bottom {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    width: 100%;
+}
+
+.jumbotron-bottom h1 {
+    color: white;
+    right: 15px;
+    position: relative;
+}
+
+.row-padding{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.actions {
+    display: inline;
+}
+
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
@@ -38,7 +90,18 @@ textarea {
 }
 
 #featured {
+}
+#homejumbo {
+    position: relative;
+    background-size: cover;
+    height: 628px;
+    left: 0px;
+    top: 0px;
+    background-image: url('/Images/Homejumbo.png');
+}
 
+#wheretosearch {
+    background: #FBDFD3;
 }
 
 /* Footer css*/
@@ -148,6 +211,94 @@ textarea {
 #EventsJumbo {
     background-image: url(/Images/EventsJumbo.png)
 }
+.bg1 {
+    background-color: #FBDFD3;
+}
+
+.bg2{
+    background-color: #E1EBE9;
+}
+
+/* Footer css*/
+.footer{
+    width: 1152px;
+    display: block;
+    overflow: hidden;
+    padding: 70px 0;
+    box-sizing: border-box;
+}
+
+.footer-header {
+    width: 247px;
+    height: 28px;
+    left: 315px;
+    top: 32px;
+
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: #36454E;
+    border-radius: 4px;
+}
+
+.footer-content {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* Dit is de plaatje op een positie*/
+#footer_1_4{
+    position: relative;
+}
+
+/* Dit zijn de social media icons*/
+.footer-icons{
+    position: absolute;
+    bottom: 50px;
+}
+
+.circle-icon{
+    background: green;
+    padding: 10px;
+    border-radius: 100%;
+}
+
+.fa-instagram{
+    color: white;
+}
+
+.fa-facebook {
+    color: white;
+}
+
+.fa-twitter {
+    color: white;
+}
+
+.fa-youtube {
+    color: white;
+}
+
+/*Dit is de quick links sectie van de footer*/
+.footer-ql {
+    border-bottom: 1px solid #CEDBD8;
+    padding-top: 15px;
+}
+
+.footer-ql a {
+    color: black;
+}
+
+.footer-hl {
+    padding-top: 0px;
+}
+
+.footer-hl a {
+    color: black;
+}
 
 /* nav bar*/
 
@@ -215,3 +366,4 @@ ul li:hover:not(.active) {
     outline: none;
     cursor: pointer;
 }
+
