@@ -10,6 +10,9 @@
    
 </head>
 <body>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -38,10 +41,10 @@
                     <div class="col-md-3" id="footer-1_4">
                         <img src=" /Images/image.png" /> <br />
                         <div class="footer-icons">
-                        <i class="fab fa-instagram fa-lg circle-icon"></i>
-                        <i class="fab fa-facebook fa-lg circle-icon"></i>
-                        <i class="fab fa-twitter fa-lg circle-icon"></i>
-                        <i class="fab fa-youtube fa-lg circle-icon"></i>
+                            <i class="fab fa-instagram fa-lg circle-icon"></i>
+                            <i class="fab fa-facebook fa-lg circle-icon"></i>
+                            <i class="fab fa-twitter fa-lg circle-icon"></i>
+                            <i class="fab fa-youtube fa-lg circle-icon"></i>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -106,12 +109,10 @@
                             <i class="fas fa-chevron-right fa-fw"></i><a href="insert_quick_link">Privacy statement</a><br />
                         </div>
                     </div>
+                </div>
             </div>
-    </div>
 
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+
 </body>
 </html>
