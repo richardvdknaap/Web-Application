@@ -44,16 +44,28 @@ body {
     border-radius: 4px;
     padding-top: 25px;
     padding-bottom: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .jumbotron-bottom {
     position: absolute;
     bottom: 50px;
+    left: 50px;
     width: 100%;
 }
 
-.actions{
+.jumbotron-bottom h1 {
+    color: white;
+    right: 15px;
+    position: relative;
+}
+
+.row-padding{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.actions {
     display: inline;
 }
 
@@ -66,6 +78,10 @@ textarea {
 
 #homejumbo {
     position: relative;
+    background-size: cover;
+    height: 628px;
+    left: 0px;
+    top: 0px;
     background-image: url('/Images/Homejumbo.png');
 }
 
