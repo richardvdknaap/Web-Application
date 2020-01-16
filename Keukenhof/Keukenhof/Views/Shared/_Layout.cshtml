@@ -7,34 +7,55 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <script src="https://kit.fontawesome.com/185266b104.js" crossorigin="anonymous"></script>
-   
+    <script>$(document).ready(function () {
+            $(".fa-search").click(function () {
+                $(".search-box").toggle();
+                $("input[type='text']").focus();
+            });
+
+        });</script>
+
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <div class="nav-link">@Html.ActionLink("Index", "About", "Home")</div>
-                </li>
-                <li class="nav-item">
-                    <div class="nav-link">@Html.ActionLink("Praktisch", "About", "Home")</div>
-                </li>
-                <li class="nav-item">
-                    <div class="nav-link">@Html.ActionLink("Veelgestelde vragen", "Contact", "Home")</div>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+    <nav class="navbar navbar-expand-md navbar-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="/Images/image.png" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Het park</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Praktisch</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Veelgestelde vragen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Bereikbaarheid</a>
+                    </li>
+                    <li class="active">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <div class="search-box">
+                            <input type="text" placeholder="" />
+                            <input type="button" value="Zoeken" />
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
         </div>
     </nav>
-    <div class="container">
+
+    <div class="container body-content">
         @RenderBody()
         <hr />
         <div class="footer">
@@ -43,10 +64,10 @@
                     <div class="col-md-3" id="footer-1_4">
                         <img src=" /Images/image.png" /> <br />
                         <div class="footer-icons">
-                        <i class="fab fa-instagram fa-lg circle-icon"></i>
-                        <i class="fab fa-facebook fa-lg circle-icon"></i>
-                        <i class="fab fa-twitter fa-lg circle-icon"></i>
-                        <i class="fab fa-youtube fa-lg circle-icon"></i>
+                            <i class="fab fa-instagram fa-lg circle-icon"></i>
+                            <i class="fab fa-facebook fa-lg circle-icon"></i>
+                            <i class="fab fa-twitter fa-lg circle-icon"></i>
+                            <i class="fab fa-youtube fa-lg circle-icon"></i>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -111,12 +132,9 @@
                             <i class="fas fa-chevron-right fa-fw"></i><a href="insert_quick_link">Privacy statement</a><br />
                         </div>
                     </div>
+                </div>
             </div>
+        </div>
     </div>
-
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
 </body>
 </html>

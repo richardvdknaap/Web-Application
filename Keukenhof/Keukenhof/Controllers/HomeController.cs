@@ -26,5 +26,11 @@ namespace Keukenhof.Controllers
 
             return View();
         }
+        public ActionResult HetPark()
+        {
+            ViewBag.Message = "Het Park";
+
+            return View();
+        }
     }
 }
