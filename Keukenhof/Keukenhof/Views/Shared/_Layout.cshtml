@@ -6,138 +6,37 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <script src="https://kit.fontawesome.com/185266b104.js" crossorigin="anonymous"></script>
-
 </head>
 <body>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
-
-    <script>
-        $(document).ready(function () {
-            $(".fa-search").click(function () {
-                $(".search-box").toggle();
-                $("input[type='text']").focus();
-            });
-
-        });
-    </script>
-
-    <nav class="navbar navbar-expand-md navbar-light sticky-top">
-        <div class="container-fluid container-md">
-            <a class="navbar-brand" href="#"><img src="/Images/image.png" /></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Het park</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Praktisch</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Veelgestelde vragen</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Bereikbaarheid</a>
-                    </li>
-                    <li class="active">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                        <div class="search-box">
-                            <input type="text" placeholder="" />
-                            <input type="button" value="Zoeken" />
-                        </div>
-                    </li>
-                </ul>
-
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Keukenhof", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-
-        </div>
-    </nav>
-
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3" id="footer-1_4">
-                        <img src=" /Images/image.png" /> <br />
-                        <div class="footer-icons">
-                            <i class="fab fa-instagram fa-lg circle-icon"></i>
-                            <i class="fab fa-facebook fa-lg circle-icon"></i>
-                            <i class="fab fa-twitter fa-lg circle-icon"></i>
-                            <i class="fab fa-youtube fa-lg circle-icon"></i>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <h1 class="footer-header">Adres</h1>
-                        <label class="footer-content">Stationsweg 166A</label><br />
-                        <label class="footer-content">2161 AM Lisse</label><br />
-                        <h2 class="footer-header">Openingstijden</h2>
-                        <label class="footer-content">21 maart - 10 mei 2020, </label><br />
-                        <label class="footer-content">9:00-17:00u</label><br />
-                    </div>
-                    <div class="col-md-3">
-                        <div class="footer-ql">
-                            <div class="row">
-                                <div class="col-sm-10">
-                                    <a href="insert_quick_link">Het Park</a>
-                                </div>
-                                <div class="col-sm-2">
-                                    <i class="fas fa-arrow-right"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="footer-ql">
-                            <div class="row">
-                                <div class="col-sm-10">
-                                    <a href="insert_quick_link">Praktisch</a>
-                                </div>
-                                <div class="col-sm-2">
-                                    <i class="fas fa-arrow-right"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="footer-ql">
-                            <div class="row">
-                                <div class="col-sm-10">
-                                    <a href="insert_quick_link">Groepen</a>
-                                </div>
-                                <div class="col-sm-2">
-                                    <i class="fas fa-arrow-right"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="footer-ql">
-                            <div class="row">
-                                <div class="col-sm-10">
-                                    <a href="insert_quick_link">Pers</a>
-                                </div>
-                                <div class="col-sm-2">
-                                    <i class="fas fa-arrow-right"></i>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div class="col-md-3">
-                        <div class="footer-hl">
-                            <h1 class="footer-header">Meer handige links</h1>
-                            <i class="fas fa-chevron-right fa-fw"></i><a href="insert_quick_link">Beschikbaarheid</a><br />
-                            <i class="fas fa-chevron-right fa-fw"></i><a href="insert_quick_link">Evenementen</a><br />
-                            <i class="fas fa-chevron-right fa-fw"></i><a href="insert_quick_link">Veelgestelde vragen</a><br />
-                            <i class="fas fa-chevron-right fa-fw"></i><a href="insert_quick_link">Contact</a><br />
-                            <i class="fas fa-chevron-right fa-fw"></i><a href="insert_quick_link">Privacy statement</a><br />
-                        </div>
-                    </div>
-                </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Het park", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Praktisch", "About", "Home")</li>
+                    <li>@Html.ActionLink("Veelgestelde vragen", "Contact", "Home")</li>
+                </ul>
             </div>
         </div>
     </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 </body>
 </html>
