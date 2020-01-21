@@ -131,20 +131,80 @@
 <div class="container">
     <div class="row row-padding" style="background-color: #E1EBE9">
         <div class="col-md-12">
-            <h2>Praktische informatie.</h2>
+            <h2>Praktische informatie</h2>
             <div>
                 <p class="float-left">Download de kaart of krijg er een bij de informatiebalie</p>
-                <p class="float-right">Meer praktische informatie.</p>
+                <a href="#" class="justify-content-end float-right text-dark font-weight-bold text-decoration-none">Meer praktische informatie<i class="fa fa-arrow-right ml-1 text-warning"></i> </a></br>
             </div>
         </div>
         <div class="col-md-6">
-            <img src="/Images/PLATTEGROND Keukenhof 2019.png" />
+            <div class="img-wrapper">
+                <img class="img-responsive" src="/Images/PLATTEGROND Keukenhof 2019.png">
+                <div class="img-overlay">
+                    <button class="btn btn-md btn-success"><i class="fa fa-download" aria-hidden="true"></i> Download de kaart</button>
+                </div>
+            </div>
         </div>
         <div class="col-md-6">
-            <div class="praticalinfo">Openingstijden</div>
-            <div class="praticalinfo">Faciliteiten</div>
-            <div class="praticalinfo">Parkeren en openbare vervoer</div>
-            <div class="praticalinfo">Groepen</div>
+            <div id="accordion">
+                <div class="card">
+                    <div id="headingOne">
+                        <h5 class="mb-0">
+                            <div data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                Openingstijden <i class="fa fa-angle-down float-lg-right" aria-hidden="true"></i>
+                            </div>
+                        </h5>
+                    </div>
+
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            Helaas zijn wij nog niet open.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div id="headingTwo">
+                        <h5 class="mb-0">
+                            <div data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Toegankelijkheid<i class="fa fa-angle-down float-lg-right" aria-hidden="true"></i>
+                            </div>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            Nope!
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div id="headingThree">
+                        <h5 class="mb-0">
+                            <div data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Parkeren en openbaar vervoer<i class="fa fa-angle-down float-lg-right" aria-hidden="true"></i>
+                            </div>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            Nope!
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div id="headingFour">
+                        <h5 class="mb-0">
+                            <div data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Groepen<i class="fa fa-angle-down float-lg-right" aria-hidden="true"></i>
+                            </div>
+                        </h5>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                        <div class="card-body">
+                            Nope!
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
