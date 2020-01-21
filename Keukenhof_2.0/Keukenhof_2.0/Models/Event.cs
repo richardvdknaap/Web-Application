@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -8,7 +9,18 @@ namespace Keukenhof_2._0.Models
 {
     public class Event
     {
-        int id { get; set; }
-        string naam { get; set; }
+        [Key]
+        [Required]
+        public int Id { get; set; }
+        [Required]
+        public string Naam { get; set; }
+        [Required]
+        public string Beschrijving { get; set; }
+        [Required]
+        public DateTime Datum { get; set; }
+        public string Info { get; set; }
+
+        List<Foto> Fotos { get; set; }
+
     }
 }

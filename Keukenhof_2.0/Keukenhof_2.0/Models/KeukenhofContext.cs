@@ -15,5 +15,6 @@ namespace Keukenhof_2._0.Models
         { }
 
         public DbSet<Event> Events { get; set; }
+        public DbSet<Foto> Fotos { get; set; }
     }
 }
