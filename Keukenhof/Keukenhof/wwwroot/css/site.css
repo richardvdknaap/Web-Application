@@ -502,7 +502,6 @@ ul.breadcrumb li a:hover {
 
 .cardnopadding {
     background-color: white;
-    color: pink;
     padding-bottom: 20px;
     margin-top: 20px;
 }
@@ -510,7 +509,6 @@ ul.breadcrumb li a:hover {
 .cardnopadding:hover {
     background-color: #EA6025;
     color: #FFFFFF;
-        
 }
 
 .container show {
