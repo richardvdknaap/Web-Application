@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Keukenhof_2._0.Models
+namespace Keukenhof.Models
 {
     public class Foto
     {
