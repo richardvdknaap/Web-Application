@@ -33,8 +33,10 @@ body {
 
 .jumbotron {
     position: relative;
-    background-size: cover;
-    height: 628px;
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 329px;
+    width: 1152px;
     left: 0px;
     top: 0px;
 }
@@ -516,3 +518,28 @@ ul.breadcrumb li a:hover {
     background-color: green;
     color: white;
 }
+
+.img-wrapper {
+    position: relative;
+}
+
+.img-responsive {
+    width: 100%;
+    height: auto;
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+    .img-overlay:before {
+        content: ' ';
+        display: block;
+        height: 50%;
+    }
+
