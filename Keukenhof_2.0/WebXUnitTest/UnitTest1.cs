@@ -20,7 +20,7 @@ namespace WebXUnitTest
             var result = _homeController.Index() as ViewResult;
             Assert.Equal("Index", result.ViewName);
             Console.WriteLine(result);
-            Console.ReadKey(true);
+            Console.ReadLine();
         }
     }
 }
