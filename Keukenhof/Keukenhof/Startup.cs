@@ -4,9 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Keukenhof.Data;
 using Keukenhof.Models;
-using Keukenhof.Models;
+using Keukenhof.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -28,6 +29,12 @@ namespace Keukenhof
             services.AddMvc();
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("KeukenhofContext")));
+			 services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+
+            // Add application services.
+            services.AddTransient<IEmailSender, EmailSender>();													 
 
         }
 
@@ -38,6 +45,7 @@ namespace Keukenhof
             {
                 app.UseBrowserLink();
                 app.UseDeveloperExceptionPage();
+				app.UseDatabaseErrorPage();
             }
             else
             {
@@ -46,6 +54,7 @@ namespace Keukenhof
 
             app.UseStaticFiles();
 
+			app.UseAuthentication();						
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

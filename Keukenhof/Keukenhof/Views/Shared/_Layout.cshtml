@@ -49,13 +49,13 @@
                         <a asp-area="" asp-controller="HetPark" asp-action="Index" class="nav-link">Het park</a>
                     </li>
                     <li class="nav-item">
-                        <a asp-area="" asp-controller="Info" asp-action="Index" class="nav-link"">Praktisch</a>
+                        <a asp-area="" asp-controller="Info" asp-action="Index" class="nav-link">Praktisch</a>
                     </li>
                     <li class="nav-item">
                         <a asp-area="" asp-controller="Info" asp-action="Index" class="nav-link">Veelgestelde vragen</a>
                     </li>
                     <li class="nav-item">
-                        <a asp-area="" asp-controller="HetPark" asp-action="Index" class="nav-link"">Bereikbaarheid</a>
+                        <a asp-area="" asp-controller="HetPark" asp-action="Index" class="nav-link">Bereikbaarheid</a>
                     </li>
                     <li class="active">
                         <i class="fa fa-search" aria-hidden="true"></i>
@@ -65,6 +65,7 @@
                         </div>
                     </li>
                 </ul>
+                @await Html.PartialAsync("_LoginPartial")
             </div>
         </div>
     </nav>
