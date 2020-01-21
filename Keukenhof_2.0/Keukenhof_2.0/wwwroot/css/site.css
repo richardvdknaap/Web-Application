@@ -6,6 +6,14 @@
     src: url('/fonts/source-sans-pro.woff2') format('woff2');
 }
 
+a{
+    color: black;
+}
+
+a:hover{
+    color: white;
+}
+
 body {
     padding-bottom: 20px;
 }
@@ -31,6 +39,16 @@ body {
     background-color: #E1EBE9;
 }
 
+.clickcard {
+    padding-top: 15px;
+    background-color: white;
+    padding-bottom: 15px;
+}
+
+.clickcard:hover {
+    background-color: #EA6025;
+}
+
 .jumbotron {
     position: relative;
     background-size: auto;
@@ -53,6 +71,7 @@ body {
     background-color: white;
     border-radius: 4px;
     padding-top: 25px;
+    padding-left: 25px;
     padding-bottom: 25px;
     margin-bottom: 15px;
 }
