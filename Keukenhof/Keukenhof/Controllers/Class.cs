@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Keukenhof.Models;
+
+namespace Keukenhof.Controllers
+{
+    public class PracticalController : Controller
+    {
+        // GET: Event
+        public ActionResult Index()
+        {
+            return View();
+        }
+    }
+}
