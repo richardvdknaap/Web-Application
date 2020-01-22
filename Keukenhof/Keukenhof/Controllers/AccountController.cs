@@ -55,6 +55,12 @@ namespace Keukenhof.Controllers
         } */
 
         [HttpGet]
+        public IActionResult GoogleLogin()
+        {
+            return Challenge(new AuthenticationProperties { RedirectUri = "Account" }, "Google");
+        }
+
+        [HttpGet]
         [AllowAnonymous]
         public async Task<IActionResult> Login(string returnUrl)
         {
@@ -271,16 +277,16 @@ namespace Keukenhof.Controllers
         
         [HttpPost]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public IActionResult ExternalLogin(string provider, string returnUrl = null)
+        public IActionResult ExternalLogin(string provider, string returnUrl)
         {
-            // Request a redirect to the external login provider.
-            var redirectUrl = Url.Action(nameof(ExternalLoginCallback), "Account", new { returnUrl });
-            var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
-            return Challenge(properties, provider);
-        } 
+            var redirectUrl = Url.Action("ExternalLoginCallback", "Account",
+                                new { ReturnUrl = returnUrl });
+            var properties = _signInManager
+                .ConfigureExternalAuthenticationProperties(provider, redirectUrl);
+            return new ChallengeResult(provider, properties);
+        }
 
-        
+
         [HttpGet]
         [AllowAnonymous]
         public async Task<IActionResult> ExternalLoginCallback(string returnUrl = null, string remoteError = null)

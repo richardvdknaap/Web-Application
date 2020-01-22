@@ -70,10 +70,10 @@
                 }
                 else
                 {
-                    <form asp-action="ExternalLogin" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal">
+                    <form method="post" asp-controller="Account" asp-action="ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" >
                         <div>
                             <p>
-                                @foreach (var provider in loginProviders)
+                                @foreach (var provider in Model.ExternalLogins)
                                 {
                                     <button type="submit" class="btn btn-default" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.Name</button>
                                 }

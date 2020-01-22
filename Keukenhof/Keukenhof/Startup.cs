@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Keukenhof.Data;
 using Keukenhof.Models;
 using Keukenhof.Services;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.OAuth;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -33,6 +37,8 @@ namespace Keukenhof
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+            
+
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
 
@@ -42,9 +48,19 @@ namespace Keukenhof
                     options.ClientId = "161876866936-dssioajmtuknlujbtp3fu4ki1nji71n4.apps.googleusercontent.com";
                     options.ClientSecret = "JV1_U7L_bI5cLvzd4Ew-Gr1C";
                     options.UserInformationEndpoint = "https://www.googleapis.com/oauth2/v1/certs";
+                    options.ClaimActions.Clear();
+                    options.ClaimActions.MapJsonKey(ClaimTypes.NameIdentifier, "id");
+                    options.ClaimActions.MapJsonKey(ClaimTypes.Name, "name");
+                    options.ClaimActions.MapJsonKey(ClaimTypes.GivenName, "given_name");
+                    options.ClaimActions.MapJsonKey(ClaimTypes.Surname, "family_name");
+                    options.ClaimActions.MapJsonKey("urn:google:profile", "link");
+                    options.ClaimActions.MapJsonKey(ClaimTypes.Email, "email");
+                    
                  });
 
         }
+
+        
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -61,7 +77,7 @@ namespace Keukenhof
             }
 
             app.UseStaticFiles();
-
+            app.UseCookiePolicy();
 			app.UseAuthentication();						
             app.UseMvc(routes =>
             {
