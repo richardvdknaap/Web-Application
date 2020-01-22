@@ -34,7 +34,17 @@ namespace Keukenhof
                 .AddDefaultTokenProviders();
 
             // Add application services.
-            services.AddTransient<IEmailSender, EmailSender>();													 
+            services.AddTransient<IEmailSender, EmailSender>();
+
+            services.AddAuthentication()
+                .AddGoogle(options =>
+                 {
+                    IConfigurationSection googleAuthNSection =
+                        Configuration.GetSection("Authentication:Google");
+
+                    options.ClientId = googleAuthNSection["Authentication:Google:ClientId"];
+                    options.ClientSecret = googleAuthNSection["Authentication:Google:ClientSecret"];
+                });
 
         }
 
