@@ -25,7 +25,7 @@ namespace Keukenhof.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IEmailSender _emailSender;
         private readonly ILogger _logger;
-        private object signInManage;
+        private object signInManager;
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
