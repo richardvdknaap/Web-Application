@@ -39,12 +39,10 @@ namespace Keukenhof
             services.AddAuthentication()
                 .AddGoogle(options =>
                  {
-                    IConfigurationSection googleAuthNSection =
-                        Configuration.GetSection("Authentication:Google");
-
-                    options.ClientId = googleAuthNSection["Authentication:Google:ClientId"];
-                    options.ClientSecret = googleAuthNSection["Authentication:Google:ClientSecret"];
-                });
+                    options.ClientId = "161876866936-dssioajmtuknlujbtp3fu4ki1nji71n4.apps.googleusercontent.com";
+                    options.ClientSecret = "JV1_U7L_bI5cLvzd4Ew-Gr1C";
+                    options.UserInformationEndpoint = "https://www.googleapis.com/oauth2/v1/certs";
+                 });
 
         }
 

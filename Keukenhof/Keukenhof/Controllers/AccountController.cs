@@ -25,6 +25,7 @@ namespace Keukenhof.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IEmailSender _emailSender;
         private readonly ILogger _logger;
+        private object signInManage;
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
@@ -41,6 +42,7 @@ namespace Keukenhof.Controllers
         [TempData]
         public string ErrorMessage { get; set; }
 
+        /*
         [HttpGet]
         [AllowAnonymous]
         public async Task<IActionResult> Login(string returnUrl = null)
@@ -50,6 +52,20 @@ namespace Keukenhof.Controllers
 
             ViewData["ReturnUrl"] = returnUrl;
             return View();
+        } */
+
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<IActionResult> Login(string returnUrl)
+        {
+            LoginViewModel model = new LoginViewModel
+            {
+                ReturnUrl = returnUrl,
+                ExternalLogins =
+                (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList()
+            };
+
+            return View(model);
         }
 
         [HttpPost]
@@ -87,6 +103,7 @@ namespace Keukenhof.Controllers
             // If we got this far, something failed, redisplay form
             return View(model);
         }
+       
 
         [HttpGet]
         [AllowAnonymous]
@@ -251,6 +268,7 @@ namespace Keukenhof.Controllers
             return RedirectToAction(nameof(HomeController.Index), "Home");
         }
 
+        
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -260,8 +278,9 @@ namespace Keukenhof.Controllers
             var redirectUrl = Url.Action(nameof(ExternalLoginCallback), "Account", new { returnUrl });
             var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
             return Challenge(properties, provider);
-        }
+        } 
 
+        
         [HttpGet]
         [AllowAnonymous]
         public async Task<IActionResult> ExternalLoginCallback(string returnUrl = null, string remoteError = null)
@@ -297,6 +316,7 @@ namespace Keukenhof.Controllers
                 return View("ExternalLogin", new ExternalLoginViewModel { Email = email });
             }
         }
+        
 
         [HttpPost]
         [AllowAnonymous]
@@ -329,6 +349,9 @@ namespace Keukenhof.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             return View(nameof(ExternalLogin), model);
         }
+
+       
+        
 
         [HttpGet]
         [AllowAnonymous]
