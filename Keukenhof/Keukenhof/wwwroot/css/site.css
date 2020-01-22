@@ -122,6 +122,16 @@ textarea {
     background-image: url('/Images/Homejumbo.png');
 }
 
+#AccessibilityJumbo {
+    position: relative;
+    background-size: cover;
+    height: 396px;
+    width: 1152px;
+    left: 0px;
+    top: 0px;
+    background-image: url('/Images/Accessibility1.png');
+}
+
 #wheretosearch {
     background: #FBDFD3;
 }
