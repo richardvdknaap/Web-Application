@@ -13,7 +13,5 @@ namespace Keukenhof.Data
             : base(options)
         {
         }
-        public DbSet<Event> Events { get; set; }
-        public DbSet<Foto> Fotos { get; set; }
     }
 }
