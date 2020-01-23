@@ -48,7 +48,7 @@ namespace WebApplication1.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "events",
+                name: "Event",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -60,7 +60,7 @@ namespace WebApplication1.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_events", x => x.Id);
+                    table.PrimaryKey("PK_Event", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -170,7 +170,7 @@ namespace WebApplication1.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "fotos",
+                name: "Foto",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -180,11 +180,11 @@ namespace WebApplication1.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_fotos", x => x.Id);
+                    table.PrimaryKey("PK_Foto", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_fotos_events_EventId",
+                        name: "FK_Foto_Event_EventId",
                         column: x => x.EventId,
-                        principalTable: "events",
+                        principalTable: "Event",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -229,8 +229,8 @@ namespace WebApplication1.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_fotos_EventId",
-                table: "fotos",
+                name: "IX_Foto_EventId",
+                table: "Foto",
                 column: "EventId");
         }
 
@@ -252,7 +252,7 @@ namespace WebApplication1.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "fotos");
+                name: "Foto");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
@@ -261,7 +261,7 @@ namespace WebApplication1.Migrations
                 name: "AspNetUsers");
 
             migrationBuilder.DropTable(
-                name: "events");
+                name: "Event");
         }
     }
 }

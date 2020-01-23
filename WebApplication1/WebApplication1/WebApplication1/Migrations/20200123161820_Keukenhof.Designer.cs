@@ -10,7 +10,7 @@ using WebApplication1.Data;
 namespace WebApplication1.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200123154033_Keukenhof")]
+    [Migration("20200123161820_Keukenhof")]
     partial class Keukenhof
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -204,7 +204,7 @@ namespace WebApplication1.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("events");
+                    b.ToTable("Event");
                 });
 
             modelBuilder.Entity("WebApplication1.Models.Foto", b =>
@@ -222,7 +222,7 @@ namespace WebApplication1.Migrations
 
                     b.HasIndex("EventId");
 
-                    b.ToTable("fotos");
+                    b.ToTable("Foto");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
