@@ -13,7 +13,7 @@ using Microsoft.Extensions.Options;
 using Keukenhof.Models;
 using Keukenhof.Models.AccountViewModels;
 using Keukenhof.Services;
-using Keukenhof_2._0.Controllers;
+using Keukenhof.Controllers;
 
 namespace Keukenhof.Controllers
 {

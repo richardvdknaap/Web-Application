@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Keukenhof.Models;
 
-namespace Keukenhof_2._0.Controllers
+namespace Keukenhof.Controllers
 {
     public class HomeController : Controller
     {
