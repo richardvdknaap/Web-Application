@@ -9,6 +9,36 @@
             $(".selecting").parent().removeClass("active");
             $(this).parent().addClass("active");
         });
+        $("#Arrow1").click(function (e) {
+            e.preventDefault();
+            if ($(this).attr('aria-expanded') == 'false') {
+                $("#A1").removeClass("fa fa-angle-down");
+                $("#A1").addClass("fa fa-angle-up");
+            } else if ($(this).attr('aria-expanded') == 'true') {
+                $("#A1").removeClass("fa fa-angle-up");
+                $("#A1").addClass("fa fa-angle-down");
+            }
+        });
+        $("#Arrow2").click(function (e) {
+            e.preventDefault();
+            if ($(this).attr('aria-expanded') == 'false') {
+                $("#A2").removeClass("fa fa-angle-down");
+                $("#A2").addClass("fa fa-angle-up");
+            } else if ($(this).attr('aria-expanded') == 'true') {
+                $("#A2").removeClass("fa fa-angle-up");
+                $("#A2").addClass("fa fa-angle-down");
+            }
+        });
+        $("#Arrow3").click(function (e) {
+            e.preventDefault();
+            if ($(this).attr('aria-expanded') == 'false') {
+                $("#A3").removeClass("fa fa-angle-down");
+                $("#A3").addClass("fa fa-angle-up");
+            } else if ($(this).attr('aria-expanded') == 'true') {
+                $("#A3").removeClass("fa fa-angle-up");
+                $("#A3").addClass("fa fa-angle-down");
+            }
+        });
     });
 </script>
 
@@ -105,8 +135,8 @@
                 <div class="card">
                     <div id="headingOne">
                         <h5 class="mb-0">
-                            <div data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                Parkeren van de auto, fiets of scooter <i class="fa fa-angle-down float-lg-right" aria-hidden="true"></i>
+                            <div data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" id="Arrow1">
+                                Parkeren van de auto, fiets of scooter <i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A1"></i>
                             </div>
                         </h5>
                     </div>
@@ -120,8 +150,8 @@
                 <div class="card">
                     <div id="headingTwo">
                         <h5 class="mb-0">
-                            <div data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Oplaadpunten voor electrische auto's of fietsen<i class="fa fa-angle-down float-lg-right" aria-hidden="true"></i>
+                            <div data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="Arrow2">
+                                Oplaadpunten voor electrische auto's of fietsen<i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A2"></i>
                             </div>
                         </h5>
                     </div>
@@ -134,8 +164,8 @@
                 <div class="card">
                     <div id="headingThree">
                         <h5 class="mb-0">
-                            <div data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Mag ik in het park fietsen en zijn ze te huur?<i class="fa fa-angle-down float-lg-right" aria-hidden="true"></i>
+                            <div data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="Arrow3">
+                                Mag ik in het park fietsen en zijn ze te huur?<i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A3"></i>
                             </div>
                         </h5>
                     </div>
