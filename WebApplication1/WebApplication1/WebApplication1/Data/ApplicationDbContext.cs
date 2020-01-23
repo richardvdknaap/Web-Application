@@ -14,7 +14,14 @@ namespace WebApplication1.Data
         {
         }
         
-        public DbSet<Event> events { get; set; }
-        public DbSet<Foto> fotos { get; set; }
+        public DbSet<Event> Events { get; set; }
+        public DbSet<Foto> Fotos { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+            builder.Entity<Event>().ToTable("Event");
+            builder.Entity<Foto>().ToTable("Foto");
+        }
     }
 }

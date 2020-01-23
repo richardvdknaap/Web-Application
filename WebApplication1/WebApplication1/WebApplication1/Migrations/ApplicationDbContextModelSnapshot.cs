@@ -202,7 +202,7 @@ namespace WebApplication1.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("events");
+                    b.ToTable("Event");
                 });
 
             modelBuilder.Entity("WebApplication1.Models.Foto", b =>
@@ -220,7 +220,7 @@ namespace WebApplication1.Migrations
 
                     b.HasIndex("EventId");
 
-                    b.ToTable("fotos");
+                    b.ToTable("Foto");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
