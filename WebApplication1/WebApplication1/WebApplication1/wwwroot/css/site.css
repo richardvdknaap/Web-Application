@@ -555,7 +555,7 @@ ul.breadcrumb {
 }
 
     .btn:hover {
-        background-color: green;
+        background-color: #EA6025;
         color: white;
     }
 
@@ -640,8 +640,28 @@ ul.breadcrumb {
     margin-bottom: 15px;
 }
 
+.instafeed{
+    width:249px;
+    height:249px;
+}
 
-#navbarText{
+a.frame {
+    position: relative;
+    display: inline-block;
+}
+
+.expand-position-for-picture {
+    border-radius: 22px;
+    color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px 30px;
+}
+
+
+#navbarText {
     flex-grow: 0;
 }
+
 
