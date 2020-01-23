@@ -4,12 +4,13 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Keukenhof.Models;
 
 namespace Keukenhof.Controllers
 {
-    public class PracticalController : Controller
+    public class AccessibilityController : Controller
     {
-        // GET: Event
+        // GET: HetPark
         public ActionResult Index()
         {
             return View();

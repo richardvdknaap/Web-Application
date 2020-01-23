@@ -8,7 +8,7 @@ using Keukenhof.Models;
 
 namespace Keukenhof.Controllers
 {
-    public class EventsController : Controller
+    public class PracticalController : Controller
     {
         // GET: Event
         public ActionResult Index()
