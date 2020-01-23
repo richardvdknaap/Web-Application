@@ -6,13 +6,13 @@
     src: url('/fonts/source-sans-pro.woff2') format('woff2');
 }
 
-a{
+a {
     color: black;
 }
 
-a:hover{
-    color: white;
-}
+    a:hover {
+        color: white;
+    }
 
 body {
     padding-bottom: 20px;
@@ -35,7 +35,7 @@ body {
     background-color: #FBDFD3;
 }
 
-.bg2{
+.bg2 {
     background-color: #E1EBE9;
 }
 
@@ -45,9 +45,9 @@ body {
     padding-bottom: 15px;
 }
 
-.clickcard:hover {
-    background-color: #EA6025;
-}
+    .clickcard:hover {
+        background-color: #EA6025;
+    }
 
 .jumbotron {
     position: relative;
@@ -59,13 +59,13 @@ body {
     top: 0px;
 }
 
-.jumbotron h1 {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 52px;
-    line-height: 56px;
-    color: white;
- }
+    .jumbotron h1 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 52px;
+        line-height: 56px;
+        color: white;
+    }
 
 .praticalinfo {
     background-color: white;
@@ -83,13 +83,13 @@ body {
     width: 100%;
 }
 
-.jumbotron-bottom h1 {
-    color: white;
-    right: 15px;
-    position: relative;
-}
+    .jumbotron-bottom h1 {
+        color: white;
+        right: 15px;
+        position: relative;
+    }
 
-.row-padding{
+.row-padding {
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -107,11 +107,12 @@ textarea {
 }
 
 #ParkJumbo {
-    background-image:url('/Images/ParkJumbo.png');
+    background-image: url('/Images/ParkJumbo.png');
 }
 
 #featured {
 }
+
 #homejumbo {
     position: relative;
     background-size: cover;
@@ -121,12 +122,22 @@ textarea {
     background-image: url('/Images/Homejumbo.png');
 }
 
+#AccessibilityJumbo {
+    position: relative;
+    background-size: cover;
+    height: 396px;
+    width: 1152px;
+    left: 0px;
+    top: 0px;
+    background-image: url('/Images/Accessibility1.png');
+}
+
 #wheretosearch {
     background: #FBDFD3;
 }
 
 /* Footer css*/
-.footer{
+.footer {
     width: 1152px;
     display: block;
     overflow: hidden;
@@ -139,7 +150,6 @@ textarea {
     height: 28px;
     left: 315px;
     top: 32px;
-
     font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 600;
@@ -156,23 +166,23 @@ textarea {
 }
 
 /* Dit is de plaatje op een positie*/
-#footer_1_4{
+#footer_1_4 {
     position: relative;
 }
 
 /* Dit zijn de social media icons*/
-.footer-icons{
+.footer-icons {
     position: absolute;
     bottom: 50px;
 }
 
-.circle-icon{
+.circle-icon {
     background: green;
     padding: 10px;
     border-radius: 100%;
 }
 
-.fa-instagram{
+.fa-instagram {
     color: white;
 }
 
@@ -194,17 +204,17 @@ textarea {
     padding-top: 15px;
 }
 
-.footer-ql a {
-    color: black;
-}
+    .footer-ql a {
+        color: black;
+    }
 
 .footer-hl {
     padding-top: 0px;
 }
 
-.footer-hl a {
-    color: black;
-}
+    .footer-hl a {
+        color: black;
+    }
 
 .pagination .page-item .page-link {
     outline: none;
@@ -215,12 +225,12 @@ textarea {
     border-color: #FBDFD3;
 }
 
-.pagination .page-item .page-link:hover {
-    z-index: 1;
-    color: #FFFFFF;
-    background-color: #EA6025;
-    border-color: #EA6025;
-}
+    .pagination .page-item .page-link:hover {
+        z-index: 1;
+        color: #FFFFFF;
+        background-color: #EA6025;
+        border-color: #EA6025;
+    }
 
 .pagination .page-item.disabled .page-link {
     z-index: 1;
@@ -232,16 +242,17 @@ textarea {
 #EventsJumbo {
     background-image: url(/Images/EventsJumbo.png)
 }
+
 .bg1 {
     background-color: #FBDFD3;
 }
 
-.bg2{
+.bg2 {
     background-color: #E1EBE9;
 }
 
 /* Footer css*/
-.footer{
+.footer {
     width: 1152px;
     display: block;
     overflow: hidden;
@@ -254,7 +265,6 @@ textarea {
     height: 28px;
     left: 315px;
     top: 32px;
-
     font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 600;
@@ -271,23 +281,23 @@ textarea {
 }
 
 /* Dit is de plaatje op een positie*/
-#footer_1_4{
+#footer_1_4 {
     position: relative;
 }
 
 /* Dit zijn de social media icons*/
-.footer-icons{
+.footer-icons {
     position: absolute;
     bottom: 50px;
 }
 
-.circle-icon{
+.circle-icon {
     background: green;
     padding: 10px;
     border-radius: 100%;
 }
 
-.fa-instagram{
+.fa-instagram {
     color: white;
 }
 
@@ -309,25 +319,25 @@ textarea {
     padding-top: 15px;
 }
 
-.footer-ql a {
-    color: black;
-}
+    .footer-ql a {
+        color: black;
+    }
 
 .footer-hl {
     padding-top: 0px;
 }
 
-.footer-hl a {
-    color: black;
-}
+    .footer-hl a {
+        color: black;
+    }
 
 /* nav bar*/
 
-.navbar{
+.navbar {
     padding: 1rem;
 }
 
-.navbar-nav li{
+.navbar-nav li {
     padding-right: 20px;
 }
 
@@ -342,9 +352,10 @@ ul {
 }
 
 
-ul li:hover:not(.active) {
-    background: #D80B15;
-}
+    ul li:hover:not(.active) {
+        background: #D80B15;
+    }
+
 .search-box {
     background: #E8E8E4;
     position: absolute;
@@ -358,43 +369,43 @@ ul li:hover:not(.active) {
     display: none;
 }
 
-.search-box:before {
-    content: "";
-    position: absolute;
-    top: -32px;
-    right: 13px;
-    border-left: 12px solid transparent;
-    border-right: 12px solid transparent;
-    border-top: 14px solid transparent;
-    border-bottom: 14px solid #D80B15;
-}
+    .search-box:before {
+        content: "";
+        position: absolute;
+        top: -32px;
+        right: 13px;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-top: 14px solid transparent;
+        border-bottom: 14px solid #D80B15;
+    }
 
-.search-box input[type="text"] {
-    width: 200px;
-    padding: 5px 10px;
-    margin-left: 23px;
-    border: 1px solid #D80B15;
-    outline: none;
-}
+    .search-box input[type="text"] {
+        width: 200px;
+        padding: 5px 10px;
+        margin-left: 23px;
+        border: 1px solid #D80B15;
+        outline: none;
+    }
 
-.search-box input[type="button"] {
-    width: 80px;
-    padding: 5px 0;
-    background: #D80B15;
-    color: #fff;
-    margin-left: -6px;
-    border: 1px solid #D80B15;
-    outline: none;
-    cursor: pointer;
-}
+    .search-box input[type="button"] {
+        width: 80px;
+        padding: 5px 0;
+        background: #D80B15;
+        color: #fff;
+        margin-left: -6px;
+        border: 1px solid #D80B15;
+        outline: none;
+        cursor: pointer;
+    }
 
-.circle-icon{
+.circle-icon {
     background: green;
     padding: 10px;
     border-radius: 100%;
 }
 
-.fa-instagram{
+.fa-instagram {
     color: white;
 }
 
@@ -416,44 +427,44 @@ ul li:hover:not(.active) {
     padding-top: 15px;
 }
 
-.footer-ql a {
-    color: black;
-}
+    .footer-ql a {
+        color: black;
+    }
 
 .footer-hl {
     padding-top: 0px;
 }
 
-.footer-hl a {
-    color: black;
-}
+    .footer-hl a {
+        color: black;
+    }
 
 /*Content Pagina*/
 
-.autoJumboTron{
+.autoJumboTron {
     position: relative;
     height: 329px;
     left: 0px;
     top: 0px;
 }
 
-.autoJumboTron h1{
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 48px;
-    line-height: 56px;
-    color: white;
-}
+    .autoJumboTron h1 {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 56px;
+        color: white;
+    }
 
-.autoJumboTron-bottom{
+.autoJumboTron-bottom {
     position: absolute;
     bottom: 25px;
     left: 32px;
     width: 90%;
 }
 
-#autojumbo{
+#autojumbo {
     background-image: url('/Images/AutoJumboTron.png');
 }
 
@@ -461,43 +472,55 @@ ul li:hover:not(.active) {
     color: #00694C;
 }
 
- /* Style the list */
+/* Style the list */
 
 ul.breadcrumb {
-  padding: 10px 16px;
-  list-style: none;
-  background-color: white;
+    padding: 10px 16px;
+    list-style: none;
+    background-color: white;
 }
 
-/* Display list items side by side */
-ul.breadcrumb li {
-  display: inline;
-  font-size: 14px;
-}
+    /* Display list items side by side */
+    ul.breadcrumb li {
+        display: inline;
+        font-size: 14px;
+    }
 
-/* Add a slash symbol (/) before/behind each list item */
-ul.breadcrumb li + li:before {
-  padding: 8px;
-  color: #CEDBD8;
-  content: "/\00a0";
-}
+        /* Add a slash symbol (/) before/behind each list item */
+        ul.breadcrumb li + li:before {
+            padding: 8px;
+            color: #CEDBD8;
+            content: "/\00a0";
+        }
 
-/* Add a color to all links inside the list */
-ul.breadcrumb li a {
-  color: #0275d8;
-  text-decoration: none;
-}
+        /* Add a color to all links inside the list */
+        ul.breadcrumb li a {
+            color: #0275d8;
+            text-decoration: none;
+        }
 
-/* Add a color on mouse-over */
-ul.breadcrumb li a:hover {
-  color: #01447e;
-  text-decoration: underline;
-} 
+            /* Add a color on mouse-over */
+            ul.breadcrumb li a:hover {
+                color: #01447e;
+                text-decoration: underline;
+            }
 
 .card {
     background-color: white;
     padding: 20px;
     margin-top: 20px;
+}
+
+.cardnopadding {
+    background-color: white;
+    color: black;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
+.cardnopadding:hover {
+    background-color: #EA6025;
+    color: white;
 }
 
 .container show {
@@ -533,9 +556,31 @@ ul.breadcrumb li a:hover {
     cursor: pointer; /* Mouse pointer on hover */
 }
 
-.btn:hover {
-    background-color: green;
-    color: white;
+    .btn:hover {
+        background-color: green;
+        color: white;
+    }
+
+.btn2 {
+    background-color: #E1EBE9;
+    border: none;
+    color: #36454E;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 400px;
+    height: 72px;
+}
+
+    .btn2:hover {
+        text-decoration-line: underline;
+    }
+
+.btn2-primary:focus {
+    background: white;
+    color: black;
+    border: none;
+    font-weight: bold;
 }
 
 .img-wrapper {
@@ -562,3 +607,18 @@ ul.breadcrumb li a:hover {
         height: 50%;
     }
 
+.facilities {
+    background-color: #E1EBE9;
+    text-align: left;
+    border: none;
+    width: 400px;
+    height: 72px;
+    border-radius: 4px;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.carousel-inner {
+    width: 653px;
+    height: 484px;
+}
