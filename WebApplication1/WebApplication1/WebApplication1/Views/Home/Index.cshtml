@@ -4,7 +4,46 @@
 
 <script>
     $(document).ready(function () {
-
+        $("#Arrow1").click(function (e) {
+            e.preventDefault();
+            if ($(this).attr('aria-expanded') == 'false') {
+                $("#A1").removeClass("fa fa-angle-down");
+                $("#A1").addClass("fa fa-angle-up");
+            } else if ($(this).attr('aria-expanded') == 'true') {
+                $("#A1").removeClass("fa fa-angle-up");
+                $("#A1").addClass("fa fa-angle-down");
+            }
+        });
+        $("#Arrow2").click(function (e) {
+            e.preventDefault();
+            if ($(this).attr('aria-expanded') == 'false') {
+                $("#A2").removeClass("fa fa-angle-down");
+                $("#A2").addClass("fa fa-angle-up");
+            } else if ($(this).attr('aria-expanded') == 'true') {
+                $("#A2").removeClass("fa fa-angle-up");
+                $("#A2").addClass("fa fa-angle-down");
+            }
+        });
+        $("#Arrow3").click(function (e) {
+            e.preventDefault();
+            if ($(this).attr('aria-expanded') == 'false') {
+                $("#A3").removeClass("fa fa-angle-down");
+                $("#A3").addClass("fa fa-angle-up");
+            } else if ($(this).attr('aria-expanded') == 'true') {
+                $("#A3").removeClass("fa fa-angle-up");
+                $("#A3").addClass("fa fa-angle-down");
+            }
+        });
+        $("#Arrow4").click(function (e) {
+            e.preventDefault();
+            if ($(this).attr('aria-expanded') == 'false') {
+                $("#A4").removeClass("fa fa-angle-down");
+                $("#A4").addClass("fa fa-angle-up");
+            } else if ($(this).attr('aria-expanded') == 'true') {
+                $("#A4").removeClass("fa fa-angle-up");
+                $("#A4").addClass("fa fa-angle-down");
+            }
+        });
     })
 </script>
 <div class="container">
@@ -64,7 +103,7 @@
 <div class="container">
     <div class="row row-padding" id="wheretosearch">
         <div class="col-md-12">
-            <h3>Hoe bent u van plan naar Keukenhof te reizen?</h3>
+            <h3>Waar bent u naar op zoek?</h3>
         </div>
         <div class="col-md-3">
             <div class="cardnopadding">
@@ -142,7 +181,7 @@
             <h2>Praktische informatie</h2>
             <div>
                 <p class="float-left">Download de kaart of krijg er een bij de informatiebalie</p>
-                <a href="#" class="justify-content-end float-right text-dark font-weight-bold text-decoration-none">Veel gestelde vragen<i class="fa fa-arrow-right ml-1 text-warning"></i> </a></br>
+                <a href="#" class="justify-content-end float-right text-dark font-weight-bold text-decoration-none">Meer praktische informatie<i class="fa fa-arrow-right ml-1 text-warning"></i> </a></br>
             </div>
         </div>
         <div class="col-md-6">
@@ -204,12 +243,12 @@
                 <div class="card">
                     <div id="headingThree">
                         <h5 class="mb-0">
-                            <div data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="Arrow3">
-                                Groepen<i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A3"></i>
+                            <div data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" id="Arrow4">
+                                Groepen<i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A4"></i>
                             </div>
                         </h5>
                     </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
                         <div class="card-body">
                             Het vliegtuig Harry Hatseflats vertrekt over 10 minuten uw piloot Harry zal u pinda's en chips aanbieden als versnapering tijdens de vlugt, wij gaan zo een salto doen om te testen of dit kan en of dit leuk is, bedankt voor uw begrip.
                         </div>
@@ -224,7 +263,7 @@
         <a href="#" class="justify-content-end float-right text-dark font-weight-bold text-decoration-none">Bekijk alle<i class="fa fa-arrow-right ml-1 text-warning"></i> </a></br>
     <div class="row mt-3">
         <div class="col-sm-3">
-            <div class="card">
+            <div class="cardnopadding">
                 <img src="~/Images/ev1.png" class="card-img-top">
                 <div class="card-body">
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
@@ -234,7 +273,7 @@
             </div>
         </div>
         <div class="col-sm-3">
-            <div class="card">
+            <div class="cardnopadding">
                 <img src="~/Images/ev2.png" class="card-img-top">
                 <div class="card-body">
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
@@ -244,7 +283,7 @@
             </div>
         </div>
         <div class="col-sm-3">
-            <div class="card">
+            <div class="cardnopadding">
                 <img src="~/Images/ev3.png" class="card-img-top">
                 <div class="card-body">
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
@@ -254,7 +293,7 @@
             </div>
         </div>
         <div class="col-sm-3">
-            <div class="card">
+            <div class="cardnopadding">
                 <img src="~/Images/ev4.png" class="card-img-top">
                 <div class="card-body">
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
@@ -265,25 +304,21 @@
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="row row-padding" style="background-color: #E1EBE9;">
-        <div class="col-md-12">
-            <div class="card">
-                <a asp-area="" asp-controller="HetPark" asp-action="Index" class="card-link text-dark text-decoration-none">
-                    <img src="/Images/Groepen.png" class="card-img-top" alt="Bereikbaarheid">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-11">
-                                <h4><b class="card-title">Groepen</b></h4>
-                            </div>
-                            <div class="col-md-1 text-lg-right">
-                                <i class="fas fa-arrow-right text-success"></i>
-                            </div>
-                        </div>
+<div class="container bg2 py-4">
+    <div class="cardnopadding">
+        <img class="card-img-top" src="~/Images/Praktisch6.png" alt="Card image cap">
+        <a class="text-decoration-none" href="#">
+            <div class="card-body" id="cards">
+                <div class="row">
+                    <div class="col-md-11">
+                        <h5 class="card-title">Groepen</h5>
                     </div>
-                </a>
+                    <div class="col-md-1 text-lg-right">
+                        <i class="fas fa-arrow-right text-success"></i>
+                    </div>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
 </div>
 <div class="container bg1 py-4" id="featured">
