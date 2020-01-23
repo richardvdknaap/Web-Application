@@ -9,19 +9,79 @@
             $(".selecting").parent().removeClass("active");
             $(this).parent().addClass("active");
         });
+        $("#f1").click(function (e) {
+            e.preventDefault();
+            $("#img1").removeClass("d-none");
+            $("#img2").addClass("d-none");
+            $("#img3").addClass("d-none");
+            $("#img4").addClass("d-none");
+            $("#img5").addClass("d-none");
+            $("#img6").addClass("d-none");
+        });
+        $("#f2").click(function (e) {
+            e.preventDefault();
+            $("#img1").addClass("d-none");
+            $("#img2").removeClass("d-none");
+            $("#img3").addClass("d-none");
+            $("#img4").addClass("d-none");
+            $("#img5").addClass("d-none");
+            $("#img6").addClass("d-none");
+        });
+        $("#f3").click(function (e) {
+            e.preventDefault();
+            $("#img1").addClass("d-none");
+            $("#img2").addClass("d-none");
+            $("#img3").removeClass("d-none");
+            $("#img4").addClass("d-none");
+            $("#img5").addClass("d-none");
+            $("#img6").addClass("d-none");
+        });
+        $("#f4").click(function (e) {
+            e.preventDefault();
+            $("#img1").addClass("d-none");
+            $("#img2").addClass("d-none");
+            $("#img3").addClass("d-none");
+            $("#img4").removeClass("d-none");
+            $("#img5").addClass("d-none");
+            $("#img6").addClass("d-none");
+        });
+        $("#f5").click(function (e) {
+            e.preventDefault();
+            $("#img1").addClass("d-none");
+            $("#img2").addClass("d-none");
+            $("#img3").addClass("d-none");
+            $("#img4").addClass("d-none");
+            $("#img5").removeClass("d-none");
+            $("#img6").addClass("d-none");
+        });
+        $("#f6").click(function (e) {
+            e.preventDefault();
+            $("#img1").addClass("d-none");
+            $("#img2").addClass("d-none");
+            $("#img3").addClass("d-none");
+            $("#img4").addClass("d-none");
+            $("#img5").addClass("d-none");
+            $("#img6").removeClass("d-none");
+        });
     });
 </script>
 
 <div class="jumbotron" id="ParkJumbo">
 </div>
-<div class="container" id="head">
+
+
+
+<div class="containerpractical" id="head">
     <h1>Praktische informatie</h1>
     <div class="row">
         <p class="col-sm-6 text-dark">In 2020 is Keukenhof open van 21 maart tot en met 10 mei tussen 9:00-17:00 uur.</p>
         <p class="col-sm-6 text-dark">In alle rust genieten van Keukenhof? Voor 10:30 uur en na 16:00 uur is het minder druk.</p>
     </div>
-    <p><a href="https://asp.net" class="btn btn-outline-success">Bekijk Video</a></p>
+    <p><a href="https://asp.net" class="btn btn-outline-success"><b>Bekijk Video</b></a></p>
 </div>
+
+
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
@@ -49,7 +109,7 @@
             <h2>Praktische informatie</h2>
             <div>
                 <p class="float-left">Download de kaart of krijg er een bij de informatiebalie</p>
-                <a href="#" class="d-flex flex-row-reverse text-dark text-decoration-none"><i class="fa fa-arrow-right"></i> Veel gestelde vragen </a>
+                <a href="#" class="justify-content-end float-right text-dark font-weight-bold text-decoration-none">Veel gestelde vragen<i class="fa fa-arrow-right ml-1 text-warning"></i> </a></br>
             </div>
         </div>
         <div class="col-md-6">
@@ -59,18 +119,18 @@
                     <button class="btn btn-md btn-success"><i class="fa fa-download" aria-hidden="true"></i> Download de kaart</button>
                 </div>
             </div>
-            </div>
+        </div>
 
 
 
         <div class="col-md-6">
             <div id="accordion">
                 <div class="card">
-                    <div class="card-header" id="headingOne">
+                    <div id="headingOne">
                         <h5 class="mb-0">
-                            <button data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                Ik heb online een Parkgids besteld, waar kan ik die ophalen?
-                            </button>
+                            <div data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                Ik heb online een Parkgids besteld, waar kan ik die ophalen? <i class="fa fa-angle-down float-lg-right" aria-hidden="true"></i>
+                            </div>
                         </h5>
                     </div>
 
@@ -81,11 +141,11 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header" id="headingTwo">
+                    <div id="headingTwo">
                         <h5 class="mb-0">
-                            <button data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Waar kan ik entree tickets kopen?
-                            </button>
+                            <div data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Waar kan ik entree tickets kopen?<i class="fa fa-angle-down float-lg-right" aria-hidden="true"></i>
+                            </div>
                         </h5>
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
@@ -95,11 +155,11 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header" id="headingThree">
+                    <div id="headingThree">
                         <h5 class="mb-0">
-                            <button data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Hoe lang is mijn entreeticket geldig?
-                            </button>
+                            <div data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Hoe lang is mijn entreeticket geldig?<i class="fa fa-angle-down float-lg-right" aria-hidden="true"></i>
+                            </div>
                         </h5>
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
@@ -110,6 +170,7 @@
                 </div>
             </div>
         </div>
+    </div>
 </div>
 
 
@@ -120,94 +181,155 @@
             <h3>Hoe bent u van plan naar Keukenhof te reizen?</h3>
         </div>
         <div class="col-md-3">
-            <div class="card">
+            <div class="cardnopadding">
                 <img src="/Images/Praktisch1.png" class="card-img-top" alt="Openbaar vervoer">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-10">
-                            <h5 class="card-title">Openbaar vervoer</h5>
-                        </div>
-                        <div class="col-md-2 text-lg-right">
-                            <i class="fas fa-arrow-right text-success"></i>
+                <a class="text-decoration-none" href="#">
+                    <div class="card-body" id="cards">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <h5 class="card-title">Openbaar vervoer</h5>
+                            </div>
+                            <div class="col-md-2 text-lg-right">
+                                <i class="fas fa-arrow-right text-success"></i>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
         <div class="col-md-3">
-            <div class="card">
+            <div class="cardnopadding">
                 <img src="/Images/Praktisch2.png" class="card-img-top" alt="Combotickets">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-10">
-                            <h5 class="card-title">Combotickets</h5>
-                        </div>
-                        <div class="col-md-2 text-lg-right">
-                            <i class="fas fa-arrow-right text-success"></i>
+                <a class="text-decoration-none" href="#">
+                    <div class="card-body" id="cards">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <h5 class="card-title">Combotickets</h5>
+                            </div>
+                            <div class="col-md-2 text-lg-right">
+                                <i class="fas fa-arrow-right text-success"></i>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
         <div class="col-md-3">
-            <div class="card">
+            <div class="cardnopadding">
                 <img src="/Images/Praktisch3.png" class="card-img-top" alt="Eigen vervoer">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-10">
-                            <h5 class="card-title">Eigen vervoer</h5>
-                        </div>
-                        <div class="col-md-2 text-lg-right">
-                            <i class="fas fa-arrow-right text-success"></i>
+                <a class="text-decoration-none" href="#">
+                    <div class="card-body" id="cards">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <h5 class="card-title">Eigen vervoer</h5>
+                            </div>
+                            <div class="col-md-2 text-lg-right">
+                                <i class="fas fa-arrow-right text-success"></i>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
         <div class="col-md-3">
-            <div class="card">
+            <div class="cardnopadding">
                 <img src="/Images/Praktisch4.png" class="card-img-top" alt="Groepen">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-10">
-                            <h5 class="card-title">Groepen</h5>
-                        </div>
-                        <div class="col-md-2 text-lg-right">
-                            <i class="fas fa-arrow-right text-success"></i>
+                <a class="text-decoration-none" href="#">
+                    <div class="card-body" id="cards">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <h5 class="card-title">Groepen</h5>
+                            </div>
+                            <div class="col-md-2 text-lg-right">
+                                <i class="fas fa-arrow-right text-success"></i>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
 </div>
+
+
+
 <div class="container">
     <div class="row row-padding" style="background-color: #E1EBE9">
         <div class="col-md-12">
             <h2>Voorzieningen</h2>
         </div>
-        <div class="col-md-4">
-            <div class="praticalinfo"><img src="/Images/Facilities icon 1.png" />Wi-Fi</div>
-            <div class="praticalinfo"><img src="/Images/Facilities icon 2.png" />Lockers</div>
-            <div class="praticalinfo"><img src="/Images/Facilities icon 3.png" />Honden in het park</div>
-            <div class="praticalinfo"><img src="/Images/Facilities icon 4.png" />Toegankelijkheid</div>
-            <div class="praticalinfo"><img src="/Images/Facilities icon 5.png" />Fiets huren</div>
-            <div class="praticalinfo"><img src="/Images/Facilities icon 6.png" />Gevonden voorwerpen</div>
+        <div class="facilities col-md-5">
+            <button class="facilities btn2 btn2-primary" id="f1"><img src="/Images/Facilities icon 1.png" /> Wi-Fi</button>
+            <button class="facilities btn2 btn2-primary" id="f2"><img src="/Images/Facilities icon 2.png" /> Lockers</button>
+            <button class="facilities btn2 btn2-primary" id="f3"><img src="/Images/Facilities icon 3.png" /> Honden in het park</button>
+            <button class="facilities btn2 btn2-primary" id="f4"><img src="/Images/Facilities icon 4.png" /> Toegankelijkheid</button>
+            <button class="facilities btn2 btn2-primary" id="f5"><img src="/Images/Facilities icon 5.png" /> Fiets huren</button>
+            <button class="facilities btn2 btn2-primary" id="f6"><img src="/Images/Facilities icon 6.png" /> Gevonden voorwerpen</button>
         </div>
-        <div class="col-md-8">
-            <img src="/Images/Praktisch5.png" />
-            <div class="praticalinfo">
-                Ons park is goed toegankelijk voor rolstoelen en scootmobiels en is ruim voorzien van aangepaste toiletten.
-                <i class="fas fa-arrow-right text-success"></i>
-            </div>
+        <div class="col-md-7" id="img1">
+            <a class="text-dark text-decoration-none float-right" href="#">
+                <img src="/Images/Praktisch5.png" style="width:653px; height:396px">
+                <div class="praticalinfo">
+                    Ons park is goed toegankelijk voor rolstoelen en scootmobiels en is ruim voorzien van aangepaste toiletten.
+                    <i class="fas fa-arrow-right text-success"></i>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-7 d-none" id="img2">
+            <a class="text-dark text-decoration-none float-right" href="#">
+                <img src="/Images/Praktisch2.png" style="width:653px; height:396px">
+                <div class="praticalinfo">
+                    Ik ben een test
+                    <i class="fas fa-arrow-right text-success"></i>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-7 d-none" id="img3">
+            <a class="text-dark text-decoration-none float-right" href="#">
+                <img src="/Images/Praktisch3.png" style="width:653px; height:396px">
+                <div class="praticalinfo">
+                    Ik ben ook een test
+                    <i class="fas fa-arrow-right text-success"></i>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-7 d-none" id="img4">
+            <a class="text-dark text-decoration-none float-right" href="#">
+                <img src="/Images/Praktisch4.png" style="width:653px; height:396px">
+                <div class="praticalinfo">
+                    Waarom discrimineer jij
+                    <i class="fas fa-arrow-right text-success"></i>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-7 d-none" id="img5">
+            <a class="text-dark text-decoration-none float-right" href="#">
+                <img src="/Images/Praktisch5.png" style="width:653px; height:396px">
+                <div class="praticalinfo">
+                    Hatseflats
+                    <i class="fas fa-arrow-right text-success"></i>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-7 d-none" id="img6">
+            <a class="text-dark text-decoration-none float-right" href="#">
+                <img src="/Images/Praktisch6.png" style="width:653px; height:396px">
+                <div class="praticalinfo">
+                    Pizza
+                    <i class="fas fa-arrow-right text-success"></i>
+                </div>
+            </a>
         </div>
     </div>
 </div>
+
+
+
 <div class="container bg2 py-4">
-    <div class="card">
+    <div class="cardnopadding">
         <img class="card-img-top" src="~/Images/Praktisch6.png" alt="Card image cap">
-        <div class="card-body">
-            <a class="text-dark text-decoration-none" href="#">
+        <a class="text-decoration-none" href="#">
+        <div class="card-body" id="cards">
                 <div class="row">
                     <div class="col-md-11">
                         <h5 class="card-title">Groepen</h5>
@@ -216,7 +338,7 @@
                         <i class="fas fa-arrow-right text-success"></i>
                     </div>
                 </div>
-            </a>
         </div>
+            </a>
     </div>
 </div>
