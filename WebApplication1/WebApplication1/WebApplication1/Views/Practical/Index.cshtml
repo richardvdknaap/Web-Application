@@ -63,6 +63,36 @@
             $("#img5").addClass("d-none");
             $("#img6").removeClass("d-none");
         });
+        $("#Arrow1").click(function (e) {
+            e.preventDefault();
+            if ($(this).attr('aria-expanded') == 'false') {
+                $("#A1").removeClass("fa fa-angle-down");
+                $("#A1").addClass("fa fa-angle-up");
+            } else if ($(this).attr('aria-expanded') == 'true') {
+                $("#A1").removeClass("fa fa-angle-up");
+                $("#A1").addClass("fa fa-angle-down");
+            }
+        });
+        $("#Arrow2").click(function (e) {
+            e.preventDefault();
+            if ($(this).attr('aria-expanded') == 'false') {
+                $("#A2").removeClass("fa fa-angle-down");
+                $("#A2").addClass("fa fa-angle-up");
+            } else if ($(this).attr('aria-expanded') == 'true') {
+                $("#A2").removeClass("fa fa-angle-up");
+                $("#A2").addClass("fa fa-angle-down");
+            }
+        });
+        $("#Arrow3").click(function (e) {
+            e.preventDefault();
+            if ($(this).attr('aria-expanded') == 'false') {
+                $("#A3").removeClass("fa fa-angle-down");
+                $("#A3").addClass("fa fa-angle-up");
+            } else if ($(this).attr('aria-expanded') == 'true') {
+                $("#A3").removeClass("fa fa-angle-up");
+                $("#A3").addClass("fa fa-angle-down");
+            }
+        });
     });
 </script>
 
@@ -128,8 +158,8 @@
                 <div class="card">
                     <div id="headingOne">
                         <h5 class="mb-0">
-                            <div data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                Ik heb online een Parkgids besteld, waar kan ik die ophalen? <i class="fa fa-angle-down float-lg-right" aria-hidden="true"></i>
+                            <div data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" id="Arrow1">
+                                Ik heb online een Parkgids besteld, waar kan ik die ophalen? <i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A1" style="line-height:0"></i>
                             </div>
                         </h5>
                     </div>
@@ -143,8 +173,8 @@
                 <div class="card">
                     <div id="headingTwo">
                         <h5 class="mb-0">
-                            <div data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Waar kan ik entree tickets kopen?<i class="fa fa-angle-down float-lg-right" aria-hidden="true"></i>
+                            <div data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="Arrow2">
+                                Waar kan ik entree tickets kopen?<i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A2"></i>
                             </div>
                         </h5>
                     </div>
@@ -157,8 +187,8 @@
                 <div class="card">
                     <div id="headingThree">
                         <h5 class="mb-0">
-                            <div data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Hoe lang is mijn entreeticket geldig?<i class="fa fa-angle-down float-lg-right" aria-hidden="true"></i>
+                            <div data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="Arrow3">
+                                Hoe lang is mijn entreeticket geldig?<i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A3"></i>
                             </div>
                         </h5>
                     </div>
@@ -268,6 +298,33 @@
         </div>
         <div class="col-md-7" id="img1">
             <a class="text-dark text-decoration-none float-right" href="#">
+                <img src="/Images/Praktisch6.png" style="width:653px; height:396px">
+                <div class="praticalinfo">
+                    Testertekst1
+                    <i class="fas fa-arrow-right text-success"></i>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-7 d-none" id="img2">
+            <a class="text-dark text-decoration-none float-right" href="#">
+                <img src="/Images/Praktisch6.png" style="width:653px; height:396px">
+                <div class="praticalinfo">
+                    Testertekst2
+                    <i class="fas fa-arrow-right text-success"></i>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-7 d-none" id="img3">
+            <a class="text-dark text-decoration-none float-right" href="#">
+                <img src="/Images/Praktisch6.png" style="width:653px; height:396px">
+                <div class="praticalinfo">
+                    Testertekst3
+                    <i class="fas fa-arrow-right text-success"></i>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-7 d-none" id="img4">
+            <a class="text-dark text-decoration-none float-right" href="#">
                 <img src="/Images/Praktisch5.png" style="width:653px; height:396px">
                 <div class="praticalinfo">
                     Ons park is goed toegankelijk voor rolstoelen en scootmobiels en is ruim voorzien van aangepaste toiletten.
@@ -275,38 +332,11 @@
                 </div>
             </a>
         </div>
-        <div class="col-md-7 d-none" id="img2">
-            <a class="text-dark text-decoration-none float-right" href="#">
-                <img src="/Images/Praktisch2.png" style="width:653px; height:396px">
-                <div class="praticalinfo">
-                    Ik ben een test
-                    <i class="fas fa-arrow-right text-success"></i>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-7 d-none" id="img3">
-            <a class="text-dark text-decoration-none float-right" href="#">
-                <img src="/Images/Praktisch3.png" style="width:653px; height:396px">
-                <div class="praticalinfo">
-                    Ik ben ook een test
-                    <i class="fas fa-arrow-right text-success"></i>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-7 d-none" id="img4">
-            <a class="text-dark text-decoration-none float-right" href="#">
-                <img src="/Images/Praktisch4.png" style="width:653px; height:396px">
-                <div class="praticalinfo">
-                    Waarom discrimineer jij
-                    <i class="fas fa-arrow-right text-success"></i>
-                </div>
-            </a>
-        </div>
         <div class="col-md-7 d-none" id="img5">
             <a class="text-dark text-decoration-none float-right" href="#">
-                <img src="/Images/Praktisch5.png" style="width:653px; height:396px">
+                <img src="/Images/Praktisch6.png" style="width:653px; height:396px">
                 <div class="praticalinfo">
-                    Hatseflats
+                    Testertekst5
                     <i class="fas fa-arrow-right text-success"></i>
                 </div>
             </a>
@@ -315,7 +345,7 @@
             <a class="text-dark text-decoration-none float-right" href="#">
                 <img src="/Images/Praktisch6.png" style="width:653px; height:396px">
                 <div class="praticalinfo">
-                    Pizza
+                    Testertekst5
                     <i class="fas fa-arrow-right text-success"></i>
                 </div>
             </a>
