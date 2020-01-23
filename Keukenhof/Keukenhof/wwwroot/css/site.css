@@ -518,9 +518,8 @@ ul.breadcrumb {
     margin-top: 20px;
 }
 
-.cardnopadding:hover {
+#cards:hover {
     background-color: #EA6025;
-    color: white;
 }
 
 .container show {
@@ -549,8 +548,7 @@ ul.breadcrumb {
 
 .btn {
     background-color: white; /* Blue background */
-    border: none; /* Remove borders */
-    color: green; /* White text */
+    color: black; /* White text */
     padding: 12px 16px; /* Some padding */
     font-size: 16px; /* Set a font size */
     cursor: pointer; /* Mouse pointer on hover */
@@ -575,6 +573,28 @@ ul.breadcrumb {
     .btn2:hover {
         text-decoration-line: underline;
     }
+
+.btn2-primary:focus {
+    background: white;
+    color: black;
+    border: none;
+    font-weight: bold;
+}
+
+.btn2 {
+    background-color: #E1EBE9;
+    border: none;
+    color: #36454E;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 400px;
+    height: 72px;
+}
+
+.btn2:hover{
+    text-decoration-line: underline;
+}
 
 .btn2-primary:focus {
     background: white;
@@ -618,7 +638,8 @@ ul.breadcrumb {
     margin-bottom: 15px;
 }
 
-.carousel-inner {
-    width: 653px;
-    height: 484px;
+
+#navbarText{
+    flex-grow: 0;
 }
+
