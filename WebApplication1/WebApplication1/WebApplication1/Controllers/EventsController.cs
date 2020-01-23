@@ -4,9 +4,10 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Keukenhof.Models;
+using WebApplication1.Models;
 
-namespace Keukenhof.Controllers
+
+namespace WebApplication1.Controllers
 {
     public class EventsController : Controller
     {
