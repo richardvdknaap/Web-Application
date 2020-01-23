@@ -1,0 +1,169 @@
+﻿@{
+    ViewBag.Title = "Accessibility";
+}
+
+<script>
+    $(document).ready(function () {
+        $(".selecting").click(function (e) {
+            e.preventDefault();
+            $(".selecting").parent().removeClass("active");
+            $(this).parent().addClass("active");
+        });
+    });
+</script>
+
+<div class="jumbotron" id="AccessibilityJumbo">
+</div>
+<div class="container" id="head">
+    <h1>Bereikbaarheid</h1>
+    <div class="row">
+        <p class="col-sm-6 text-dark">Voorkom drukte voor het parkeren met de auto en geniet van het gemak wanneer u kiest voor de bus!</p>
+        <p class="col-sm-6 text-dark">Tijdens de dagen dat Keukenhof geopend is, rijden er extra bussen van Arriva vanaf verschillende treinstations en steden naar Keukenhof!</p>
+    </div>
+    <p><a href="https://asp.net" class="btn btn-outline-success">Reisplanner</a></p>
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link selecting" href="#">Openbaar vervoer</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link selecting" href="#">Eigen vervoer</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link selecting" href="#">Georganiseerde reis</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<div class="praticalinfo" id="head">
+    <h1>Openbaar Vervoer</h1>
+    <div class="row">
+        <p class="col-sm-12 text-dark">Met het OV reis je snel en comfortabel naar Keukenhof. Reis eerst naar een van de vertreklocaties (departure locations) en neem vanaf daar de rechtstreekse bus van Arriva naar Keukenhof. We adviseren om 9292 te raadplegen tot aan één van onderstaande stations die het dichts bij jou in de buurt. Bekijk hoe er het snelst gereisd kan worden naar Keukenhof via de Arriva Reisplanner als u vanuit Amsterdam komt, raadpleeg anders 9292OV tot en met Amsterdam, Leiden of Haarlem</p>
+    </div>
+</div>
+
+<div class="container bg2 py-4">
+    <div class="cardnopadding">
+        <img class="card-img-top" src="~/Images/Accessibility3.png" alt="Card image cap">
+        <div class="card-body">
+            <a class="text-dark text-decoration-none" href="#">
+                <div class="row">
+                    <div class="col-md-11">
+                        <h5 class="card-title">Download een overzicht met de verschillende bus-, trein-, tram- en metrolijnen</h5>
+                    </div>
+                    <div class="col-md-1 text-lg-right">
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container bg2 py-4">
+    <div class="cardnopadding">
+        <img class="card-img-top" src="~/Images/Accessibility2.png" alt="Card image cap">
+        <div class="card-body">
+            <a class="text-dark text-decoration-none" href="#">
+                <div class="row">
+                    <div class="col-md-11">
+                        <h5 class="card-title">Hoe kunt u het best reizen?</h5>
+                    </div>
+                    <div class="col-md-1 text-lg-right">
+                        <i class="fas fa-arrow-right text-success"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="praticalinfo" id="head">
+    <h1>Eigen vervoer</h1>
+    <div class="row">
+        <p class="col-sm-12 text-dark">Op drukke dagen raden wij aan gebruik te maken van het Openbaar Vervoer, maar uiteraard kunt u ook met de auto, motor, fiets of scooter naar Keukenhof komen. Er zijn genoeg parkeerplekken voor alle vervoersmiddelen. Keukenhof ligt tussen Amsterdam en Den Haag en is gemakkelijk te bereiken via de A4 (afslag Nieuw-Vennep) en de A44 (afslag 3 Lisse).</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row row-padding" style="background-color: #E1EBE9">
+        <div class="col-md-6">
+            <div class="img-wrapper">
+                <img class="img-responsive" src="/Images/Accessibility4.png">
+            </div>
+        </div>
+
+
+
+        <div class="col-md-6">
+            <div id="accordion">
+                <div class="card">
+                    <div id="headingOne">
+                        <h5 class="mb-0">
+                            <div data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                Parkeren van de auto, fiets of scooter <i class="fa fa-angle-down float-lg-right" aria-hidden="true"></i>
+                            </div>
+                        </h5>
+                    </div>
+
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            Bij het park is er voldoende parkeergelegenehid voor auto's en motors. Ook is er is een fietsenstalling bij beide ingangen van het park. Je kunt je fiets of scooter hier gratis parkeren.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div id="headingTwo">
+                        <h5 class="mb-0">
+                            <div data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Oplaadpunten voor electrische auto's of fietsen<i class="fa fa-angle-down float-lg-right" aria-hidden="true"></i>
+                            </div>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            Kijk naar mij ik ben een lange tekst om deze accordion die geen muziek kan afspelen te testen
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div id="headingThree">
+                        <h5 class="mb-0">
+                            <div data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Mag ik in het park fietsen en zijn ze te huur?<i class="fa fa-angle-down float-lg-right" aria-hidden="true"></i>
+                            </div>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            Het vliegtuig Harry Hatseflats vertrekt over 10 minuten uw piloot Harry zal u pinda's en chips aanbieden als versnapering tijdens de vlugt, wij gaan zo een salto doen om te testen of dit kan en of dit leuk is, bedankt voor uw begrip.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container bg2 py-4">
+    <div class="cardnopadding">
+        <img class="card-img-top" src="~/Images/Praktisch6.png" alt="Card image cap">
+        <div class="card-body">
+            <a class="text-dark text-decoration-none" href="#">
+                <div class="row">
+                    <div class="col-md-11">
+                        <h5 class="card-title">Groepen</h5>
+                    </div>
+                    <div class="col-md-1 text-lg-right">
+                        <i class="fas fa-arrow-right text-success"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

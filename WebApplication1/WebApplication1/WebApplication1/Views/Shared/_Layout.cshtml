@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Keukenhof</title>
+    <script src="https://kit.fontawesome.com/185266b104.js" crossorigin="anonymous"></script>
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+    <nav class="navbar navbar-expand-md navbar-light sticky-top">
+        <div class="container-fluid container-md">
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand" ><img src="/Images/image.png" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a asp-area="" asp-controller="HetPark" asp-action="Index" class="nav-link">Het park</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-area="" asp-controller="Info" asp-action="Index" class="nav-link">Praktisch</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-area="" asp-controller="Info" asp-action="Index" class="nav-link">Veelgestelde vragen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-area="" asp-controller="HetPark" asp-action="Index" class="nav-link">Bereikbaarheid</a>
+                    </li>
+                    <li class="active">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <div class="search-box">
+                            <input type="text" placeholder="" />
+                            <input type="button" value="Zoeken" />
+                        </div>
+                    </li>
+                </ul>
+                @await Html.PartialAsync("_LoginPartial")
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3" id="footer-1_4">
+                        <img src=" /Images/image.png" /> <br />
+                        <div class="footer-icons">
+                            <i class="fab fa-instagram fa-lg circle-icon"></i>
+                            <i class="fab fa-facebook fa-lg circle-icon"></i>
+                            <i class="fab fa-twitter fa-lg circle-icon"></i>
+                            <i class="fab fa-youtube fa-lg circle-icon"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h1 class="footer-header">Adres</h1>
+                        <label class="footer-content">Stationsweg 166A</label><br />
+                        <label class="footer-content">2161 AM Lisse</label><br />
+                        <h2 class="footer-header">Openingstijden</h2>
+                        <label class="footer-content">21 maart - 10 mei 2020, </label><br />
+                        <label class="footer-content">9:00-17:00u</label><br />
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-ql">
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    <a asp-area="" asp-controller="HetPark" asp-action="Index">Het Park</a>
+                                </div>
+                                <div class="col-sm-2">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-ql">
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    <a asp-area="" asp-controller="Info" asp-action="Index">Praktisch</a>
+                                </div>
+                                <div class="col-sm-2">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-ql">
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    <a asp-area="" asp-controller="Info" asp-action="Index">Groepen</a>
+                                </div>
+                                <div class="col-sm-2">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-ql">
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    <a asp-area="" asp-controller="Info" asp-action="Index">Pers</a>
+                                </div>
+                                <div class="col-sm-2">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-hl">
+                            <h1 class="footer-header">Meer handige links</h1>
+                            <i class="fas fa-chevron-right fa-fw"></i><a asp-area="" asp-controller="Info" asp-action="Index">Beschikbaarheid</a><br />
+                            <i class="fas fa-chevron-right fa-fw"></i><a asp-area="" asp-controller="Events" asp-action="Index">Evenementen</a><br />
+                            <i class="fas fa-chevron-right fa-fw"></i><a asp-area="" asp-controller="Info" asp-action="Index">Veelgestelde vragen</a><br />
+                            <i class="fas fa-chevron-right fa-fw"></i><a asp-area="" asp-controller="Info" asp-action="Index">Contact</a><br />
+                            <i class="fas fa-chevron-right fa-fw"></i><a asp-area="" asp-controller="Info" asp-action="Index">Privacy statement</a><br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
