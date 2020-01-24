@@ -678,4 +678,9 @@ a.frame {
     flex-grow: 0;
 }
 
-
+#Header {
+    font-weight: bold;
+    font-family: Avenir;
+    background-color: white;
+    padding-top: 50px;
+}
