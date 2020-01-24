@@ -1,4 +1,4 @@
-using Keukenhof.Controllers;
+using WebApplication1.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using Xunit;
@@ -8,7 +8,7 @@ namespace WebXUnitTest
     public class WebUnitTest
     {
         [Fact]
-        public void TestIfIndexIsViewResult()
+        public void TestIfHomeIndexIsViewResult()
         {
             HomeController homeController = new HomeController();
             var result = homeController.Index();
@@ -17,7 +17,7 @@ namespace WebXUnitTest
         }
 
         [Fact]
-        public void TestIfIndexIsNotRedirect()
+        public void TestIfHomeIndexIsRedirect()
         {
             HomeController homeController = new HomeController();
             var result = homeController.Index();
@@ -26,19 +26,19 @@ namespace WebXUnitTest
         }
 
         [Fact]
-        public void TestIfHetParkIsView()
+        public void TestIfInfoIndexIsView()
         {
-            HetParkController hetParkController = new HetParkController();
-            var result = hetParkController.Index();
+            InfoController infoController = new InfoController();
+            var result = infoController.Index();
 
             var viewResult = Assert.IsType<ViewResult>(result);
         }
 
         [Fact]
-        public void TestIfHetParkIsNotRedirect()
+        public void TestIfInfoIndexIsRedirect()
         {
-            HetParkController hetParkController = new HetParkController();
-            var result = hetParkController.Index();
+            InfoController infoController = new InfoController();
+            var result = infoController.Index();
 
             var viewResult = Assert.IsType<RedirectResult>(result);
         }
