@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using Xunit;
+using WebApplication1.Controllers;
 
 namespace WebXUnitTest
 {
@@ -18,13 +19,15 @@ namespace WebXUnitTest
         {
             _context = context;
         }
-
+        
         [Fact]
-        public void TestDB()
+        public void TestIfEventsIndexIsView()
         {
-            ApplicationDbContext context = GetInMemoryDBWithData();
+            EventsController eventsController = new EventsController(_context);
 
+            var result = eventsController.Index();
 
+            var viewResult = Assert.IsType<ViewResult>(result);
         }
 
         private ApplicationDbContext GetInMemoryDBWithData()

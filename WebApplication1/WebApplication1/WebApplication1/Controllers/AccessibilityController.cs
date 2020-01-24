@@ -10,7 +10,7 @@ namespace WebApplication1.Controllers
 {
     public class AccessibilityController : Controller
     {
-        // GET: HetPark
+        // GET: Accessibility
         public ActionResult Index()
         {
             return View();
