@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Keukenhof</title>
     <script src="https://kit.fontawesome.com/185266b104.js" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#Search1").click(function (e) {
+                e.preventDefault();
+                $("#S1").addClass("d-none");
+            });
+        });
+
+    </script>
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
@@ -37,33 +46,33 @@
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
-    <nav class="navbar navbar-expand-md navbar-light sticky-top">
-        <div class="container-fluid container-md">
+    <nav class="navbar navbar-expand-md navbar-light sticky-top" style="padding-top:0px; background-color: white; box-shadow:0px 0px 8px rgba(0, 0, 0, 0.24">
+        <div class="container-fluid container-md" id="Header">
             <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand" ><img src="/Images/image.png" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a asp-area="" asp-controller="HetPark" asp-action="Index" class="nav-link">Het park</a>
-                    </li>
-                    <li class="nav-item">
-                        <a asp-area="" asp-controller="Info" asp-action="Index" class="nav-link">Praktisch</a>
-                    </li>
-                    <li class="nav-item">
-                        <a asp-area="" asp-controller="Info" asp-action="Index" class="nav-link">Veelgestelde vragen</a>
-                    </li>
-                    <li class="nav-item">
-                        <a asp-area="" asp-controller="HetPark" asp-action="Index" class="nav-link">Bereikbaarheid</a>
-                    </li>
-                    <li class="active">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                        <div class="search-box">
-                            <input type="text" placeholder="" />
-                            <input type="button" value="Zoeken" />
+                    <div class="nav-item" style="padding-left:15px; padding-right:15px">
+                        <a asp-area="" asp-controller="HetPark" asp-action="Index" class="nav-link" style="color:#36454E">Het park</a>
+                    </div>
+                    <div class="nav-item" style="padding-left:15px; padding-right:15px">
+                        <a asp-area="" asp-controller="Info" asp-action="Index" class="nav-link" style="color:#36454E">Praktisch</a>
+                    </div>
+                    <div class="nav-item" style="padding-left:15px; padding-right:15px">
+                        <a asp-area="" asp-controller="Info" asp-action="Index" class="nav-link" style="color:#36454E">Veelgestelde vragen</a>
+                    </div>
+                    <div class="nav-item" style="padding-left:15px; padding-right:15px">
+                        <a asp-area="" asp-controller="HetPark" asp-action="Index" class="nav-link" style="color:#36454E">Bereikbaarheid</a>
+                    </div>
+                    <div class="btn-group dropright" style="padding-left:15px; padding-right:15px">
+                        <div class="fa fa-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                               <input class="form-control" type="text" placeholder="Zoeken" aria-label="Search">
+                            </div>
                         </div>
-                    </li>
+                    </div>
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>
