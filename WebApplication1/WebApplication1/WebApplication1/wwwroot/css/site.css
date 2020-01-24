@@ -10,9 +10,9 @@ a {
     color: black;
 }
 
-    a:hover {
-        color: white;
-    }
+a:hover {
+    color: white;
+}
 
 body {
     padding-bottom: 20px;
