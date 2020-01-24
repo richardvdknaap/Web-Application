@@ -10,6 +10,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Keukenhof</title>
     <script src="https://kit.fontawesome.com/185266b104.js" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#Search1").click(function (e) {
+                e.preventDefault();
+                $("#S1").addClass("d-none");
+            });
+        });
+
+    </script>
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
