@@ -22,17 +22,11 @@ namespace WebApplication1.Controllers
         }
 
         // GET: DBEvents
-        /*public async Task<IActionResult> Index()
-        {
-            return View(await _context.Events.ToListAsync());
-        }*/
         public async Task<IActionResult> Index()
         {
-            var courses = _context.Events
-                .Include(c => c.Info)
-                .AsNoTracking();
-            return View(await courses.ToListAsync());
+            return View(await _context.Events.ToListAsync());
         }
+
 
         // GET: DBEvents/Details/5
         public async Task<IActionResult> Details(int? id)
