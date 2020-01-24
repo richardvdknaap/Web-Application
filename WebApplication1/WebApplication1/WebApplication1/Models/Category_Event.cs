@@ -8,10 +8,10 @@ namespace WebApplication1.Models
 {
     public class Category_Event
     {
-        [Key]
+        public int EventId { get; set; }
         public string EventName { get; set; }
         public Event Event { get; set; }
-        [Key]
+        public int CategoryId { get; set; }
         public string CategoryName { get; set; }
         public Category Category { get; set; }
 
