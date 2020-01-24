@@ -10,7 +10,6 @@ namespace WebXUnitTest
 {
     public class WebUnitDBTest : Controller
     {
-
         private string databaseName;
 
         private readonly ApplicationDbContext _context;
