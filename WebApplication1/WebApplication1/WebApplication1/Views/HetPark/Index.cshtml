@@ -117,11 +117,12 @@
     <p class="w-75 text-dark">In Keukenhof kunt u genieten van geweldige evenementen. Elke weekend zijn er verschillende evenementen, dus zoek de juiste datum voor uw bezoek uit!</p>
     <a href="#" class="d-flex flex-row-reverse text-dark text-decoration-none"><i class="fa fa-arrow-right"></i> Bekijk alle </a>
     <div class="row">
-        @{ int count = 0; }
+        @{ int parkcount = 0; }
         @foreach (var item in Model)
         {
-            @if (count != 4)
+            @if (parkcount > 4)
             {
+               
             <div class="col-sm-3">
                 <div class="card">
                     <img src="~/Images/event2.png" class="card-img-top">
@@ -134,7 +135,7 @@
                 </div>
             </div>
             }
-            count++;
+            parkcount++;
         }
     </div>
 </div>
