@@ -24,12 +24,4 @@ namespace WebApplication1.Models
         List<Foto> Fotos { get; set; }
 
     }
-
-    public class CreatePost
-    {
-        public string ImageCaption { get; set; }
-        public string ImageDescription { get; set; }
-        public IFormFile MyImage{ get; set; }
-
-    }
 }

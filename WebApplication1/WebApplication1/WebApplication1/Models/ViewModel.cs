@@ -9,6 +9,7 @@ namespace WebApplication1.Models
     {
         public Event Event { get; set; }
         public Foto Foto { get; set; }
+        public UploadModel UploadModel {get;set;}
  
     }
 }

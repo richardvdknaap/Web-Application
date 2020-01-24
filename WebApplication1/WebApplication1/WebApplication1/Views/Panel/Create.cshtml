@@ -33,9 +33,7 @@
                 <span asp-validation-for="Event.Info" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Foto.Link" class="control-label"></label>
-                <input asp-for="Foto.Link" type="file" class="form-control-file" name="inputfile" />
-                <span asp-validation-for="Foto.Link" class="text-danger"></span>
+                <input asp-for="UploadModel.File" type="file" Name = "uploadedFile"/>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-outline-success" />
@@ -50,4 +48,12 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+            $(document).ready(function () {
+                $('.custom-file-input').on("change", function () {
+                    var fileName = $(this).val().split("\\").pop();
+                    $(this).next('.custom-file-label').html(fileName);
+                });
+            });
+    </script>
 }

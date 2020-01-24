@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -11,10 +12,9 @@ namespace WebApplication1.Models
         [Key]
         [Required]
         public int Id { get; set; }
-        [Required]
         public string Link { get; set; }
         public int EventId { get; set; }
         public Event Event { get; set; }
-
     }
+
 }

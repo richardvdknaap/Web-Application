@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -17,26 +18,14 @@ namespace WebApplication1.Controllers
     public class PanelController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly IHostingEnvironment hostingEnvironment;
 
-        public PanelController(ApplicationDbContext context)
+        public PanelController(ApplicationDbContext context, IHostingEnvironment environment)
         {
             _context = context;
+            hostingEnvironment = environment;
         }
 
-        private async Task<bool> UploadFile(IFormFile ufile)
-        {
-            if (ufile != null && ufile.Length > 0)
-            {
-                var fileName = Path.GetFileName(ufile.FileName);
-                var filePath = Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\images\events", fileName);
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    await ufile.CopyToAsync(fileStream);
-                }
-                return true;
-            }
-            return false;
-        }
 
         // GET: DBEvents
         public async Task<IActionResult> Index()
@@ -66,7 +55,7 @@ namespace WebApplication1.Controllers
         // GET: DBEvents/Create
         public IActionResult Create()
         {
-            ViewModel mymodel = new ViewModel() { Event = null, Foto = null};
+            ViewModel mymodel = new ViewModel() { Event = null, Foto = null, UploadModel = null};
             return View(mymodel);
         }
 
@@ -75,20 +64,42 @@ namespace WebApplication1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Naam,Beschrijving,Datum,Info")] Event @event, [Bind("Id,Link,EventId")] Foto @foto)
+        public async Task<IActionResult> Create([Bind("Id,Naam,Beschrijving,Datum,Info")] Event @event, [Bind("Id,Link,EventId")] Foto @foto, [FromForm(Name="uploadedFile")] IFormFile file)
         {
             if (ModelState.IsValid)
             {
-                
+
+                string filePath = "";
+
+                if (file != null)
+                {
+                    var uniqueFileName = GetUniqueFileName(file.FileName);
+                    var uploads = Path.Combine(hostingEnvironment.WebRootPath, "uploads");
+                    filePath = Path.Combine(uploads, uniqueFileName);
+                    file.CopyTo(new FileStream(filePath, FileMode.Create));
+                   
+                }
+
                 _context.Add(@event);
-                var appel = @event.Id;
-                @foto.EventId = appel;
+                @foto.Link = filePath;
+                @foto.EventId = @event.Id;
                 _context.Add(@foto);
+
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewModel mymodel = new ViewModel() { Event = @event, Foto = @foto };
+            
+            ViewModel mymodel = new ViewModel() { Event = @event, Foto = @foto, UploadModel = null};
             return View(mymodel);
+        }
+
+        private string GetUniqueFileName(string fileName)
+        {
+            fileName = Path.GetFileName(fileName);
+            return Path.GetFileNameWithoutExtension(fileName)
+                      + "_"
+                      + Guid.NewGuid().ToString().Substring(0, 4)
+                      + Path.GetExtension(fileName);
         }
 
         // GET: DBEvents/Edit/5
@@ -175,5 +186,20 @@ namespace WebApplication1.Controllers
         {
             return _context.Events.Any(e => e.Id == id);
         }
+
+        /*private async Task<bool> UploadFile(IFormFile ufile)
+        {
+            if (ufile != null && ufile.Length > 0)
+            {
+                var fileName = Path.GetFileName(ufile.FileName);
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\images\events", fileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await ufile.CopyToAsync(fileStream);
+                }
+                return true;
+            }
+            return false;
+        }*/
     }
 }
