@@ -14,7 +14,6 @@ namespace WebXUnitTest
             var result = homeController.Index();
 
             var viewResult = Assert.IsType<ViewResult>(result);
-            Console.ReadKey(true);
         }
 
         [Fact]
@@ -24,7 +23,6 @@ namespace WebXUnitTest
             var result = homeController.Index();
 
             var viewResult = Assert.IsType<RedirectResult>(result);
-            Console.ReadKey(true);
         }
 
         [Fact]
@@ -34,7 +32,6 @@ namespace WebXUnitTest
             var result = hetParkController.Index();
 
             var viewResult = Assert.IsType<ViewResult>(result);
-            Console.ReadKey(true);
         }
 
         [Fact]
@@ -44,7 +41,6 @@ namespace WebXUnitTest
             var result = hetParkController.Index();
 
             var viewResult = Assert.IsType<RedirectResult>(result);
-            Console.ReadKey(true);
         }
     }
 }
