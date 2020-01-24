@@ -1,9 +1,4 @@
-﻿@using Microsoft.AspNetCore.Identity
-
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -44,7 +39,7 @@
     </environment>
     <nav class="navbar navbar-expand-md navbar-light sticky-top" id="header_color">
         <div class="container-fluid container-md">
-            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand"><img src="/Images/image.png" /></a>
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand" ><img src="/Images/image.png" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -54,23 +49,14 @@
                         <a asp-area="" asp-controller="HetPark" asp-action="Index" class="nav-link">Het park</a>
                     </li>
                     <li class="nav-item">
-                        <a asp-area="" asp-controller="Practical" asp-action="Index" class="nav-link">Praktisch</a>
+                        <a asp-area="" asp-controller="Info" asp-action="Index" class="nav-link">Praktisch</a>
                     </li>
                     <li class="nav-item">
                         <a asp-area="" asp-controller="Info" asp-action="Index" class="nav-link">Veelgestelde vragen</a>
                     </li>
                     <li class="nav-item">
-                        <a asp-area="" asp-controller="Accessibility" asp-action="Index" class="nav-link">Bereikbaarheid</a>
+                        <a asp-area="" asp-controller="HetPark" asp-action="Index" class="nav-link">Bereikbaarheid</a>
                     </li>
-                    @if (SignInManager.IsSignedIn(User))
-                    {
-                        <li class="nav-item">
-                            <a asp-area="" asp-controller="Panel" asp-action="Index" class="nav-link">Admin Panel</a>
-
-                        </li>
-                    }
-                    
-                    
                     <li class="active">
                         <i class="fa fa-search" aria-hidden="true"></i>
                         <div class="search-box">
@@ -78,7 +64,6 @@
                             <input type="button" value="Zoeken" />
                         </div>
                     </li>
-                    
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>
@@ -121,7 +106,7 @@
                         <div class="footer-ql">
                             <div class="row">
                                 <div class="col-sm-10">
-                                    <a asp-area="" asp-controller="Practical" asp-action="Index">Praktisch</a>
+                                    <a asp-area="" asp-controller="Info" asp-action="Index">Praktisch</a>
                                 </div>
                                 <div class="col-sm-2">
                                     <i class="fas fa-arrow-right"></i>
@@ -141,7 +126,7 @@
                         <div class="footer-ql">
                             <div class="row">
                                 <div class="col-sm-10">
-                                    <a asp-area="" asp-controller="Pers" asp-action="Index">Pers</a>
+                                    <a asp-area="" asp-controller="Info" asp-action="Index">Pers</a>
                                 </div>
                                 <div class="col-sm-2">
                                     <i class="fas fa-arrow-right"></i>
