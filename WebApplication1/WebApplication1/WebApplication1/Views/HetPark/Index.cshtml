@@ -21,7 +21,7 @@
         <p class="col-sm-6 text-dark">Dit voorjaar staan meer dan 7 miljoen bloembollen in bloei met wel 800 verschillende soorten tulpen.</p>
         <p class="col-sm-6 text-dark">In alle rust genieten van Keukenhof? Voor 10:30 uur en na 16:00 uur is het minder druk.</p>
     </div>
-    <p><a href="https://asp.net" class="btn btn-outline-success" id="btntop">Geschiedenis</a></p>
+    <p><a href="https://nl.wikipedia.org/wiki/Keukenhof" class="btn btn-outline-success" id="btntop">Geschiedenis</a></p>
 </div>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="collapse navbar-collapse" id="navbarText">
@@ -47,7 +47,7 @@
 <div class="container bg1 py-4" id="featured">
     <h1>Wat is er te doen bij de Keukenhof?</h1>
     <p class="w-75 text-dark">Naast de ruim 32ha aan bloemen kunt u genieten van verrassende inspiratietuinen. Voor kinderen is er de gratis speurtocht, een kinderboerderij, doolhof en speeltuin.</p>
-    <a href="#" class="justify-content-end float-right text-dark font-weight-bold text-decoration-none">Bekijk alle<i class="fa fa-arrow-right ml-1 text-warning"></i> </a><br>
+    <a asp-area="" asp-controller="Info" asp-action="Index" class="justify-content-end float-right text-dark font-weight-bold text-decoration-none">Bekijk alle<i class="fa fa-arrow-right ml-1 text-warning"></i> </a><br>
     <div class="row mt-3">
         <div class="col-sm-3">
             <div class="cardnopadding">
@@ -56,7 +56,7 @@
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-outline-warning">Lees meer</a>
+                    <a asp-area="" asp-controller="Info" asp-action="Index" class="btn btn-outline-warning">Lees meer</a>
                 </div>
             </div>
         </div>
@@ -67,7 +67,7 @@
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-outline-warning">Lees meer</a>
+                    <a asp-area="" asp-controller="Info" asp-action="Index" class="btn btn-outline-warning">Lees meer</a>
                 </div>
             </div>
         </div>
@@ -78,7 +78,7 @@
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-outline-warning">Lees meer</a>
+                    <a asp-area="" asp-controller="Info" asp-action="Index" class="btn btn-outline-warning">Lees meer</a>
                 </div>
             </div>
         </div>
@@ -89,7 +89,7 @@
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-outline-warning">Lees meer</a>
+                    <a asp-area="" asp-controller="Info" asp-action="Index" class="btn btn-outline-warning">Lees meer</a>
                 </div>
             </div>
         </div>
@@ -99,7 +99,7 @@
     <div class="cardnopadding">
         <img class="card-img-top" src="~/Images/PLATTEGROND_short.png" alt="Card image cap">
         <div class="card-body">
-            <a class="text-dark text-decoration-none" href="#">
+            <a class="text-dark text-decoration-none" href="~/images/PLATTEGROND Keukenhof 2019.png">
                 <div class="row">
                     <div class="col-md-11">
                         <h5 class="card-title">Download de plattegrond van het park</h5>
@@ -115,7 +115,7 @@
 <div class="container bg1 py-4" id="featured">
     <h1>Evenementen</h1>
     <p class="w-75 text-dark">In Keukenhof kunt u genieten van geweldige evenementen. Elke weekend zijn er verschillende evenementen, dus zoek de juiste datum voor uw bezoek uit!</p>
-    <a href="#" class="d-flex flex-row-reverse text-dark text-decoration-none"><i class="fa fa-arrow-right"></i> Bekijk alle </a>
+    <a asp-area="" asp-controller="Events" asp-action="Index" class="d-flex flex-row-reverse text-dark text-decoration-none"><i class="fa fa-arrow-right"></i> Bekijk alle </a>
     <div class="row">
         @{ int parkcount = 0; }
         @foreach (var item in Model)
@@ -130,7 +130,7 @@
                         <p class="card-text"><small class="text-muted">@Html.DisplayFor(modelItem => item.Datum)</small></p>
                         <h5 class="card-title">@Html.DisplayFor(modelItem => item.Naam)</h5>
                         <p class="card-text">@Html.DisplayFor(modelItem => item.Beschrijving)</p>
-                        <a href="#" class="btn btn-outline-warning">Lees meer</a>
+                        <a asp-area="" asp-controller="Events" asp-action="Index" class="btn btn-outline-warning">Lees meer</a>
                     </div>
                 </div>
             </div>
@@ -143,7 +143,7 @@
     <div class="cardnopadding">
         <img class="card-img-top" src="~/Images/Tulpomania.png" alt="Card image cap">
         <div class="card-body">
-            <a class="text-dark text-decoration-none" href="#">
+            <a class="text-dark text-decoration-none" asp-area="" asp-controller="Events" asp-action="Index">
                 <div class="row">
                     <div class="col-md-11">
                         <h5 class="card-title">Tulpomania</h5>
@@ -159,7 +159,7 @@
 <div class="container bg1 py-4" id="featured">
     <h1>Bloemenshows</h1>
     <p class="w-75 text-dark">In Keukenhof kunt u genieten van spectaculaire bloemenshows en unieke kunstwerken. Vergeet vooral de Tulpomania tentoonstelling in het Juliana Paviljoen niet.</p>
-    <a href="#" class="d-flex flex-row-reverse text-dark text-decoration-none"><i class="fa fa-arrow-right"></i> Bekijk alle </a>
+    <a asp-area="" asp-controller="Events" asp-action="Index" class="d-flex flex-row-reverse text-dark text-decoration-none"><i class="fa fa-arrow-right"></i> Bekijk alle </a>
     <div class="row">
         <div class="col-sm-3">
             <div class="cardnopadding">
@@ -168,7 +168,7 @@
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-outline-warning">Lees meer</a>
+                    <a asp-area="" asp-controller="Events" asp-action="Index" class="btn btn-outline-warning">Lees meer</a>
                 </div>
             </div>
         </div>
@@ -179,7 +179,7 @@
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-outline-warning">Lees meer</a>
+                    <a asp-area="" asp-controller="Events" asp-action="Index" class="btn btn-outline-warning">Lees meer</a>
                 </div>
             </div>
         </div>
@@ -190,7 +190,7 @@
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-outline-warning">Lees meer</a>
+                    <a asp-area="" asp-controller="Events" asp-action="Index" class="btn btn-outline-warning">Lees meer</a>
                 </div>
             </div>
         </div>
@@ -201,7 +201,7 @@
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-outline-warning">Lees meer</a>
+                    <a asp-area="" asp-controller="Events" asp-action="Index" class="btn btn-outline-warning">Lees meer</a>
                 </div>
             </div>
         </div>

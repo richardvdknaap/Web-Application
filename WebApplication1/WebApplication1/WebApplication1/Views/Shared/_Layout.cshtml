@@ -54,13 +54,13 @@
                         <a asp-area="" asp-controller="HetPark" asp-action="Index" class="nav-link" style="color:#36454E">Het park</a>
                     </div>
                     <div class="nav-item" style="padding-left:15px; padding-right:15px">
-                        <a asp-area="" asp-controller="Info" asp-action="Index" class="nav-link" style="color:#36454E">Praktisch</a>
+                        <a asp-area="" asp-controller="Practical" asp-action="Index" class="nav-link" style="color:#36454E">Praktisch</a>
                     </div>
                     <div class="nav-item" style="padding-left:15px; padding-right:15px">
-                        <a asp-area="" asp-controller="Info" asp-action="Index" class="nav-link" style="color:#36454E">Veelgestelde vragen</a>
+                        <a asp-area="" asp-controller="Vragen" asp-action="Index" class="nav-link" style="color:#36454E">Veelgestelde vragen</a>
                     </div>
                     <div class="nav-item" style="padding-left:15px; padding-right:15px">
-                        <a asp-area="" asp-controller="HetPark" asp-action="Index" class="nav-link" style="color:#36454E">Bereikbaarheid</a>
+                        <a asp-area="" asp-controller="Accessibility" asp-action="Index" class="nav-link" style="color:#36454E">Bereikbaarheid</a>
                     </div>
                     @if (SignInManager.IsSignedIn(User)) {
                     <div class="nav-item" style="padding-left:15px; padding-right:15px">
@@ -109,7 +109,7 @@
                         <div class="footer-ql">
                             <div class="row">
                                 <div class="col-sm-10">
-                                    <a asp-area="" asp-controller="Info" asp-action="Index">Praktisch</a>
+                                    <a asp-area="" asp-controller="Practical" asp-action="Index">Praktisch</a>
                                 </div>
                                 <div class="col-sm-2">
                                     <i class="fas fa-arrow-right"></i>
@@ -119,7 +119,7 @@
                         <div class="footer-ql">
                             <div class="row">
                                 <div class="col-sm-10">
-                                    <a asp-area="" asp-controller="Info" asp-action="Index">Groepen</a>
+                                    <a asp-area="" asp-controller="HetPark" asp-action="Index">Groepen</a>
                                 </div>
                                 <div class="col-sm-2">
                                     <i class="fas fa-arrow-right"></i>
@@ -140,10 +140,10 @@
                     <div class="col-md-3">
                         <div class="footer-hl">
                             <h1 class="footer-header">Meer handige links</h1>
-                            <i class="fas fa-chevron-right fa-fw"></i><a asp-area="" asp-controller="Info" asp-action="Index">Beschikbaarheid</a><br />
+                            <i class="fas fa-chevron-right fa-fw"></i><a asp-area="" asp-controller="Accessibility" asp-action="Index">Beschikbaarheid</a><br />
                             <i class="fas fa-chevron-right fa-fw"></i><a asp-area="" asp-controller="Events" asp-action="Index">Evenementen</a><br />
-                            <i class="fas fa-chevron-right fa-fw"></i><a asp-area="" asp-controller="Info" asp-action="Index">Veelgestelde vragen</a><br />
-                            <i class="fas fa-chevron-right fa-fw"></i><a asp-area="" asp-controller="Info" asp-action="Index">Contact</a><br />
+                            <i class="fas fa-chevron-right fa-fw"></i><a asp-area="" asp-controller="Vragen" asp-action="Index">Veelgestelde vragen</a><br />
+                            <i class="fas fa-chevron-right fa-fw"></i><a asp-area="" asp-controller="Contact" asp-action="Index">Contact</a><br />
                             <i class="fas fa-chevron-right fa-fw"></i><a asp-area="" asp-controller="Info" asp-action="Index">Privacy statement</a><br />
                         </div>
                     </div>
