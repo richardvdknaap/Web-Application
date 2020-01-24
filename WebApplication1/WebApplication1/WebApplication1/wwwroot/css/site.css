@@ -14,15 +14,16 @@
 @font-face{
     font-family: 'Avenir-bold';
     src: url(/fonts/Nunito-Bold.ttf) format('truetype');
+    src: url('/fonts/source-sans-pro.woff2') format('woff2');
 }
 
 a {
     color: black;
 }
 
-    a:hover {
-        color: white;
-    }
+a:hover {
+    color: white;
+}
 
 body {
     padding-bottom: 20px;
@@ -524,12 +525,12 @@ ul.breadcrumb {
 .cardnopadding {
     background-color: white;
     color: black;
-    padding-bottom: 20px;
     margin-top: 20px;
 }
 
 #cards:hover {
     background-color: #EA6025;
+    color: white;
 }
 
 .container show {
@@ -568,6 +569,25 @@ ul.breadcrumb {
         background-color: green;
         color: white;
     }
+
+#btntop {
+    background-color: white; /* Blue background */
+    color: black; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+    border-color: green;
+}
+
+#btntop:hover {
+    background-color: green;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #EA6025;
+    color: white;
+}
 
 .btn2 {
     background-color: #E1EBE9;
@@ -644,10 +664,11 @@ ul.breadcrumb {
     width: 400px;
     height: 72px;
     border-radius: 4px;
+    padding-top: 20px;
+    padding-left: 20px;
     padding-left: 20px;
     margin-bottom: 15px;
 }
-
 
 #navbarText{
     flex-grow: 0;
@@ -803,4 +824,34 @@ PraktischContactText {
     font-weight: 600;
     font-size: 20px;
     line-height: 28px;
+
+.instafeed{
+    width:249px;
+    height:249px;
+}
+
+a.frame {
+    position: relative;
+    display: inline-block;
+}
+
+.expand-position-for-picture {
+    border-radius: 22px;
+    color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px 30px;
+}
+
+
+#navbarText {
+    flex-grow: 0;
+}
+
+#Header {
+    font-weight: bold;
+    font-family: Avenir;
+    background-color: white;
+    padding-top: 50px;
 }
