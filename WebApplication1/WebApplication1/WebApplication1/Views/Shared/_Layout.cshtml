@@ -71,6 +71,13 @@
                     <div class="nav-item" style="padding-left:15px; padding-right:15px">
                         <a asp-area="" asp-controller="HetPark" asp-action="Index" class="nav-link" style="color:#36454E">Bereikbaarheid</a>
                     </div>
+                    @if (SignInManager.IsSignedIn(User)) {
+                    <div class="nav-item" style="padding-left:15px; padding-right:15px">
+                        <a asp-area="" asp-controller="Panel" asp-action="Index" class="nav-link" style="color:#36454E">Admin Panel</a>
+                    </div>
+                    }
+
+
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>
