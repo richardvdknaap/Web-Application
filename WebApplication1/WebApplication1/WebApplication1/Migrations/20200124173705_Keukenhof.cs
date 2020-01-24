@@ -175,7 +175,7 @@ namespace WebApplication1.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Link = table.Column<string>(nullable: false),
+                    Link = table.Column<string>(nullable: true),
                     EventId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

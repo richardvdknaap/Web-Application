@@ -10,7 +10,7 @@ using WebApplication1.Data;
 namespace WebApplication1.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200124122847_Keukenhof")]
+    [Migration("20200124173705_Keukenhof")]
     partial class Keukenhof
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -215,8 +215,7 @@ namespace WebApplication1.Migrations
 
                     b.Property<int>("EventId");
 
-                    b.Property<string>("Link")
-                        .IsRequired();
+                    b.Property<string>("Link");
 
                     b.HasKey("Id");
 

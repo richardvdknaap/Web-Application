@@ -213,8 +213,7 @@ namespace WebApplication1.Migrations
 
                     b.Property<int>("EventId");
 
-                    b.Property<string>("Link")
-                        .IsRequired();
+                    b.Property<string>("Link");
 
                     b.HasKey("Id");
 
