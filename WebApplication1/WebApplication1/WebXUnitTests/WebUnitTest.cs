@@ -96,5 +96,23 @@ namespace WebXUnitTest
 
             var viewResult = Assert.IsType<RedirectResult>(result);
         }
+
+        [Fact]
+        public void TestIfVragenIsView()
+        {
+            VragenController vragenController = new VragenController();
+            var result = vragenController.Index();
+
+            var viewResult = Assert.IsType<ViewResult>(result);
+        }
+
+        [Fact]
+        public void TestIfVragenIsRedirect()
+        {
+            VragenController vragenController = new VragenController();
+            var result = vragenController.Index();
+
+            var viewResult = Assert.IsType<RedirectResult>(result);
+        }
     }
 }
