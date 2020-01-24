@@ -1,9 +1,10 @@
-﻿@{
+﻿@model IEnumerable<WebApplication1.Models.Event>
+@{
     ViewBag.Title = "Events";
 }
 
 <script>
-  $(document).ready(function () {
+    $(document).ready(function () {
         $("#P1").click(function (e) {
             e.preventDefault();
             $("#Card2").addClass("d-none");
@@ -11,13 +12,13 @@
             $("#Card1").removeClass("d-none");
             $("#P2").parent().removeClass("disabled");
         });
-      $("#P2").click(function (e) {
-          e.preventDefault();
-          $("#Card1").addClass("d-none");
-          $("#P2").parent().addClass("disabled");
-          $("#Card2").removeClass("d-none");
-          $("#P1").parent().removeClass("disabled");
-      });
+        $("#P2").click(function (e) {
+            e.preventDefault();
+            $("#Card1").addClass("d-none");
+            $("#P2").parent().addClass("disabled");
+            $("#Card2").removeClass("d-none");
+            $("#P1").parent().removeClass("disabled");
+        });
     });
 
 </script>
@@ -28,117 +29,30 @@
     <h1>Evenementen</h1>
     <div class="container" id="Card1">
         <div class="row pb-4">
-            <div class="col-sm-3">
-                <div class="cardnopadding">
-                    <img src="~/Images/event1.png" class="card-img-top">
-                    <div class="card-body">
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">To be added</p>
-                        <a asp-area="" asp-controller="Info" asp-action="Index" class="btn btn-outline-warning">Lees meer</a>
+            @{ int count = 0; }
+            @foreach (var item in Model){
+                @if (count != 8)
+                {
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <img src="~/Images/event2.png" class="card-img-top">
+                            <div class="card-body">
+                                <p class="card-text"><small class="text-muted">@Html.DisplayFor(modelItem => item.Datum)</small></p>
+                                <h5 class="card-title">@Html.DisplayFor(modelItem => item.Naam)</h5>
+                                <p class="card-text">@Html.DisplayFor(modelItem => item.Beschrijving)</p>
+                                <a href="#" class="btn btn-outline-warning">Lees meer</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="cardnopadding">
-                    <img src="~/Images/Event2.png" class="card-img-top">
-                    <div class="card-body">
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">To be added</p>
-                        <a asp-area="" asp-controller="Info" asp-action="Index" class="btn btn-outline-warning">Lees meer</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="cardnopadding">
-                    <img src="~/Images/Show1.png" class="card-img-top">
-                    <div class="card-body">
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">To be added</p>
-                        <a asp-area="" asp-controller="Info" asp-action="Index" class="btn btn-outline-warning">Lees meer</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="cardnopadding">
-                    <img src="~/Images/Kunst1.png" class="card-img-top">
-                    <div class="card-body">
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">To be added</p>
-                        <a asp-area="" asp-controller="Info" asp-action="Index" class="btn btn-outline-warning">Lees meer</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row pb-4">
-            <div class="col-sm-3">
-                <div class="cardnopadding">
-                    <img src="~/Images/Event3.png" class="card-img-top">
-                    <div class="card-body">
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">To be added</p>
-                        <a asp-area="" asp-controller="Info" asp-action="Index" class="btn btn-outline-warning">Lees meer</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="cardnopadding">
-                    <img src="~/Images/Event4.png" class="card-img-top">
-                    <div class="card-body">
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">To be added</p>
-                        <a asp-area="" asp-controller="Info" asp-action="Index" class="btn btn-outline-warning">Lees meer</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="cardnopadding">
-                    <img src="~/Images/Show2.png" class="card-img-top">
-                    <div class="card-body">
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">To be added</p>
-                        <a asp-area="" asp-controller="Info" asp-action="Index" class="btn btn-outline-warning">Lees meer</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="cardnopadding">
-                    <img src="~/Images/Event5.png" class="card-img-top">
-                    <div class="card-body">
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">To be added</p>
-                        <a asp-area="" asp-controller="Info" asp-action="Index" class="btn btn-outline-warning">Lees meer</a>
-                    </div>
-                </div>
-            </div>
+                }
+                count++;
+            }
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled"><a class="page-link" id="P1" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" id="P2" href="#">2</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
-    <div class="container d-none" id="Card2">
-        <div class="row pb-4">
-            <div class="col-sm-3">
-                <div class="cardnopadding">
-                    <img src="~/Images/Event5.png" class="card-img-top">
-                    <div class="card-body">
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">To be added</p>
-                        <a asp-area="" asp-controller="Info" asp-action="Index" class="btn btn-outline-warning">Lees meer</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-                <li class="page-item disabled"><a class="page-link" id="P1" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" id="P2" href="#">2</a></li>
-            </ul>
-        </nav>
 </div>

@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -37,9 +42,9 @@
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
-    <nav class="navbar navbar-expand-md navbar-light sticky-top">
+    <nav class="navbar navbar-expand-md navbar-light sticky-top" id="header_color">
         <div class="container-fluid container-md">
-            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand" ><img src="/Images/image.png" /></a>
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand"><img src="/Images/image.png" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -57,13 +62,19 @@
                     <li class="nav-item">
                         <a asp-area="" asp-controller="HetPark" asp-action="Index" class="nav-link">Bereikbaarheid</a>
                     </li>
-                    <li class="active">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                        <div class="search-box">
-                            <input type="text" placeholder="" />
-                            <input type="button" value="Zoeken" />
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <li class="nav-item">
+                            <a asp-area="" asp-controller="Panel" asp-action="Index" class="nav-link">Admin Panel</a>
+                        </li>
+                    }
+                    <!--<li class="active">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <div class="search-box">
+                                <input type="text" placeholder="" />
+                                <input type="button" value="Zoeken" />
                         </div>
-                    </li>
+                    </li>-->
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>
