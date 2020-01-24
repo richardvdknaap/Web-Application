@@ -1,6 +1,5 @@
 using WebApplication1.Controllers;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using Xunit;
 
 namespace WebXUnitTest

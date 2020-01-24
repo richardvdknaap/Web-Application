@@ -3,15 +3,15 @@ using WebApplication1.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
-using WebApplication1.Controllers;
 
 namespace WebXUnitTest
 {
     public class WebUnitDBTest : Controller
     {
+
+        private string databaseName;
+
         private readonly ApplicationDbContext _context;
 
         public WebUnitDBTest(ApplicationDbContext context)
@@ -29,16 +29,19 @@ namespace WebXUnitTest
 
         private ApplicationDbContext GetInMemoryDBWithData()
         {
-            ApplicationDbContext context = GetNewInMemoryDB();
+            ApplicationDbContext context = GetNewInMemoryDB(true);
             context.Add(new Event { Id = 1, Naam = "Een event", Beschrijving = "Een heel leuke event", Datum = new DateTime(2020, 5, 5, 10, 0, 0) });
             context.Add(new Event { Id = 2, Naam = "Een andere event", Beschrijving = "Een andere leuke event", Datum = new DateTime(2020, 5, 6, 10, 0, 0) });
             context.SaveChanges();
-            return context;
+            return GetNewInMemoryDB(false);
         }
 
 
-        private ApplicationDbContext GetNewInMemoryDB()
+        private ApplicationDbContext GetNewInMemoryDB(bool NewDb)
         {
+            if (NewDb) this.databaseName = Guid.NewGuid().ToString();
+
+
             var options = new DbContextOptionsBuilder<ApplicationDbContext>()
                 .UseInMemoryDatabase(Guid.NewGuid().ToString())
                 .Options;
