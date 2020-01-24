@@ -1,4 +1,4 @@
-﻿@model WebApplication1.Models.Event
+﻿@model WebApplication1.Models.ViewModel
 
 @{
     ViewData["Title"] = "Create";
@@ -13,34 +13,39 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Naam" class="control-label"></label>
-                <input asp-for="Naam" class="form-control" />
-                <span asp-validation-for="Naam" class="text-danger"></span>
+                <label asp-for="Event.Naam" class="control-label"></label>
+                <input asp-for="Event.Naam" class="form-control" />
+                <span asp-validation-for="Event.Naam" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Beschrijving" class="control-label"></label>
-                <input asp-for="Beschrijving" class="form-control" />
-                <span asp-validation-for="Beschrijving" class="text-danger"></span>
+                <label asp-for="Event.Beschrijving" class="control-label"></label>
+                <input asp-for="Event.Beschrijving" class="form-control" />
+                <span asp-validation-for="Event.Beschrijving" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Datum" class="control-label"></label>
-                <input asp-for="Datum" class="form-control" />
-                <span asp-validation-for="Datum" class="text-danger"></span>
+                <label asp-for="Event.Datum" class="control-label"></label>
+                <input asp-for="Event.Datum" class="form-control" />
+                <span asp-validation-for="Event.Datum" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Info" class="control-label"></label>
-                <input asp-for="Info" class="form-control" />
-                <span asp-validation-for="Info" class="text-danger"></span>
+                <label asp-for="Event.Info" class="control-label"></label>
+                <input asp-for="Event.Info" class="form-control" />
+                <span asp-validation-for="Event.Info" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <label asp-for="Foto.Link" class="control-label"></label>
+                <input asp-for="Foto.Link" type="file" class="form-control-file" />
+                <span asp-validation-for="Foto.Link" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-outline-success" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index" class="btn btn-default">Back to List</a>
+    <a asp-action="Index" class="btn btn-outline-success">Back to List</a>
 </div>
 
 @section Scripts {

@@ -49,7 +49,8 @@ namespace WebApplication1.Controllers
         // GET: DBEvents/Create
         public IActionResult Create()
         {
-            return View();
+            ViewModel mymodel = new ViewModel() { Event = null, Foto = null};
+            return View(mymodel);
         }
 
         // POST: DBEvents/Create
@@ -57,15 +58,20 @@ namespace WebApplication1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Naam,Beschrijving,Datum,Info")] Event @event)
+        public async Task<IActionResult> Create([Bind("Id,Naam,Beschrijving,Datum,Info")] Event @event, [Bind("Id,Link,EventId")] Foto @foto)
         {
             if (ModelState.IsValid)
             {
+                
                 _context.Add(@event);
+                var appel = @event.Id;
+                @foto.EventId = appel;
+                _context.Add(@foto);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(@event);
+            ViewModel mymodel = new ViewModel() { Event = @event, Foto = @foto };
+            return View(mymodel);
         }
 
         // GET: DBEvents/Edit/5
