@@ -26,5 +26,6 @@ namespace WebApplication1.Controllers
         {
             return View(await _context.Events.ToListAsync());
         }
+
     }
 }
