@@ -1,0 +1,87 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model IEnumerable<WebApplication1.Models.Event>
+@{
+    Layout = null;
+}
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Keukenhof</title>
+    <script src="https://kit.fontawesome.com/185266b104.js" crossorigin="anonymous"></script>
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+
+<body>
+    <div class="Admin_Head ml-5">
+        <h2>Faka @UserManager.GetUserName(User)!</h2><br />
+        <a href="/Home/" class="btn btn-outline-success">Home</a>
+        <a href="/Events/" class="btn btn-outline-success">Events</a>
+        <a asp-area="" asp-controller="Panel" asp-action="Create" class="btn btn-outline-success">Create</a>
+    </div><br />
+    <div class="container bg1 p-3 ">
+        <h1>Evenementen</h1>
+        <p>Hier zijn alle evenementen te zien!</p>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Naam)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Beschrijving)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Datum)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Naam)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Beschrijving)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Datum)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</body>
+</html>
