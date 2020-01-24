@@ -4,16 +4,27 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Keukenhof.Models;
+using Microsoft.EntityFrameworkCore;
+using WebApplication1.Data;
+using WebApplication1.Models;
 
-namespace Keukenhof.Controllers
+
+namespace WebApplication1.Controllers
 {
     public class HetParkController : Controller
     {
-        // GET: HetPark
-        public ActionResult Index()
+        private readonly ApplicationDbContext _context;
+
+        public HetParkController(ApplicationDbContext context)
         {
-            return View();
+            _context = context;
+        }
+
+
+        // GET: HetPark
+        public async Task<IActionResult> Index()
+        {
+            return View(await _context.Events.ToListAsync());
         }
     }
 }

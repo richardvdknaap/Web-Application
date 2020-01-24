@@ -17,6 +17,12 @@
     src: url('/fonts/source-sans-pro.woff2') format('woff2');
 }
 
+
+#header_color{
+    background: white;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.24);
+}
+
 a {
     color: black;
 }
@@ -24,7 +30,6 @@ a {
 a:hover {
     color: white;
 }
-
 body {
     padding-bottom: 20px;
 }
@@ -525,6 +530,7 @@ ul.breadcrumb {
 .cardnopadding {
     background-color: white;
     color: black;
+    padding-bottom: 20px;
     margin-top: 20px;
 }
 
@@ -565,10 +571,6 @@ ul.breadcrumb {
     cursor: pointer; /* Mouse pointer on hover */
 }
 
-    .btn:hover {
-        background-color: green;
-        color: white;
-    }
 
 #btntop {
     background-color: white; /* Blue background */
@@ -665,7 +667,6 @@ ul.breadcrumb {
     height: 72px;
     border-radius: 4px;
     padding-top: 20px;
-    padding-left: 20px;
     padding-left: 20px;
     margin-bottom: 15px;
 }
