@@ -21,7 +21,7 @@ namespace WebApplication1.Controllers
         }
 
 
-        // GET: HetPark
+        // GET: Events
         public async Task<IActionResult> Index()
         {
             return View(await _context.Events.ToListAsync());
