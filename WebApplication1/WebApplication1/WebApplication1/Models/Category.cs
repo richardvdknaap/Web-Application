@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WebApplication1.Models
 {
-    public class Event
+    public class Category
     {
         [Key]
         [Required]
@@ -16,15 +16,8 @@ namespace WebApplication1.Models
         public string Naam { get; set; }
         [Required]
         public string Beschrijving { get; set; }
-        [Required]
-        public DateTime Datum { get; set; }
-        public string Info { get; set; }
-
-        List<Foto> Fotos { get; set; }
 
         [Required]
         public List<Category_Event> Category_Event { get; set; }
-
-
     }
 }

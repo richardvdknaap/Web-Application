@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace WebApplication1.Models
 {
-    public class Foto
+    public class Category_Event
     {
         [Key]
-        [Required]
-        public int Id { get; set; }
-        [Required]
-        public string Link { get; set; }
-        public int EventId { get; set; }
+        public string EventName { get; set; }
         public Event Event { get; set; }
+        [Key]
+        public string CategoryName { get; set; }
+        public Category Category { get; set; }
 
     }
 }
