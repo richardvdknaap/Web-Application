@@ -533,6 +533,11 @@ ul.breadcrumb {
     color: white;
 }
 
+#cards2:hover {
+    background-color: #00694C;
+    color: white;
+}
+
 .container show {
 }
 
