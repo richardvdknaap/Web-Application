@@ -9,6 +9,14 @@
             if ($(this).attr('aria-expanded') == 'false') {
                 $("#A1").removeClass("fa fa-angle-down");
                 $("#A1").addClass("fa fa-angle-up");
+
+                $("#A2").removeClass("fa fa-angle-up");
+                $("#A2").addClass("fa fa-angle-down");
+                $("#A3").removeClass("fa fa-angle-up");
+                $("#A3").addClass("fa fa-angle-down");
+                $("#A4").removeClass("fa fa-angle-up");
+                $("#A4").addClass("fa fa-angle-down");
+
             } else if ($(this).attr('aria-expanded') == 'true') {
                 $("#A1").removeClass("fa fa-angle-up");
                 $("#A1").addClass("fa fa-angle-down");
@@ -19,6 +27,13 @@
             if ($(this).attr('aria-expanded') == 'false') {
                 $("#A2").removeClass("fa fa-angle-down");
                 $("#A2").addClass("fa fa-angle-up");
+                $("#A1").removeClass("fa fa-angle-up");
+                $("#A1").addClass("fa fa-angle-down");
+                $("#A3").removeClass("fa fa-angle-up");
+                $("#A3").addClass("fa fa-angle-down");
+                $("#A4").removeClass("fa fa-angle-up");
+                $("#A4").addClass("fa fa-angle-down");
+
             } else if ($(this).attr('aria-expanded') == 'true') {
                 $("#A2").removeClass("fa fa-angle-up");
                 $("#A2").addClass("fa fa-angle-down");
@@ -29,6 +44,12 @@
             if ($(this).attr('aria-expanded') == 'false') {
                 $("#A3").removeClass("fa fa-angle-down");
                 $("#A3").addClass("fa fa-angle-up");
+                $("#A1").removeClass("fa fa-angle-up");
+                $("#A1").addClass("fa fa-angle-down");
+                $("#A2").removeClass("fa fa-angle-up");
+                $("#A2").addClass("fa fa-angle-down");
+                $("#A4").removeClass("fa fa-angle-up");
+                $("#A4").addClass("fa fa-angle-down");
             } else if ($(this).attr('aria-expanded') == 'true') {
                 $("#A3").removeClass("fa fa-angle-up");
                 $("#A3").addClass("fa fa-angle-down");
@@ -39,6 +60,12 @@
             if ($(this).attr('aria-expanded') == 'false') {
                 $("#A4").removeClass("fa fa-angle-down");
                 $("#A4").addClass("fa fa-angle-up");
+                $("#A1").removeClass("fa fa-angle-up");
+                $("#A1").addClass("fa fa-angle-down");
+                $("#A2").removeClass("fa fa-angle-up");
+                $("#A2").addClass("fa fa-angle-down");
+                $("#A3").removeClass("fa fa-angle-up");
+                $("#A3").addClass("fa fa-angle-down");
             } else if ($(this).attr('aria-expanded') == 'true') {
                 $("#A4").removeClass("fa fa-angle-up");
                 $("#A4").addClass("fa fa-angle-down");
@@ -182,6 +209,7 @@
             <div>
                 <p class="float-left">Download de kaart of krijg er een bij de informatiebalie</p>
                 <a asp-area="" asp-controller="Practical" asp-action="Index" class="justify-content-end float-right text-dark font-weight-bold text-decoration-none">Meer praktische informatie<i class="fa fa-arrow-right ml-1 text-warning"></i> </a></br>
+
             </div>
         </div>
         <div class="col-md-6">
@@ -323,30 +351,31 @@
 </div>
 <div class="container bg1 py-4" id="featured">
     <h1>Instagram #Visitkeukenhof</h1>
+
     <a href="https://www.instagram.com/visitkeukenhof/" class="justify-content-end float-right text-dark font-weight-bold text-decoration-none"><i class="fab fa-instagram ml-1" style="color:#EA6025; font-size:20px"></i> Volg ons </a></br>
     <div class="row mt-3">
         <div class="col-sm-3">
-            <img src="~/Images/Instagram1.png" class="instafeed">
-            <div class="expand-position-for-picture">
-                <span class="fab fa-instagram ml-1" style="font-size: 45px"></span>
+            <img class="img-responsive" src="~/Images/Instagram1.png">
+            <div class="img-overlay2">
+                <span><i class="fab fa-instagram ml-1" aria-hidden="true" style="font-size: 45px"></i></span>
             </div>
         </div>
         <div class="col-sm-3">
             <img src="~/Images/Instagram2.png" class="instafeed">
-            <div class="expand-position-for-picture">
-                <span class="fab fa-instagram ml-1" style="font-size: 45px"></span>
+            <div class="img-overlay2">
+                <span><i class="fab fa-instagram ml-1" aria-hidden="true" style="font-size: 45px"></i></span>
             </div>
         </div>
         <div class="col-sm-3">
             <img src="~/Images/Instagram3.png" class="instafeed">
-            <div class="expand-position-for-picture">
-                <span class="fab fa-instagram ml-1" style="font-size: 45px"></span>
+            <div class="img-overlay2">
+                <span><i class="fab fa-instagram ml-1" aria-hidden="true" style="font-size: 45px"></i></span>
             </div>
         </div>
         <div class="col-sm-3">
             <img src="~/Images/Instagram4.png" class="instafeed">
-            <div class="expand-position-for-picture">
-                <span class="fab fa-instagram ml-1" style="font-size: 45px"></span>
+            <div class="img-overlay2">
+                <span><i class="fab fa-instagram ml-1" aria-hidden="true" style="font-size: 45px"></i></span>
             </div>
         </div>
     </div>
