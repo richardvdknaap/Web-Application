@@ -34,10 +34,11 @@
             <div class="form-group">
                 <label for="exampleFormControlSelect2">Thema</label>
                 <select multiple class="form-control" id="exampleFormControlSelect2">
+                    @foreach (var item in Model.AllCats)
+                    {
+                        <option>@item.Naam</option>
+                    }
                     <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
                     <option>5</option>
                 </select>
             </div>
@@ -63,8 +64,8 @@
                 var fileName = $(this).val().split("\\").pop();
                 $(this).next('.custom-file-label').html(fileName);
             });
-               
-               
+
+
         });
     </script>
 }

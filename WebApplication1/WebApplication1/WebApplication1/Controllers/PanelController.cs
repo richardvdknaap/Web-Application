@@ -19,6 +19,7 @@ namespace WebApplication1.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly IHostingEnvironment hostingEnvironment;
+        private readonly List<Category> categories;
 
         public PanelController(ApplicationDbContext context, IHostingEnvironment environment)
         {
@@ -53,13 +54,15 @@ namespace WebApplication1.Controllers
         }
 
         // GET: DBEvents/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            ViewModel mymodel = new ViewModel() { Event = null, Foto = null, UploadModel = null};
+            List<Category> categories = await _context.Category.ToListAsync();
+            ViewModel mymodel = new ViewModel() { Event = null, Foto = null, UploadModel = null, AllCats = categories};
             return View(mymodel);
         }
 
-        public IActionResult CreateThema()
+
+        public IActionResult CreateCat()
         {
             return View();
         }

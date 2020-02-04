@@ -16,6 +16,7 @@ namespace WebApplication1.Data
 
         public DbSet<Event> Events { get; set; }
         public DbSet<Foto> Fotos { get; set; }
+        public DbSet<Category> Categorys { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder) {
             {
@@ -37,5 +38,7 @@ namespace WebApplication1.Data
                 .WithMany(c => c.Category_Event)
                 .HasForeignKey(ce => ce.CategoryId);
         }
+
+        public DbSet<WebApplication1.Models.Category> Category { get; set; }
     }
 }

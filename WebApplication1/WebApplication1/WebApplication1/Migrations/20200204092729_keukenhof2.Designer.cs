@@ -10,14 +10,14 @@ using WebApplication1.Data;
 namespace WebApplication1.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200124095551_Keukenhof")]
-    partial class Keukenhof
+    [Migration("20200204092729_keukenhof2")]
+    partial class keukenhof2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.11-servicing-32099")
+                .HasAnnotation("ProductVersion", "2.1.14-servicing-32113")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -249,8 +249,7 @@ namespace WebApplication1.Migrations
 
                     b.Property<int>("EventId");
 
-                    b.Property<string>("Link")
-                        .IsRequired();
+                    b.Property<string>("Link");
 
                     b.HasKey("Id");
 
