@@ -23,6 +23,7 @@ namespace WebApplication1.Data
                 base.OnModelCreating(builder);
                 builder.Entity<Event>().ToTable("Event");
                 builder.Entity<Foto>().ToTable("Foto");
+                //builder.Entity<Category>().ToTable("Category");
             }
 
             builder.Entity<Category_Event>()
