@@ -14,6 +14,8 @@ namespace WebApplication1.Data
         {
         }
 
+
+        //Maken van Dbsets voor de database
         public DbSet<Event> Events { get; set; }
         public DbSet<Foto> Fotos { get; set; }
         public DbSet<Category> Category { get; set; }
@@ -26,6 +28,7 @@ namespace WebApplication1.Data
                 //builder.Entity<Category>().ToTable("Category");
             }
 
+            //Many-to-Many relatie tussen Event en Category maken!!!!!
             builder.Entity<Category_Event>()
                 .HasKey(c => new { c.EventId, c.CategoryId });
 

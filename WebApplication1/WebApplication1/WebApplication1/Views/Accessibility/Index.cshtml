@@ -10,6 +10,7 @@
             $(".selecting").parent().removeClass("active");
             $(this).parent().addClass("active");
         });
+        //1e pijl in de accordeon
         $("#Arrow1").click(function (e) {
             e.preventDefault();
             if ($(this).attr('aria-expanded') == 'false') {
@@ -24,6 +25,7 @@
                 $("#A1").addClass("fa fa-angle-down");
             }
         });
+        //2e pijl in de accordeon
         $("#Arrow2").click(function (e) {
             e.preventDefault();
             if ($(this).attr('aria-expanded') == 'false') {
@@ -38,6 +40,7 @@
                 $("#A2").addClass("fa fa-angle-down");
             }
         });
+        //3e pijl in de accordeon
         $("#Arrow3").click(function (e) {
             e.preventDefault();
             if ($(this).attr('aria-expanded') == 'false') {
