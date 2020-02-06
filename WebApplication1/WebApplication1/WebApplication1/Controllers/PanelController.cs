@@ -19,7 +19,6 @@ namespace WebApplication1.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly IHostingEnvironment hostingEnvironment;
-        private readonly List<Category> categories;
 
         public PanelController(ApplicationDbContext context, IHostingEnvironment environment)
         {
@@ -54,10 +53,10 @@ namespace WebApplication1.Controllers
         }
 
         // GET: DBEvents/Create
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {
-            List<Category> categories = await _context.Category.ToListAsync();
-            ViewModel mymodel = new ViewModel() { Event = null, Foto = null, UploadModel = null, AllCats = categories};
+            //List<Category> categories = await _context.Category.ToListAsync();
+            ViewModel mymodel = new ViewModel() { Event = null, Foto = null, UploadModel = null };
             return View(mymodel);
         }
 
@@ -77,19 +76,8 @@ namespace WebApplication1.Controllers
             if (ModelState.IsValid)
             {
 
-                string filePath = "";
-
-                if (file != null)
-                {
-                    var uniqueFileName = GetUniqueFileName(file.FileName);
-                    var uploads = Path.Combine(hostingEnvironment.WebRootPath, "uploads");
-                    filePath = Path.Combine(uploads, uniqueFileName);
-                    file.CopyTo(new FileStream(filePath, FileMode.Create));
-                   
-                }
 
                 _context.Add(@event);
-                @foto.Link = filePath;
                 @foto.EventId = @event.Id;
                 _context.Add(@foto);
 
@@ -97,17 +85,8 @@ namespace WebApplication1.Controllers
                 return RedirectToAction(nameof(Index));
             }
             
-            ViewModel mymodel = new ViewModel() { Event = @event, Foto = @foto, UploadModel = null};
+            ViewModel mymodel = new ViewModel() { Event = @event, Foto = @foto};
             return View(mymodel);
-        }
-
-        private string GetUniqueFileName(string fileName)
-        {
-            fileName = Path.GetFileName(fileName);
-            return Path.GetFileNameWithoutExtension(fileName)
-                      + "_"
-                      + Guid.NewGuid().ToString().Substring(0, 4)
-                      + Path.GetExtension(fileName);
         }
 
         // GET: DBEvents/Edit/5
@@ -194,20 +173,5 @@ namespace WebApplication1.Controllers
         {
             return _context.Events.Any(e => e.Id == id);
         }
-
-        /*private async Task<bool> UploadFile(IFormFile ufile)
-        {
-            if (ufile != null && ufile.Length > 0)
-            {
-                var fileName = Path.GetFileName(ufile.FileName);
-                var filePath = Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\images\events", fileName);
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    await ufile.CopyToAsync(fileStream);
-                }
-                return true;
-            }
-            return false;
-        }*/
     }
 }
