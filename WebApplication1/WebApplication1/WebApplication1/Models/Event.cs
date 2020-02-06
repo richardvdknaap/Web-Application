@@ -23,8 +23,8 @@ namespace WebApplication1.Models
 
         List<Foto> Fotos { get; set; }
 
-        [Required]
-        public List<Category_Event> Category_Event { get; set; }
+        //[Required]
+        //public List<Category_Event> Category_Event { get; set; }
 
 
     }

@@ -71,11 +71,10 @@ namespace WebApplication1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Naam,Beschrijving,Datum,Info")] Event @event, [Bind("Id,Link,EventId")] Foto @foto, [FromForm(Name="uploadedFile")] IFormFile file)
+        public async Task<IActionResult> Create([Bind("Id,Naam,Beschrijving,Datum,Info")] Event @event, [Bind("Id,Link,EventId")] Foto @foto)
         {
             if (ModelState.IsValid)
             {
-
 
                 _context.Add(@event);
                 @foto.EventId = @event.Id;

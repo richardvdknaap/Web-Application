@@ -17,7 +17,7 @@ namespace WebApplication1.Models
         [Required]
         public string Beschrijving { get; set; }
 
-        [Required]
+        //[Required]
         public List<Category_Event> Category_Event { get; set; }
     }
 }
