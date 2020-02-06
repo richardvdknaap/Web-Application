@@ -25,24 +25,18 @@
 </head>
 <body>
     <environment include="Development">
+        <!-- Latest compiled and minified JavaScript -->
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
+        
     </environment>
     <environment exclude="Development">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
-        </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
-        </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        
     </environment>
     <nav class="navbar navbar-expand-md navbar-light sticky-top" style="padding-top:0px; background-color: white; box-shadow:0px 0px 8px rgba(0, 0, 0, 0.24">
         <div class="container-fluid container-md" id="Header">
@@ -56,13 +50,13 @@
                         <a asp-area="" asp-controller="HetPark" asp-action="Index" class="nav-link" style="color:#36454E">Het park</a>
                     </div>
                     <div class="nav-item" style="padding-left:15px; padding-right:15px">
-                        <a asp-area="" asp-controller="Info" asp-action="Index" class="nav-link" style="color:#36454E">Praktisch</a>
+                        <a asp-area="" asp-controller="Practical" asp-action="Index" class="nav-link" style="color:#36454E">Praktisch</a>
                     </div>
                     <div class="nav-item" style="padding-left:15px; padding-right:15px">
-                        <a asp-area="" asp-controller="Info" asp-action="Index" class="nav-link" style="color:#36454E">Veelgestelde vragen</a>
+                        <a asp-area="" asp-controller="Vragen" asp-action="Index" class="nav-link" style="color:#36454E">Veelgestelde vragen</a>
                     </div>
                     <div class="nav-item" style="padding-left:15px; padding-right:15px">
-                        <a asp-area="" asp-controller="HetPark" asp-action="Index" class="nav-link" style="color:#36454E">Bereikbaarheid</a>
+                        <a asp-area="" asp-controller="Accessibility" asp-action="Index" class="nav-link" style="color:#36454E">Bereikbaarheid</a>
                     </div>
                     @if (SignInManager.IsSignedIn(User)) {
                     <div class="nav-item" style="padding-left:15px; padding-right:15px">
@@ -83,10 +77,10 @@
                     <div class="col-md-3" id="footer-1_4">
                         <img src=" /Images/image.png" /> <br />
                         <div class="footer-icons">
-                            <i class="fab fa-instagram fa-lg circle-icon"></i>
-                            <i class="fab fa-facebook fa-lg circle-icon"></i>
-                            <i class="fab fa-twitter fa-lg circle-icon"></i>
-                            <i class="fab fa-youtube fa-lg circle-icon"></i>
+                           <a href="https://www.instagram.com/visitkeukenhof/"> <i class="fab fa-instagram fa-lg circle-icon"></i> </a>
+                           <a href="https://www.facebook.com/Visit-Keukenhof-626441381105826/"><i class="fab fa-facebook fa-lg circle-icon"></i></a>
+                           <a href="https://twitter.com/visitkeukenhof"><i class="fab fa-twitter fa-lg circle-icon"></i></a>
+                           <a href="https://www.youtube.com/channel/UCqvitLp1vxIcb5QrcUgEA7w"> <i class="fab fa-youtube fa-lg circle-icon"></i></a>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -111,7 +105,7 @@
                         <div class="footer-ql">
                             <div class="row">
                                 <div class="col-sm-10">
-                                    <a asp-area="" asp-controller="Info" asp-action="Index">Praktisch</a>
+                                    <a asp-area="" asp-controller="Practical" asp-action="Index">Praktisch</a>
                                 </div>
                                 <div class="col-sm-2">
                                     <i class="fas fa-arrow-right"></i>
@@ -121,7 +115,7 @@
                         <div class="footer-ql">
                             <div class="row">
                                 <div class="col-sm-10">
-                                    <a asp-area="" asp-controller="Info" asp-action="Index">Groepen</a>
+                                    <a asp-area="" asp-controller="HetPark" asp-action="Index">Groepen</a>
                                 </div>
                                 <div class="col-sm-2">
                                     <i class="fas fa-arrow-right"></i>
@@ -142,10 +136,10 @@
                     <div class="col-md-3">
                         <div class="footer-hl">
                             <h1 class="footer-header">Meer handige links</h1>
-                            <i class="fas fa-chevron-right fa-fw"></i><a asp-area="" asp-controller="Info" asp-action="Index">Beschikbaarheid</a><br />
+                            <i class="fas fa-chevron-right fa-fw"></i><a asp-area="" asp-controller="Accessibility" asp-action="Index">Beschikbaarheid</a><br />
                             <i class="fas fa-chevron-right fa-fw"></i><a asp-area="" asp-controller="Events" asp-action="Index">Evenementen</a><br />
-                            <i class="fas fa-chevron-right fa-fw"></i><a asp-area="" asp-controller="Info" asp-action="Index">Veelgestelde vragen</a><br />
-                            <i class="fas fa-chevron-right fa-fw"></i><a asp-area="" asp-controller="Info" asp-action="Index">Contact</a><br />
+                            <i class="fas fa-chevron-right fa-fw"></i><a asp-area="" asp-controller="Vragen" asp-action="Index">Veelgestelde vragen</a><br />
+                            <i class="fas fa-chevron-right fa-fw"></i><a asp-area="" asp-controller="Contact" asp-action="Index">Contact</a><br />
                             <i class="fas fa-chevron-right fa-fw"></i><a asp-area="" asp-controller="Info" asp-action="Index">Privacy statement</a><br />
                         </div>
                     </div>

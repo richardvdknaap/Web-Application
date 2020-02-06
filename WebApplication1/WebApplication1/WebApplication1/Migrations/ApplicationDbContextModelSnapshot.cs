@@ -184,6 +184,40 @@ namespace WebApplication1.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("WebApplication1.Models.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Beschrijving")
+                        .IsRequired();
+
+                    b.Property<string>("Naam")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Category");
+                });
+
+            modelBuilder.Entity("WebApplication1.Models.Category_Event", b =>
+                {
+                    b.Property<int>("EventId");
+
+                    b.Property<int>("CategoryId");
+
+                    b.Property<string>("CategoryName");
+
+                    b.Property<string>("EventName");
+
+                    b.HasKey("EventId", "CategoryId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("Category_Event");
+                });
+
             modelBuilder.Entity("WebApplication1.Models.Event", b =>
                 {
                     b.Property<int>("Id")
@@ -264,6 +298,19 @@ namespace WebApplication1.Migrations
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser")
                         .WithMany()
                         .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("WebApplication1.Models.Category_Event", b =>
+                {
+                    b.HasOne("WebApplication1.Models.Category", "Category")
+                        .WithMany("Category_Event")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("WebApplication1.Models.Event", "Event")
+                        .WithMany("Category_Event")
+                        .HasForeignKey("EventId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

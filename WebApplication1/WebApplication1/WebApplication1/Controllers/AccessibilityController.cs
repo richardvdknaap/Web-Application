@@ -10,7 +10,8 @@ namespace WebApplication1.Controllers
 {
     public class AccessibilityController : Controller
     {
-        // GET: Accessibility
+        // GET: Accessibility 
+        //Return Accessability/Index.cshtml
         public ActionResult Index()
         {
             return View();

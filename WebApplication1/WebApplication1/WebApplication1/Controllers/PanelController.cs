@@ -14,9 +14,11 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
+    // Controleerd de login van de user
     [Authorize]
     public class PanelController : Controller
     {
+        // Leest de DbContext en de HostingEnvironment
         private readonly ApplicationDbContext _context;
         private readonly IHostingEnvironment hostingEnvironment;
 
@@ -30,11 +32,13 @@ namespace WebApplication1.Controllers
         // GET: DBEvents
         public async Task<IActionResult> Index()
         {
+            //wacht op resultaat van context.Events.ToListAsync
             return View(await _context.Events.ToListAsync());
         }
 
 
         // GET: DBEvents/Details/5
+        //id begint als NULL om te controleren of er wel Details zijn
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -53,35 +57,29 @@ namespace WebApplication1.Controllers
         }
 
         // GET: DBEvents/Create
-        public IActionResult Create()
+        // Laat de Create knop functioneren
+        public async Task<IActionResult> Create()
         {
             ViewModel mymodel = new ViewModel() { Event = null, Foto = null, UploadModel = null};
             return View(mymodel);
         }
 
+        // Als create wordt geselecteerd word de juiste view gestuurd
+        public IActionResult CreateCat()
+        {
+            return View();
+        }
+
         // POST: DBEvents/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        //Maakt event aan
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Naam,Beschrijving,Datum,Info")] Event @event, [Bind("Id,Link,EventId")] Foto @foto, [FromForm(Name="uploadedFile")] IFormFile file)
+        public async Task<IActionResult> Create([Bind("Id,Naam,Beschrijving,Datum,Info")] Event @event, [Bind("Id,Link,EventId")] Foto @foto)
         {
             if (ModelState.IsValid)
             {
 
-                string filePath = "";
-
-                if (file != null)
-                {
-                    var uniqueFileName = GetUniqueFileName(file.FileName);
-                    var uploads = Path.Combine(hostingEnvironment.WebRootPath, "uploads");
-                    filePath = Path.Combine(uploads, uniqueFileName);
-                    file.CopyTo(new FileStream(filePath, FileMode.Create));
-                   
-                }
-
                 _context.Add(@event);
-                @foto.Link = filePath;
                 @foto.EventId = @event.Id;
                 _context.Add(@foto);
 
@@ -89,20 +87,25 @@ namespace WebApplication1.Controllers
                 return RedirectToAction(nameof(Index));
             }
             
-            ViewModel mymodel = new ViewModel() { Event = @event, Foto = @foto, UploadModel = null};
+            ViewModel mymodel = new ViewModel() { Event = @event, Foto = @foto};
             return View(mymodel);
         }
 
-        private string GetUniqueFileName(string fileName)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateCat([Bind("Id, Naam, Beschrijving")] Category @cat)
         {
-            fileName = Path.GetFileName(fileName);
-            return Path.GetFileNameWithoutExtension(fileName)
-                      + "_"
-                      + Guid.NewGuid().ToString().Substring(0, 4)
-                      + Path.GetExtension(fileName);
+            if (ModelState.IsValid)
+            {
+                _context.Add(@cat);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(@cat);
         }
 
         // GET: DBEvents/Edit/5
+        // Laat de Edit knop functioneren
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -119,8 +122,7 @@ namespace WebApplication1.Controllers
         }
 
         // POST: DBEvents/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        //Veranderd Event
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Naam,Beschrijving,Datum,Info")] Event @event)
@@ -137,6 +139,7 @@ namespace WebApplication1.Controllers
                     _context.Update(@event);
                     await _context.SaveChangesAsync();
                 }
+                //Controleerd of opgegeven ID bestaat
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!EventExists(@event.Id))
@@ -154,6 +157,7 @@ namespace WebApplication1.Controllers
         }
 
         // GET: DBEvents/Delete/5
+        // Laat de Delete knop functioneren
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -172,6 +176,7 @@ namespace WebApplication1.Controllers
         }
 
         // POST: DBEvents/Delete/5
+        // Verwijderd Event
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -182,24 +187,10 @@ namespace WebApplication1.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        // controlereerd of er een event bestaat
         private bool EventExists(int id)
         {
             return _context.Events.Any(e => e.Id == id);
         }
-
-        /*private async Task<bool> UploadFile(IFormFile ufile)
-        {
-            if (ufile != null && ufile.Length > 0)
-            {
-                var fileName = Path.GetFileName(ufile.FileName);
-                var filePath = Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\images\events", fileName);
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    await ufile.CopyToAsync(fileStream);
-                }
-                return true;
-            }
-            return false;
-        }*/
     }
 }

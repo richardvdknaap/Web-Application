@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WebApplication1.Migrations
 {
-    public partial class Keukenhof : Migration
+    public partial class keukenhof : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -45,6 +45,20 @@ namespace WebApplication1.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Category",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Naam = table.Column<string>(nullable: false),
+                    Beschrijving = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Category", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -170,6 +184,32 @@ namespace WebApplication1.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Category_Event",
+                columns: table => new
+                {
+                    EventId = table.Column<int>(nullable: false),
+                    EventName = table.Column<string>(nullable: true),
+                    CategoryId = table.Column<int>(nullable: false),
+                    CategoryName = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Category_Event", x => new { x.EventId, x.CategoryId });
+                    table.ForeignKey(
+                        name: "FK_Category_Event_Category_CategoryId",
+                        column: x => x.CategoryId,
+                        principalTable: "Category",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Category_Event_Event_EventId",
+                        column: x => x.EventId,
+                        principalTable: "Event",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Foto",
                 columns: table => new
                 {
@@ -229,6 +269,11 @@ namespace WebApplication1.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Category_Event_CategoryId",
+                table: "Category_Event",
+                column: "CategoryId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Foto_EventId",
                 table: "Foto",
                 column: "EventId");
@@ -252,6 +297,9 @@ namespace WebApplication1.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Category_Event");
+
+            migrationBuilder.DropTable(
                 name: "Foto");
 
             migrationBuilder.DropTable(
@@ -259,6 +307,9 @@ namespace WebApplication1.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Category");
 
             migrationBuilder.DropTable(
                 name: "Event");

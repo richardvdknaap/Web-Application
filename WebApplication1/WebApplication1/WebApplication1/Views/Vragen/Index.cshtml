@@ -3,6 +3,7 @@
     ViewBag.Title = "Vragen"; ;
 }
 
+<!-- Zorgt voor de Jumbotron en hoofdtekst van de pagina-->
 <div class="jumbotron" id="VragenJumbo">
 </div>
 <div class="container" id="head" style="padding:32px">
@@ -16,6 +17,7 @@
         </p>
     </div>
 </div>
+<!-- De zwarte navigatie balk-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
@@ -31,156 +33,143 @@
         </ul>
     </div>
 </nav>
+<!--Accordion voor alle vragen-->
 <div class="container" style="background-color: #E1EBE9;">
-    <div class="row row-padding">
-        <div class="col-md-12">
-            <h2 style="font-size:40px;">Bereikbaarheid</h2>
-        </div>
+    <div class="container" style="background-color: #E1EBE9;">
+        <div class="row row-padding">
+            <div class="col-md-12">
+                <h2 style="font-size:40px;">Bereikbaarheid</h2>
+            </div>
 
-        <div class="col-md-6" id="accordion">
-            <div class="card">
-                <div id="headingOne">
-                    <h5 class="mb-0">
-                        <button data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="border-width:0px; background-color: #FFFFFF">
-                            Hoe kan ik het beste naar Keukenhof reizen?
-                            <i class="fa fa-angle-down float-lg-right" aria-hidden="false">
-                            </i>
-                        </button>
-                    </h5>
+            <div class="col-md-6" id="accordion">
+                <div class="card">
+                    <div id="headingOne">
+                        <h5 class="mb-0">
+                            <div data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" id="Arrow1">
+                                Hoe kan ik het beste naar Keukenhof reizen? <i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A1"></i>
+                            </div>
+                        </h5>
+                    </div>
+
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            Met de fiets, maar misschien ook met de auto of trein.
+                            <br />Waarschijnlijk de benenwagen.
+                        </div>
+                    </div>
                 </div>
-                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body">
-                        Met de fiets, maar misschien ook met de auto of trein.
-                        <br />Waarschijnlijk de benenwagen.
+                <div class="card">
+                    <div id="headingTwo">
+                        <h5 class="mb-0">
+                            <div data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="Arrow2">
+                                Wat is een combiticket? <i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A2"></i>
+                            </div>
+                        </h5>
+                    </div>
+
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            Een combinatie van een ticket !?
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div id="headingThree">
+                        <h5 class="mb-0">
+                            <div data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="Arrow3">
+                                Kan ik parkeren bij Keukenhof? <i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A3"></i>
+                            </div>
+                        </h5>
+                    </div>
+
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            Vast wel.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div id="headingFour">
+                        <h5 class="mb-0">
+                            <div data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" id="Arrow4">
+                                Kunnen we met de camper overnachten op het parkeerterrein? <i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A4" style="line-height:0"></i>
+                            </div>
+                        </h5>
+                    </div>
+
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                        <div class="card-body">
+                            Van mij mag het.
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div id="headingTwo">
-                    <h5 class="mb-0">
-                        <button data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="border-width:0px; background-color: #FFFFFF">
-                            Wat is een combiticket?
-                            <i class="fa fa-angle-down float-lg-right" aria-hidden="false">
-                            </i>
-                        </button>
-                    </h5>
 
-                </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                    <div class="card-body">
-                        Een combinatie van een ticket !?
+            <div class="col-md-6" id="accordion">
+                <div class="card">
+                    <div id="headingFive">
+                        <h5 class="mb-0">
+                            <div data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" id="Arrow5">
+                                Mag ik in het park fietsen? <i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A5"></i>
+                            </div>
+                        </h5>
+                    </div>
+
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                        <div class="card-body">
+                            Misschien een andere keer
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card">
-                <div id="headingThree">
-                    <h5 class="mb-0">
-                        <button data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="border-width:0px; background-color: #FFFFFF">
-                            Kan ik parkeren bij Keukenhof?
-                            <i class="fa fa-angle-down float-lg-right" aria-hidden="false">
+                <div class="card">
+                    <div id="headingSix">
+                        <h5 class="mb-0">
+                            <div data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" id="Arrow6">
+                                Waar kan ik fietsen huren? <i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A6"></i>
+                            </div>
+                        </h5>
+                    </div>
 
-                            </i>
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                    <div class="card-body">
-                        Vast wel.
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                        <div class="card-body">
+                            Achterin het schuurtje.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card">
-                <div id="headingFour">
-                    <h5 class="mb-0">
-                        <button data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="border-width:0px; background-color: #FFFFFF">
-                            Kunnen we met de camper overnachten op het parkeerterrein?
-                            <i class="fa fa-angle-down float-lg-right" aria-hidden="false">
+                <div class="card">
+                    <div id="headingSeven">
+                        <h5 class="mb-0">
+                            <div data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" id="Arrow7">
+                                Zijn er oplaadpunten voor electrische auto's en fietsen? <i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A7" style="line-height:0"></i>
+                            </div>
+                        </h5>
+                    </div>
 
-                            </i>
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                    <div class="card-body">
-                        Van mij mag het
+                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                        <div class="card-body">
+                            Middenin de bloemenvelden
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="col-md-6" id="accordion">
-            <div class="card">
-                <div id="headingFive">
-                    <h5 class="mb-0">
-                        <button data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="border-width:0px; background-color: #FFFFFF">
-                            Mag ik in het park fietsen?
-                            <i class="fa fa-angle-down float-lg-right" aria-hidden="false">
-                            </i>
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                    <div class="card-body">
-                        Misschien een andere keer
+                <div class="card">
+                    <div id="headingEight">
+                        <h5 class="mb-0">
+                            <div data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight" id="Arrow8">
+                                Waar kan ik mijn scooter parkeren? <i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A8"></i>
+                            </div>
+                        </h5>
                     </div>
-                </div>
-            </div>
-            <div class="card">
-                <div id="headingSix">
-                    <h5 class="mb-0">
-                        <button data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="border-width:0px; background-color: #FFFFFF">
-                            Waar kan ik een fiets huren?
-                            <i class="fa fa-angle-down float-lg-right" aria-hidden="false">
-                            </i>
-                        </button>
-                    </h5>
 
-                </div>
-                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
-                    <div class="card-body">
-                        Achterin het schuurtje
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div id="headingSeven">
-                    <h5 class="mb-0">
-                        <button data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" style="border-width:0px; background-color: #FFFFFF">
-                            Zijn er oplaadpunten voor electrische auto's en fietsen?
-                            <i class="fa fa-angle-down float-lg-right" aria-hidden="false">
-
-                            </i>
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
-                    <div class="card-body">
-                        Middenin de bloemenvelden
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div id="headingEight">
-                    <h5 class="mb-0">
-                        <button data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight" style="border-width:0px; background-color: #FFFFFF">
-                            Waar kan ik mijn scooter parkeren
-                            <i class="fa fa-angle-down float-lg-right" aria-hidden="false">
-
-                            </i>
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
-                    <div class="card-body">
-                        Fietsenstalling
+                    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                        <div class="card-body">
+                            Fietsenstalling!
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
 
-<div class="container" id="VragenContainer">
     <div class="row row-padding">
         <div class="col-md-12">
             <h2 style="font-size:40px;">Voorzieningen</h2>
@@ -190,11 +179,9 @@
             <div class="card">
                 <div id="headingNine">
                     <h5 class="mb-0">
-                        <button data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine" style="border-width:0px; background-color: #FFFFFF">
-                            Hoe kan ik het beste naar Keukenhof reizen?
-                            <i class="fa fa-angle-down float-lg-right" aria-hidden="false">
-                            </i>
-                        </button>
+                        <div data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine" id="Arrow9">
+                            Hoe kan ik het beste naar Keukenhof reizen? <i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A9"></i>
+                        </div>
                     </h5>
                 </div>
                 <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
@@ -207,13 +194,10 @@
             <div class="card">
                 <div id="headingTen">
                     <h5 class="mb-0">
-                        <button data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen" style="border-width:0px; background-color: #FFFFFF">
-                            Wat is een combiticket?
-                            <i class="fa fa-angle-down float-lg-right" aria-hidden="false">
-                            </i>
-                        </button>
+                        <div data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen" id="Arrow10">
+                            Wat is een combiticket? <i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A10"></i>
+                        </div>
                     </h5>
-
                 </div>
                 <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
                     <div class="card-body">
@@ -224,12 +208,9 @@
             <div class="card">
                 <div id="headingEleven">
                     <h5 class="mb-0">
-                        <button data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven" style="border-width:0px; background-color: #FFFFFF">
-                            Kan ik parkeren bij Keukenhof?
-                            <i class="fa fa-angle-down float-lg-right" aria-hidden="false">
-
-                            </i>
-                        </button>
+                        <div data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven" id="Arrow11">
+                            Kan ik parkeren bij Keukenhof? <i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A11"></i>
+                        </div>
                     </h5>
                 </div>
                 <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
@@ -241,17 +222,15 @@
             <div class="card">
                 <div id="headingTwelve">
                     <h5 class="mb-0">
-                        <button data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve" style="border-width:0px; background-color: #FFFFFF">
-                            Kunnen we met de camper overnachten op het parkeerterrein?
-                            <i class="fa fa-angle-down float-lg-right" aria-hidden="false">
-
-                            </i>
-                        </button>
+                        <div data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve" id="Arrow12">
+                            Kunnen we met de camper overnachten op het parkeerterrein? <i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A12" style="line-height:0"></i>
+                        </div>
                     </h5>
                 </div>
+
                 <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordion">
                     <div class="card-body">
-                        Van mij mag het
+                        Van mij mag het.
                     </div>
                 </div>
             </div>
@@ -261,11 +240,9 @@
             <div class="card">
                 <div id="headingThirteen">
                     <h5 class="mb-0">
-                        <button data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen" style="border-width:0px; background-color: #FFFFFF">
-                            Mag ik in het park fietsen?
-                            <i class="fa fa-angle-down float-lg-right" aria-hidden="false">
-                            </i>
-                        </button>
+                        <div data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen" id="Arrow13">
+                            Mag ik in het park fietsen? <i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A13"></i>
+                        </div>
                     </h5>
                 </div>
                 <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#accordion">
@@ -277,32 +254,28 @@
             <div class="card">
                 <div id="headingFourteen">
                     <h5 class="mb-0">
-                        <button data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen" style="border-width:0px; background-color: #FFFFFF">
-                            Waar kan ik een fiets huren?
-                            <i class="fa fa-angle-down float-lg-right" aria-hidden="false">
-                            </i>
-                        </button>
+                        <div data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen" id="Arrow14">
+                            Waar kan ik fietsen huren? <i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A14"></i>
+                        </div>
                     </h5>
-
                 </div>
+
                 <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" data-parent="#accordion">
                     <div class="card-body">
-                        Achterin het schuurtje
+                        Achterin het schuurtje.
                     </div>
                 </div>
             </div>
             <div class="card">
-                <div id="headingFiveteen">
+                <div id="headingFifteen">
                     <h5 class="mb-0">
-                        <button data-toggle="collapse" data-target="#collapseFiveteen" aria-expanded="false" aria-controls="collapseFiveteen" style="border-width:0px; background-color: #FFFFFF">
-                            Zijn er oplaadpunten voor electrische auto's en fietsen?
-                            <i class="fa fa-angle-down float-lg-right" aria-hidden="false">
-
-                            </i>
-                        </button>
+                        <div data-toggle="collapse" data-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen" id="Arrow15">
+                            Zijn er oplaadpunten voor electrische auto's en fietsen? <i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A15" style="line-height:0"></i>
+                        </div>
                     </h5>
                 </div>
-                <div id="collapseFiveteen" class="collapse" aria-labelledby="headingFiveteen" data-parent="#accordion">
+
+                <div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen" data-parent="#accordion">
                     <div class="card-body">
                         Middenin de bloemenvelden
                     </div>
@@ -311,20 +284,19 @@
             <div class="card">
                 <div id="headingSixteen">
                     <h5 class="mb-0">
-                        <button data-toggle="collapse" data-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen" style="border-width:0px; background-color: #FFFFFF">
-                            Waar kan ik mijn scooter parkeren
-                            <i class="fa fa-angle-down float-lg-right" aria-hidden="false">
-
-                            </i>
-                        </button>
+                        <div data-toggle="collapse" data-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen" id="Arrow16">
+                            Waar kan ik mijn scooter parkeren? <i class="fa fa-angle-down float-lg-right" aria-hidden="true" id="A16"></i>
+                        </div>
                     </h5>
                 </div>
+
                 <div id="collapseSixteen" class="collapse" aria-labelledby="headingSixteen" data-parent="#accordion">
                     <div class="card-body">
-                        Fietsenstalling
+                        Fietsenstalling!
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+

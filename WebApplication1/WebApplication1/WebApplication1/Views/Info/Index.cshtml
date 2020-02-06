@@ -4,7 +4,7 @@
 }
 
 <script>
-
+    //script voor de buttons om de images te scrollen
     $('#carouselExampleIndicators').carousel({
         interval: 3000
     })
@@ -21,17 +21,18 @@
 
 
 
-
+<!-- Zorgt voor de Jumbotron en hoofdtekst van de pagina-->
 <div class="autoJumboTron" id="autojumbo">
     <div class="autoJumboTron-bottom">
         <h1>Bloemen festival</h1>
     </div>
 </div> <br />
 
+<!--Info die (eigenlijk uit de DB gehaal zou moeten worden)-->
 <div class="container">
     <ul class="breadcrumb">
-        <li><a href="#"><i class="fas fa-home" id="home-icon"></i></a></li>
-        <li><a href="#">Evenementen</a></li>
+        <li><a asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-home" id="home-icon"></i></a></li>
+        <li><a asp-area="" asp-controller="Events" asp-action="Index">Evenementen</a></li>
         <li>Bloemen festival</li>
     </ul>
 
@@ -49,6 +50,7 @@
         </p> <br />
     </div>
 
+    <!--images carousel-->
     <div id="carouselExampleIndicators" class="carousel slide ml-5" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -73,8 +75,8 @@
         <div class="col-sm-12">
             <div class="text-center">
                 <div class="btn-group" role="group">
-                    <button href="#carouselExampleIndicators"  data-slide="prev" class="btn" id="btnPrev"><i class="fas fa-arrow-left"></i></button>
-                    <button href="#carouselExampleIndicators"  data-slide="next" class="btn" id="btnNext"><i class="fas fa-arrow-right"></i></button>
+                    <button href="#carouselExampleIndicators" data-slide="prev" class="btn" id="btnPrev"><i class="fas fa-arrow-left"></i></button>
+                    <button href="#carouselExampleIndicators" data-slide="next" class="btn" id="btnNext"><i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>

@@ -1,22 +1,20 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Data;
-using WebApplication1.Models;
-
 
 namespace WebApplication1.Controllers
 {
-    // Leest de evenementen uit de database en gebruikt deze voor de Events view.
-    public class EventsController : Controller
+    // Leest de Catogorieen uit de database .
+    public class CategoryController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public EventsController(ApplicationDbContext context)
+        public CategoryController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -25,7 +23,7 @@ namespace WebApplication1.Controllers
         // GET: Events
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Events.ToListAsync());
+            return View(await _context.Category.ToListAsync());
         }
 
     }

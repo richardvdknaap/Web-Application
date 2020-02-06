@@ -3,6 +3,7 @@
 }
 
 <script>
+    //Script voor het veranderen van de pijl in de accordion
     $(document).ready(function () {
         $(".selecting").click(function (e) {
             e.preventDefault();
@@ -108,22 +109,20 @@
     });
 </script>
 
+<!-- Zorgt voor de Jumbotron en hoofdtekst van de pagina-->
 <div class="jumbotron" id="ParkJumbo">
 </div>
-
-
-
 <div class="containerpractical" id="head">
     <h1>Praktische informatie</h1>
     <div class="row">
         <p class="col-sm-6 text-dark">In 2020 is Keukenhof open van 21 maart tot en met 10 mei tussen 9:00-17:00 uur.</p>
         <p class="col-sm-6 text-dark">In alle rust genieten van Keukenhof? Voor 10:30 uur en na 16:00 uur is het minder druk.</p>
     </div>
-    <p><a href="https://asp.net" class="btn btn-outline-success" id="btntop"><b>Bekijk Video</b></a></p>
+    <p><a href="https://www.youtube.com/watch?v=dtPLYpvhfN4" class="btn btn-outline-success" id="btntop"><b>Bekijk Video</b></a></p>
 </div>
 
 
-
+<!-- De zwarte navigatie balk-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
@@ -144,7 +143,7 @@
 </nav>
 
 
-
+<!--Download van het kaart-->
 <div class="container">
     <div class="row row-padding" style="background-color: #E1EBE9">
         <div class="col-md-12">
@@ -158,13 +157,15 @@
             <div class="img-wrapper">
                 <img class="img-responsive" src="/Images/PLATTEGROND Keukenhof 2019.png">
                 <div class="img-overlay">
-                    <button class="btn btn-md btn-success" id="btntop"><i class="fa fa-download" aria-hidden="true"></i> Download de kaart</button>
+                    <a class="text-decoration-none" href="~/images/PLATTEGROND Keukenhof 2019.png" download>
+                        <button class="btn btn-md btn-success" id="btntop"><i class="fa fa-download" aria-hidden="true"></i> Download de kaart</button>
+                    </a>
                 </div>
             </div>
         </div>
 
 
-
+        <!--Accordion-->
         <div class="col-md-6">
             <div id="accordion">
                 <div class="card">
@@ -216,7 +217,7 @@
 </div>
 
 
-
+<!--Reisopties Kaarten met info en Fotos-->
 <div class="container">
     <div class="row row-padding" id="wheretosearch">
         <div class="col-md-12">
@@ -225,7 +226,7 @@
         <div class="col-md-3">
             <div class="cardnopadding">
                 <img src="/Images/Praktisch1.png" class="card-img-top" alt="Openbaar vervoer">
-                <a class="text-decoration-none" href="#">
+                <a class="text-decoration-none" href="https://www.ns.nl">
                     <div class="card-body" id="cards">
                         <div class="row">
                             <div class="col-md-10">
@@ -242,7 +243,7 @@
         <div class="col-md-3">
             <div class="cardnopadding">
                 <img src="/Images/Praktisch2.png" class="card-img-top" alt="Combotickets">
-                <a class="text-decoration-none" href="#">
+                <a class="text-decoration-none" asp-area="" asp-controller="Events" asp-action="Index">
                     <div class="card-body" id="cards">
                         <div class="row">
                             <div class="col-md-10">
@@ -259,7 +260,7 @@
         <div class="col-md-3">
             <div class="cardnopadding">
                 <img src="/Images/Praktisch3.png" class="card-img-top" alt="Eigen vervoer">
-                <a class="text-decoration-none" href="#">
+                <a class="text-decoration-none" asp-area="" asp-controller="Accessibility" asp-action="Index">
                     <div class="card-body" id="cards">
                         <div class="row">
                             <div class="col-md-10">
@@ -276,7 +277,7 @@
         <div class="col-md-3">
             <div class="cardnopadding">
                 <img src="/Images/Praktisch4.png" class="card-img-top" alt="Groepen">
-                <a class="text-decoration-none" href="#">
+                <a class="text-decoration-none" asp-area="" asp-controller="HetPark" asp-action="Index">
                     <div class="card-body" id="cards">
                         <div class="row">
                             <div class="col-md-10">
@@ -294,7 +295,7 @@
 </div>
 
 
-
+<!--Voorzieningen + knoppen die de info aanpassen-->
 <div class="container">
     <div class="row row-padding" style="background-color: #E1EBE9">
         <div class="col-md-12">
@@ -309,7 +310,7 @@
             <button class="facilities btn2 btn2-primary" id="f6"><img src="/Images/Facilities icon 6.png" /> Gevonden voorwerpen</button>
         </div>
         <div class="col-md-7" id="img1">
-            <a class="text-dark text-decoration-none float-right" href="#">
+            <a class="text-dark text-decoration-none float-right" asp-area="" asp-controller="Accessibility" asp-action="Index">
                 <img src="/Images/Praktisch6.png" style="width:653px; height:396px">
                 <div class="praticalinfo">
                     Testertekst1
@@ -364,14 +365,12 @@
         </div>
     </div>
 </div>
-
-
-
+<!--Image en tekst Groepen-->
 <div class="container bg2 py-4">
     <div class="cardnopadding">
         <img class="card-img-top" src="~/Images/Praktisch6.png" alt="Card image cap">
-        <a class="text-decoration-none" href="#">
-        <div class="card-body" id="cards">
+        <a class="text-decoration-none" asp-area="" asp-controller="HetPark" asp-action="Index">
+            <div class="card-body" id="cards">
                 <div class="row">
                     <div class="col-md-11">
                         <h5 class="card-title">Groepen</h5>

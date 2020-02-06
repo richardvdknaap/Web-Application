@@ -41,6 +41,7 @@ namespace WebApplication1
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
+            //Zorgt voor de mogelijkheid om met Google in te loggen.
             services.AddAuthentication().AddGoogle(options =>
             {
                 options.ClientId = "718507666798-jh9qosn4lhhep07cuvg3ci6hrp43dqgi.apps.googleusercontent.com";
@@ -71,6 +72,8 @@ namespace WebApplication1
 
             app.UseAuthentication();
 
+
+            //zorgt voor de opmaak van de URL routing.
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

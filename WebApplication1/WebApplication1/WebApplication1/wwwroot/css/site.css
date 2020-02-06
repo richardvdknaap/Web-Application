@@ -21,7 +21,6 @@
     background: white;
     box-shadow: 0px 0px 8px rgba(0,0,0,0.24);
 }
-
 a {
     color: black;
 }
@@ -57,13 +56,13 @@ body {
 
 .clickcard {
     padding-top: 15px;
-    background-color: white;
     padding-bottom: 15px;
+    background-color: white;
 }
 
-    .clickcard:hover {
-        background-color: #EA6025;
-    }
+.clickcard:hover {
+    background-color: #EA6025;
+}
 
 .jumbotron {
     position: relative;
@@ -530,12 +529,16 @@ ul.breadcrumb {
 .cardnopadding {
     background-color: white;
     color: black;
-    padding-bottom: 20px;
     margin-top: 20px;
 }
 
 #cards:hover {
     background-color: #EA6025;
+    color: white;
+}
+
+#cards2:hover {
+    background-color: #00694C;
     color: white;
 }
 
@@ -650,6 +653,16 @@ ul.breadcrumb {
     left: 0;
     right: 0;
     text-align: center;
+}
+
+
+.img-overlay2 {
+    border-radius: 22px;
+    color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px 30px;
 }
 
     .img-overlay:before {
@@ -833,15 +846,6 @@ PraktischContactText {
 a.frame {
     position: relative;
     display: inline-block;
-}
-
-.expand-position-for-picture {
-    border-radius: 22px;
-    color: black;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 15px 30px;
 }
 
 
