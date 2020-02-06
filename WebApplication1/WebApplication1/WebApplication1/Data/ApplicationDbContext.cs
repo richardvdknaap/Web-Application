@@ -16,7 +16,7 @@ namespace WebApplication1.Data
 
         public DbSet<Event> Events { get; set; }
         public DbSet<Foto> Fotos { get; set; }
-        public DbSet<Category> Categorys { get; set; }
+        public DbSet<Category> Category { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder) {
             {
@@ -31,7 +31,7 @@ namespace WebApplication1.Data
 
             builder.Entity<Category_Event>()
                 .HasOne(ce => ce.Event)
-                .WithMany(e => e.Category_Event)
+                .WithMany(c => c.Category_Event)
                 .HasForeignKey(ce => ce.EventId);
 
             builder.Entity<Category_Event>()
@@ -39,7 +39,5 @@ namespace WebApplication1.Data
                 .WithMany(c => c.Category_Event)
                 .HasForeignKey(ce => ce.CategoryId);
         }
-
-        public DbSet<WebApplication1.Models.Category> Category { get; set; }
     }
 }

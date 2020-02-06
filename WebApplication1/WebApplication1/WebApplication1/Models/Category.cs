@@ -19,5 +19,6 @@ namespace WebApplication1.Models
 
         //[Required]
         public List<Category_Event> Category_Event { get; set; }
+
     }
 }

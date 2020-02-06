@@ -58,10 +58,9 @@ namespace WebApplication1.Controllers
 
         // GET: DBEvents/Create
         // Laat de Create knop functioneren
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            //List<Category> categories = await _context.Category.ToListAsync();
-            ViewModel mymodel = new ViewModel() { Event = null, Foto = null, UploadModel = null };
+            ViewModel mymodel = new ViewModel() { Event = null, Foto = null, UploadModel = null};
             return View(mymodel);
         }
 
@@ -90,6 +89,19 @@ namespace WebApplication1.Controllers
             
             ViewModel mymodel = new ViewModel() { Event = @event, Foto = @foto};
             return View(mymodel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateCat([Bind("Id, Naam, Beschrijving")] Category @cat)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(@cat);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(@cat);
         }
 
         // GET: DBEvents/Edit/5
