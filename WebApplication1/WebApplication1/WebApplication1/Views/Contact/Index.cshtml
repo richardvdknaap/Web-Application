@@ -4,6 +4,7 @@
 }
 
 <script>
+    //Script voor het veranderen van de pijl in de accordion
     $(document).ready(function () {
         $(".selecting").click(function (e) {
             e.preventDefault();
@@ -56,6 +57,7 @@
     });
 </script>
 
+<!-- Zorgt voor de Jumbotron en hoofdtekst van de pagina-->
 <div class="contactjumbo" id="ContactJumbo">
 </div>
 <div class="container" id="ContactJumbo" style="padding:32px;">
@@ -64,56 +66,60 @@
         <p class="col-sm-6 text-dark">In 2020 is de keukenhof open van 21 maart tot en met 10 mei tussen 9:00-17:00 uur.</p>
         <p class="col-sm-6 text-dark">Bezoekersadres: <br />Stationsweg 166A, 2161 AM Lisse</p>
     </div>
-    </div>
-    <div class="container bg1 py-4" id="ContactJumbo" style="background-color: #E1EBE9">
-        <h3>Waarvoor zoekt u contact?</h3>
-        <div class="row mt-12">
-            <div class="col-sm-3">
-                <div class="card" id="ContactJumboCard">
-                    <img src="~/Images/GroepenKlein.png" class="card-img-top" id="ContactJumboCardImage">
+</div>
 
-                    <div class="card-body">
-                        <a asp-area="" asp-controller="Info" asp-action="Index" class="card-text text-decoration-none" id="ContactJumboCardText" style="padding: 16px;">Groepen <i class="fas fa-arrow-right text-success" style="position: absolute; right:19px;"></i></a>
-                        </div>
+<!--Kaarten met verwijzingen naar andere pagina's-->
+<div class="container bg1 py-4" id="ContactJumbo" style="background-color: #E1EBE9">
+    <h3>Waarvoor zoekt u contact?</h3>
+    <div class="row mt-12">
+        <div class="col-sm-3">
+            <div class="card" id="ContactJumboCard">
+                <img src="~/Images/GroepenKlein.png" class="card-img-top" id="ContactJumboCardImage">
+
+                <div class="card-body">
+                    <a asp-area="" asp-controller="Info" asp-action="Index" class="card-text text-decoration-none" id="ContactJumboCardText" style="padding: 16px;">Groepen <i class="fas fa-arrow-right text-success" style="position: absolute; right:19px;"></i></a>
                 </div>
             </div>
-            <div class="col-sm-3">
-                <div class="card" id="ContactJumboCard">
-                    <img src="~/Images/Evenementen.png" class="card-img-top" id="ContactJumboCardImage">
-                    <div class="card-body">
-                        <a asp-area="" asp-controller="Info" asp-action="Index" class="card-text text-decoration-none" id="ContactJumboCardText" style="padding: 16px;">Pers<i class="fas fa-arrow-right text-success" style="position: absolute; right:19px;"></i></a>
-                    </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card" id="ContactJumboCard">
+                <img src="~/Images/Evenementen.png" class="card-img-top" id="ContactJumboCardImage">
+                <div class="card-body">
+                    <a asp-area="" asp-controller="Info" asp-action="Index" class="card-text text-decoration-none" id="ContactJumboCardText" style="padding: 16px;">Pers<i class="fas fa-arrow-right text-success" style="position: absolute; right:19px;"></i></a>
                 </div>
             </div>
-            <div class="col-sm-3">
-                <div class="card" id="ContactJumboCard">
-                    <img src="~/Images/GevondenItem.png" class="card-img-top" id="ContactJumboCardImage">
-                    <div class="card-body">
-                        <a asp-area="" asp-controller="Info" asp-action="Index" class="card-text text-decoration-none" id="ContactJumboCardText" style="padding: 16px;">Gevonden Items<i class="fas fa-arrow-right text-success" style="position: absolute; right:19px;"></i></a>
-                    </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card" id="ContactJumboCard">
+                <img src="~/Images/GevondenItem.png" class="card-img-top" id="ContactJumboCardImage">
+                <div class="card-body">
+                    <a asp-area="" asp-controller="Info" asp-action="Index" class="card-text text-decoration-none" id="ContactJumboCardText" style="padding: 16px;">Gevonden Items<i class="fas fa-arrow-right text-success" style="position: absolute; right:19px;"></i></a>
                 </div>
             </div>
-            <div class="col-sm-3">
-                <div class="card" id="ContactJumboCard">
-                    <img src="~/Images/Leveranciers.png" class="card-img-top" id="ContactJumboCardImage">
-                    <div class="card-body">
-                        <a asp-area="" asp-controller="Info" asp-action="Index" class="card-text text-decoration-none" id="ContactJumboCardText" style="padding: 16px;"1>Leveranciers<i class="fas fa-arrow-right text-success" style="position: absolute; right:19px;"></i></a>
-                    </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card" id="ContactJumboCard">
+                <img src="~/Images/Leveranciers.png" class="card-img-top" id="ContactJumboCardImage">
+                <div class="card-body">
+                    <a asp-area="" asp-controller="Info" asp-action="Index" class="card-text text-decoration-none" id="ContactJumboCardText" style="padding: 16px;" 1>Leveranciers<i class="fas fa-arrow-right text-success" style="position: absolute; right:19px;"></i></a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
-<div class="container" >
+<div class="container">
     <div class="row row-padding" style="background-color: #FBDFD3">
         <div class="col-md-12" id="ContactJumbo" style="padding: 10px; padding-left:13px;">
             <h2>Praktische informatie</h2>
         </div>
 
-        <div class="col-md-6" >
-            <img src="~/images/PraktischeInfo.png" class="card-img-top" id="ContactJumboPraktischImage"/>
+        <!-- Image naast Accordion-->
+        <div class="col-md-6">
+            <img src="~/images/PraktischeInfo.png" class="card-img-top" id="ContactJumboPraktischImage" />
         </div>
+        <!--De Accordion-->
         <div class="col-md-6">
             <div id="accordion">
                 <div class="card" id="ContactCards" style="margin-top:0px;">
@@ -161,5 +167,5 @@
                 </div>
             </div>
         </div>
-</div>
+    </div>
 </div>

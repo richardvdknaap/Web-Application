@@ -5,6 +5,7 @@
 }
 
 <script>
+    //Script voor het veranderen van de pagina nummer
     $(document).ready(function () {
         $("#P1").click(function (e) {
             e.preventDefault();
@@ -24,10 +25,13 @@
 
 </script>
 
+<!-- Zorgt voor de Jumbotron en hoofdtekst van de pagina-->
 <div class="jumbotron" id="EventsJumbo">
 </div>
 <div class="container bg1 py-4" id="featured">
     <h1>Evenementen</h1>
+
+<!--Haalt de evenementen op uit de DB-->
     <div class="container" id="Card1">
         <div class="row pb-4">
             @foreach (var item in Model)

@@ -3,6 +3,7 @@
 }
 
 <script>
+    //Script voor het veranderen van de pijl in de accordion
     $(document).ready(function () {
         $(".selecting").click(function (e) {
             e.preventDefault();
@@ -108,11 +109,9 @@
     });
 </script>
 
+<!-- Zorgt voor de Jumbotron en hoofdtekst van de pagina-->
 <div class="jumbotron" id="ParkJumbo">
 </div>
-
-
-
 <div class="containerpractical" id="head">
     <h1>Praktische informatie</h1>
     <div class="row">
@@ -123,7 +122,7 @@
 </div>
 
 
-
+<!-- De zwarte navigatie balk-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
@@ -144,7 +143,7 @@
 </nav>
 
 
-
+<!--Download van het kaart-->
 <div class="container">
     <div class="row row-padding" style="background-color: #E1EBE9">
         <div class="col-md-12">
@@ -156,17 +155,17 @@
         </div>
         <div class="col-md-6">
             <div class="img-wrapper">
-                    <img class="img-responsive" src="/Images/PLATTEGROND Keukenhof 2019.png">
-                    <div class="img-overlay">
-                        <a class="text-decoration-none" href="~/images/PLATTEGROND Keukenhof 2019.png" download>
-                            <button class="btn btn-md btn-success" id="btntop"><i class="fa fa-download" aria-hidden="true"></i> Download de kaart</button>
-                        </a>
-                    </div>
+                <img class="img-responsive" src="/Images/PLATTEGROND Keukenhof 2019.png">
+                <div class="img-overlay">
+                    <a class="text-decoration-none" href="~/images/PLATTEGROND Keukenhof 2019.png" download>
+                        <button class="btn btn-md btn-success" id="btntop"><i class="fa fa-download" aria-hidden="true"></i> Download de kaart</button>
+                    </a>
+                </div>
             </div>
         </div>
 
 
-
+        <!--Accordion-->
         <div class="col-md-6">
             <div id="accordion">
                 <div class="card">
@@ -218,7 +217,7 @@
 </div>
 
 
-
+<!--Reisopties Kaarten met info en Fotos-->
 <div class="container">
     <div class="row row-padding" id="wheretosearch">
         <div class="col-md-12">
@@ -296,7 +295,7 @@
 </div>
 
 
-
+<!--Voorzieningen + knoppen die de info aanpassen-->
 <div class="container">
     <div class="row row-padding" style="background-color: #E1EBE9">
         <div class="col-md-12">
@@ -366,14 +365,12 @@
         </div>
     </div>
 </div>
-
-
-
+<!--Image en tekst Groepen-->
 <div class="container bg2 py-4">
     <div class="cardnopadding">
         <img class="card-img-top" src="~/Images/Praktisch6.png" alt="Card image cap">
         <a class="text-decoration-none" asp-area="" asp-controller="HetPark" asp-action="Index">
-        <div class="card-body" id="cards">
+            <div class="card-body" id="cards">
                 <div class="row">
                     <div class="col-md-11">
                         <h5 class="card-title">Groepen</h5>

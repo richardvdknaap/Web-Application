@@ -11,6 +11,7 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
+    // Leest de evenementen uit de database en gebruikt deze voor de Events view.
     public class EventsController : Controller
     {
         private readonly ApplicationDbContext _context;

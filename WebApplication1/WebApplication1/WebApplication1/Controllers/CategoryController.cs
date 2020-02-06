@@ -8,6 +8,7 @@ using WebApplication1.Data;
 
 namespace WebApplication1.Controllers
 {
+    // Leest de Catogorieen uit de database .
     public class CategoryController : Controller
     {
         private readonly ApplicationDbContext _context;

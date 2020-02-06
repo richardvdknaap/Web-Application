@@ -3,6 +3,7 @@
 }
 
 <script>
+    //Script voor het veranderen van de pijl in de accordion
     $(document).ready(function () {
         $("#Arrow1").click(function (e) {
             e.preventDefault();
@@ -73,6 +74,8 @@
         });
     })
 </script>
+
+<!--Titel + Achtergrond image + Buttons-->
 <div class="container">
     <div class="row">
         <div class="col-md-12" id="homejumbo">
@@ -81,7 +84,7 @@
                 <div class="row">
                     <div class="col-md-3 clickcard">
                         <a asp-area="" asp-controller="HetPark" asp-action="Index" class="text-dark text-decoration-none"></a>
-                        <a asp-area="" asp-controller="HetPark" asp-action="Index"class="text-decoration-none">
+                        <a asp-area="" asp-controller="HetPark" asp-action="Index" class="text-decoration-none">
                             <div class="row">
                                 <br />
                                 <div class="col-md-12">
@@ -127,6 +130,7 @@
         </div>
     </div>
 </div>
+<!--Kaarten met titels + Fotos-->
 <div class="container">
     <div class="row row-padding" id="wheretosearch">
         <div class="col-md-12">
@@ -202,6 +206,7 @@
         </div>
     </div>
 </div>
+<!--Download van het kaart-->
 <div class="container">
     <div class="row row-padding" style="background-color: #E1EBE9">
         <div class="col-md-12">
@@ -222,9 +227,6 @@
                 </div>
             </div>
         </div>
-
-
-
         <div class="col-md-6">
             <div id="accordion">
                 <div class="card">
@@ -235,7 +237,7 @@
                             </div>
                         </h5>
                     </div>
-
+                    <!--Accordion-->
                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                         <div class="card-body">
                             Kijk naar mij ik ben een lange tekst om deze accordion die geen muziek kan afspelen te testen.
@@ -288,9 +290,10 @@
         </div>
     </div>
 </div>
+<!--Nieuws Kaarten met info en Fotos-->
 <div class="container bg1 py-4" id="featured">
     <h1>Nieuws</h1>
-        <a asp-area="" asp-controller="Events" asp-action="Index" class="justify-content-end float-right text-dark font-weight-bold text-decoration-none">Bekijk alle<i class="fa fa-arrow-right ml-1 text-warning"></i> </a></br>
+    <a asp-area="" asp-controller="Events" asp-action="Index" class="justify-content-end float-right text-dark font-weight-bold text-decoration-none">Bekijk alle<i class="fa fa-arrow-right ml-1 text-warning"></i> </a></br>
     <div class="row mt-3">
         <div class="col-sm-3">
             <div class="cardnopadding">
@@ -334,6 +337,7 @@
         </div>
     </div>
 </div>
+<!--Image en tekst Groepen-->
 <div class="container bg2 py-4">
     <div class="cardnopadding">
         <img class="card-img-top" src="~/Images/Praktisch6.png" alt="Card image cap">
@@ -351,6 +355,7 @@
         </a>
     </div>
 </div>
+<!--instagram feed-->
 <div class="container bg1 py-4" id="featured">
     <h1>Instagram #Visitkeukenhof</h1>
 

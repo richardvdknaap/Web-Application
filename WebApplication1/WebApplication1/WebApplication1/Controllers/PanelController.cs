@@ -14,9 +14,11 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
+    // Controleerd de login van de user
     [Authorize]
     public class PanelController : Controller
     {
+        // Leest de DbContext en de HostingEnvironment
         private readonly ApplicationDbContext _context;
         private readonly IHostingEnvironment hostingEnvironment;
 
@@ -30,11 +32,13 @@ namespace WebApplication1.Controllers
         // GET: DBEvents
         public async Task<IActionResult> Index()
         {
+            //wacht op resultaat van context.Events.ToListAsync
             return View(await _context.Events.ToListAsync());
         }
 
 
         // GET: DBEvents/Details/5
+        //id begint als NULL om te controleren of er wel Details zijn
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -53,6 +57,7 @@ namespace WebApplication1.Controllers
         }
 
         // GET: DBEvents/Create
+        // Laat de Create knop functioneren
         public IActionResult Create()
         {
             //List<Category> categories = await _context.Category.ToListAsync();
@@ -60,15 +65,14 @@ namespace WebApplication1.Controllers
             return View(mymodel);
         }
 
-
+        // Als create wordt geselecteerd word de juiste view gestuurd
         public IActionResult CreateCat()
         {
             return View();
         }
 
         // POST: DBEvents/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        //Maakt event aan
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Naam,Beschrijving,Datum,Info")] Event @event, [Bind("Id,Link,EventId")] Foto @foto)
@@ -89,6 +93,7 @@ namespace WebApplication1.Controllers
         }
 
         // GET: DBEvents/Edit/5
+        // Laat de Edit knop functioneren
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -105,8 +110,7 @@ namespace WebApplication1.Controllers
         }
 
         // POST: DBEvents/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        //Veranderd Event
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Naam,Beschrijving,Datum,Info")] Event @event)
@@ -123,6 +127,7 @@ namespace WebApplication1.Controllers
                     _context.Update(@event);
                     await _context.SaveChangesAsync();
                 }
+                //Controleerd of opgegeven ID bestaat
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!EventExists(@event.Id))
@@ -140,6 +145,7 @@ namespace WebApplication1.Controllers
         }
 
         // GET: DBEvents/Delete/5
+        // Laat de Delete knop functioneren
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -158,6 +164,7 @@ namespace WebApplication1.Controllers
         }
 
         // POST: DBEvents/Delete/5
+        // Verwijderd Event
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -168,6 +175,7 @@ namespace WebApplication1.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        // controlereerd of er een event bestaat
         private bool EventExists(int id)
         {
             return _context.Events.Any(e => e.Id == id);

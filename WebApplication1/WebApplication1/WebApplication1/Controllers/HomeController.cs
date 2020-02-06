@@ -10,6 +10,8 @@ namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {
+
+        //Template voor opmaak van de pagina's. Daardoor worden deze views niet gebruikt.
         public IActionResult Index()
         {
             return View();
